@@ -1,0 +1,80 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/bricolage-grotesque';
+
+/*
+ * The SOS look, shared with the apps: rescue-signal orange on warm paper by day,
+ * on a night sea after dark. Navy is the ink and the frame.
+ * Values follow the apps' "sos" and "sos-night" daisyUI themes.
+ */
+:root {
+  color-scheme: light;
+  --paper: oklch(96% 0.014 80);
+  --card: oklch(99% 0.005 80);
+  --line: oklch(91% 0.02 80);
+  --ink: oklch(25% 0.045 255);
+  --muted: oklch(45% 0.03 255);
+  --signal: oklch(64% 0.215 38);
+  --signal-ink: oklch(19% 0.04 255);
+  --signal-text: oklch(55% 0.2 38);
+  --frame: oklch(24% 0.05 255);
+  --frame-ink: oklch(96% 0.012 80);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --paper: oklch(20% 0.04 255);
+    --card: oklch(25% 0.045 255);
+    --line: oklch(32% 0.045 255);
+    --ink: oklch(94% 0.012 80);
+    --muted: oklch(78% 0.02 255);
+    --signal: oklch(70% 0.2 40);
+    --signal-ink: oklch(18% 0.04 255);
+    --signal-text: oklch(74% 0.18 40);
+    --frame: oklch(13% 0.03 255);
+    --frame-ink: oklch(94% 0.012 80);
+  }
+}
+
+@theme {
+  --font-display: 'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic',
+    'Noto Sans KR', sans-serif;
+
+  --color-paper: var(--paper);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-signal: var(--signal);
+  --color-signal-ink: var(--signal-ink);
+  --color-signal-text: var(--signal-text);
+  --color-frame: var(--frame);
+  --color-frame-ink: var(--frame-ink);
+}
+
+@layer base {
+  html {
+    background: var(--paper);
+    color: var(--ink);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--paper);
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--signal);
+    outline-offset: 2px;
+  }
+}
