@@ -1,0 +1,12 @@
+---
+// "SOS" in Morse code (··· ––– ···): the brand motif, as MorseSignal.vue in the apps.
+const signal = [...'...---...'].map((mark) => mark === '-');
+---
+
+<span class="inline-flex items-center gap-1 text-primary" aria-hidden="true">
+  {
+    signal.map((dash, i) => (
+      <span class:list={['h-1.5 rounded-full bg-current', dash ? 'w-4' : 'w-1.5', i % 3 === 0 && i ? 'ml-1.5' : '']} />
+    ))
+  }
+</span>

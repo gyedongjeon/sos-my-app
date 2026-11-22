@@ -1,0 +1,82 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import MorseSignal from './MorseSignal.astro';
+import { apps } from '../data/apps';
+import { localePath, ui, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = ui[locale];
+---
+
+<Base locale={locale} path="/">
+  <div class="mx-auto max-w-5xl p-4 sm:p-8">
+    <header class="py-8 sm:py-12">
+      <MorseSignal />
+      <h1 class="mt-3 text-4xl font-extrabold tracking-tight sm:text-6xl">
+        {t.heroTitle}<br />
+        <span class="text-primary">{t.heroAccent}</span>
+      </h1>
+      <p class="mt-4 max-w-2xl text-lg text-base-content/70">{t.heroLead}</p>
+    </header>
+
+    <section aria-labelledby="apps-heading">
+      <h2 id="apps-heading" class="sr-only">{t.appsHeading}</h2>
+      <ul class="grid gap-4 md:grid-cols-2">
+        {
+          apps.map((app) => {
+            const text = app.text[locale];
+            return (
+              <li class="card card-border relative overflow-hidden bg-base-100 transition hover:border-primary">
+                <div class="card-body gap-3">
+                  <div class="flex items-center gap-4">
+                    <Image src={app.icon} alt="" width={64} height={64} class="size-14 shrink-0 sm:size-16" />
+                    <div class="grow">
+                      <h3 class="card-title text-xl sm:text-2xl">
+                        <a href={localePath(locale, `/${app.slug}/`)} class="after:absolute after:inset-0">
+                          {app.name}
+                        </a>
+                      </h3>
+                      <p class="text-sm font-semibold text-primary">{text.tagline}</p>
+                    </div>
+                    <span aria-hidden="true" class="text-2xl text-primary">›</span>
+                  </div>
+                  <p class="text-base-content/70">{text.summary}</p>
+                </div>
+                <figure class="px-6">
+                  <Image
+                    src={app.images[0]}
+                    alt=""
+                    widths={[640, 960]}
+                    sizes="(min-width: 768px) 460px, 100vw"
+                    class="aspect-[16/10] w-full rounded-t-box border border-b-0 border-base-300 object-cover object-top"
+                  />
+                </figure>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </section>
+
+    <section class="py-12">
+      <h2 class="text-2xl font-bold sm:text-3xl">{t.commonTitle}</h2>
+      <ul class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          t.common.map((item) => (
+            <li class="card card-border bg-base-100">
+              <div class="card-body gap-1">
+                <h3 class="card-title text-lg">{item.title}</h3>
+                <p class="text-sm text-base-content/70">{item.body}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </div>
+</Base>
