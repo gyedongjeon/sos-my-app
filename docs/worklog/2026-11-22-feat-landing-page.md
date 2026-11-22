@@ -32,10 +32,17 @@ stack agreed earlier: Astro and Tailwind CSS, deployed to GitHub Pages at the cu
   in Korean and English side by side, so a change in one language sits next to the other. App
   copy follows each app's README and `README.ko.md`; feature lists were shortened to the main
   items, with the README linked for the rest.
-- **Look**: the apps' own colors (warm paper, navy frame, signal orange, from their `sos` and
-  `sos-night` themes), the Bricolage Grotesque display font, the life-ring logo, and the Morse
-  "SOS" motif. Dark mode follows the system. daisyUI was left out: the site needs a handful of
-  colors, not components. No client-side JavaScript is shipped.
+- **Look, taken from the apps' frontends** (`sos-my-interview` and `sos-my-english` share
+  `frontend/src/style.css`, `BrandMark.vue`, and `MorseSignal.vue`):
+    - `src/styles/global.css` is a verbatim copy of that `style.css` (daisyUI with the `sos` and
+      `sos-night` themes, Bricolage Grotesque for headings), followed by a few site-only rules.
+    - The header is the apps' `navbar` and `menu menu-horizontal`, with the current page in
+      `bg-primary`; the hero repeats their Morse "SOS" signal and two-line heading; app cards,
+      features, and buttons use the same `card card-border bg-base-100` and `btn btn-primary`.
+    - `BrandMark.astro` and `MorseSignal.astro` are Astro ports of the apps' components.
+    - Dark mode follows the system, as in the apps. No client-side JavaScript is shipped.
+    - A first version used hand-picked CSS variables with the theme's colors and no daisyUI; it
+      was replaced so that the site and the apps share one design system.
 - **Assets**: app icons (`desktop/assets/icon.svg`) and screenshots (`docs/images/`) copied from
   each app's repository; Astro converts the screenshots to responsive WebP.
 - **Docs**: `README.md` describes running, structure, and the one-time Pages setup; `AGENTS.md`
@@ -47,9 +54,10 @@ stack agreed earlier: Astro and Tailwind CSS, deployed to GitHub Pages at the cu
 - Every `href` in the built pages checked: internal paths exist in `dist/`; GitHub links
   (repositories, READMEs, latest releases) answer 200. The `https://sosmy.app/...` canonical
   links do not resolve yet, since the domain is not connected.
-- Looked at screenshots from headless Chrome of the Korean home and interview page at 1280px,
-  the English home in dark mode, and the Korean home and English `english` page at 390px (in
-  iframes, since headless Chrome does not narrow its window that far): no horizontal scrolling,
-  and the header wraps on phones.
+- Looked at screenshots from headless Chrome of the Korean home and `english` page at 1280px,
+  the English `interview` page in dark mode, and the Korean home and English `english` page at
+  390px (in iframes, since headless Chrome does not narrow its window that far): no horizontal
+  scrolling, the header wraps on phones, and the pages match the apps' screenshots in colors,
+  header, cards, and buttons.
 - Not verified: the deploy workflow itself (it runs once this is merged), the Pages settings and
   DNS for `sosmy.app`, and the site in Safari or on a real phone.

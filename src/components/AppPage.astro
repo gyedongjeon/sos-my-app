@@ -18,82 +18,84 @@ const readme = locale === 'ko' ? `${app.repo}/blob/main/README.ko.md` : `${app.r
 ---
 
 <Base locale={locale} path={`/${slug}/`} title={app.name} description={text.summary}>
-  <section class="mx-auto max-w-5xl px-4 pt-14 pb-12 sm:px-6 sm:pt-20">
-    <div class="flex items-center gap-3">
-      <Image src={app.icon} alt="" width={56} height={56} class="size-14" />
-      <div>
-        <p class="font-display text-xl font-bold">{app.name}</p>
-        <p class="text-sm font-semibold text-signal-text">{text.tagline}</p>
+  <div class="mx-auto max-w-5xl p-4 sm:p-8">
+    <header class="py-8 sm:py-12">
+      <div class="flex items-center gap-3">
+        <Image src={app.icon} alt="" width={56} height={56} class="size-14" />
+        <div>
+          <p class="font-display text-xl">
+            <span class="font-extrabold text-primary">SOS</span>{' '}
+            <span class="font-medium">{app.name.replace('SOS ', '')}</span>
+          </p>
+          <p class="text-sm font-semibold text-base-content/60">{text.tagline}</p>
+        </div>
       </div>
-    </div>
-    <div class="mt-10"><MorseSignal /></div>
-    <h1 class="mt-5 text-4xl leading-[1.08] font-extrabold tracking-tight sm:text-6xl">
-      {text.hookTitle}<br />
-      <span class="text-signal-text">{text.hookAccent}</span>
-    </h1>
-    <p class="mt-6 max-w-2xl text-lg text-muted">{text.summary}</p>
-    <div class="mt-8 flex flex-wrap items-center gap-3">
-      <a
-        href={latestRelease(app)}
-        class="rounded-2xl bg-signal px-6 py-3 font-display text-lg font-bold text-signal-ink transition hover:brightness-105"
-      >
-        {t.download}
-      </a>
-      <a href={app.repo} class="rounded-2xl px-4 py-3 font-semibold underline-offset-4 hover:underline">
-        {t.viewSource}
-      </a>
-    </div>
-    <p class="mt-4 text-sm text-muted">
-      <span class="font-semibold text-ink">{t.platforms}:</span>{' '}
-      {text.platforms.join(' · ')}
-    </p>
-  </section>
+      <div class="mt-10"><MorseSignal /></div>
+      <h1 class="mt-3 text-4xl font-extrabold tracking-tight sm:text-6xl">
+        {text.hookTitle}<br />
+        <span class="text-primary">{text.hookAccent}</span>
+      </h1>
+      <p class="mt-4 max-w-2xl text-lg text-base-content/70">{text.summary}</p>
+      <div class="mt-6 flex flex-wrap items-center gap-2">
+        <a class="btn btn-primary btn-lg" href={latestRelease(app)}>{t.download}</a>
+        <a class="btn btn-ghost btn-lg" href={app.repo}>{t.viewSource}</a>
+      </div>
+      <p class="mt-4 flex flex-wrap items-center gap-2 text-sm text-base-content/70">
+        <span class="font-semibold text-base-content">{t.platforms}</span>
+        {text.platforms.map((p) => <span class="badge border-base-300 bg-base-100">{p}</span>)}
+      </p>
+    </header>
 
-  <section class="mx-auto max-w-5xl px-4 pb-16 sm:px-6" aria-label={t.screenshots}>
-    <div class="grid gap-6">
+    <section class="grid gap-4" aria-label={t.screenshots}>
       {
         app.images.map((image, i) => (
-          <Image
-            src={image}
-            alt={text.screenshots[i]?.alt ?? ''}
-            widths={[640, 1280, 1920]}
-            sizes="(min-width: 1024px) 976px, 100vw"
-            loading={i === 0 ? 'eager' : 'lazy'}
-            class="w-full rounded-2xl border border-line shadow-xl shadow-black/5"
-          />
+          <figure class="card card-border overflow-hidden bg-base-100">
+            <Image
+              src={image}
+              alt={text.screenshots[i]?.alt ?? ''}
+              widths={[640, 1280, 1920]}
+              sizes="(min-width: 1024px) 976px, 100vw"
+              loading={i === 0 ? 'eager' : 'lazy'}
+              class="w-full"
+            />
+          </figure>
         ))
       }
-    </div>
-  </section>
+    </section>
 
-  <section class="border-t border-line bg-card/50">
-    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+    <section class="py-12">
       <h2 class="text-2xl font-bold sm:text-3xl">{t.features}</h2>
-      <ul class="mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2">
+      <ul class="mt-6 grid gap-4 sm:grid-cols-2">
         {
           text.features.map((f) => (
-            <li class="border-l-4 border-signal pl-4">
-              <h3 class="text-lg font-bold">{f.title}</h3>
-              <p class="mt-1 text-muted">{f.body}</p>
+            <li class="card card-border bg-base-100">
+              <div class="card-body gap-1">
+                <h3 class="card-title text-lg">{f.title}</h3>
+                <p class="text-base-content/70">{f.body}</p>
+              </div>
             </li>
           ))
         }
       </ul>
-    </div>
-  </section>
+    </section>
 
-  <section class="mx-auto grid max-w-5xl gap-6 px-4 py-16 sm:px-6 md:grid-cols-2">
-    <div class="rounded-3xl border border-line bg-card p-6">
-      <h2 class="text-xl font-bold">{t.requirementsHeading}</h2>
-      <p class="mt-2 text-muted">{t.requirements}</p>
-    </div>
-    <div class="rounded-3xl border border-line bg-card p-6">
-      <h2 class="text-xl font-bold">{t.privacyHeading}</h2>
-      <p class="mt-2 text-muted">{t.privacy}</p>
-    </div>
-    <p class="text-muted md:col-span-2">
-      {t.readme}{' '}
-      <a href={readme} class="font-semibold text-ink underline underline-offset-4">README</a>
-    </p>
-  </section>
+    <section class="grid gap-4 pb-12 md:grid-cols-2">
+      <div role="note" class="alert alert-info alert-soft items-start">
+        <div>
+          <h2 class="font-bold">{t.requirementsHeading}</h2>
+          <p class="mt-1">{t.requirements}</p>
+        </div>
+      </div>
+      <div role="note" class="alert alert-success alert-soft items-start">
+        <div>
+          <h2 class="font-bold">{t.privacyHeading}</h2>
+          <p class="mt-1">{t.privacy}</p>
+        </div>
+      </div>
+      <p class="text-base-content/70 md:col-span-2">
+        {t.readme}{' '}
+        <a href={readme} class="link font-semibold text-base-content">README</a>
+      </p>
+    </section>
+  </div>
 </Base>

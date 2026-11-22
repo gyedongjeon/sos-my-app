@@ -1,67 +1,103 @@
 @import 'tailwindcss';
 @import '@fontsource-variable/bricolage-grotesque';
 
-/*
- * The SOS look, shared with the apps: rescue-signal orange on warm paper by day,
- * on a night sea after dark. Navy is the ink and the frame.
- * Values follow the apps' "sos" and "sos-night" daisyUI themes.
- */
-:root {
-  color-scheme: light;
-  --paper: oklch(96% 0.014 80);
-  --card: oklch(99% 0.005 80);
-  --line: oklch(91% 0.02 80);
-  --ink: oklch(25% 0.045 255);
-  --muted: oklch(45% 0.03 255);
-  --signal: oklch(64% 0.215 38);
-  --signal-ink: oklch(19% 0.04 255);
-  --signal-text: oklch(55% 0.2 38);
-  --frame: oklch(24% 0.05 255);
-  --frame-ink: oklch(96% 0.012 80);
+/* daisyUI is the design system: use its component classes and theme colors. */
+@plugin "daisyui" {
+  themes: false;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --paper: oklch(20% 0.04 255);
-    --card: oklch(25% 0.045 255);
-    --line: oklch(32% 0.045 255);
-    --ink: oklch(94% 0.012 80);
-    --muted: oklch(78% 0.02 255);
-    --signal: oklch(70% 0.2 40);
-    --signal-ink: oklch(18% 0.04 255);
-    --signal-text: oklch(74% 0.18 40);
-    --frame: oklch(13% 0.03 255);
-    --frame-ink: oklch(94% 0.012 80);
-  }
+/*
+ * "SOS" themes: rescue-signal orange on warm paper by day, on a night sea after dark.
+ * Navy is the ink and the frame; hi-vis yellow is kept for small accents.
+ */
+@plugin "daisyui/theme" {
+  name: 'sos';
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-base-100: oklch(99% 0.005 80);
+  --color-base-200: oklch(96% 0.014 80);
+  --color-base-300: oklch(91% 0.02 80);
+  --color-base-content: oklch(25% 0.045 255);
+  --color-primary: oklch(64% 0.215 38);
+  --color-primary-content: oklch(19% 0.04 255);
+  --color-secondary: oklch(36% 0.08 255);
+  --color-secondary-content: oklch(97% 0.01 80);
+  --color-accent: oklch(87% 0.17 95);
+  --color-accent-content: oklch(25% 0.045 255);
+  --color-neutral: oklch(24% 0.05 255);
+  --color-neutral-content: oklch(96% 0.012 80);
+  --color-info: oklch(60% 0.13 240);
+  --color-info-content: oklch(98% 0.01 240);
+  --color-success: oklch(60% 0.14 160);
+  --color-success-content: oklch(98% 0.01 160);
+  --color-warning: oklch(78% 0.16 85);
+  --color-warning-content: oklch(25% 0.045 255);
+  --color-error: oklch(52% 0.21 15);
+  --color-error-content: oklch(98% 0.01 15);
+  --radius-selector: 1rem;
+  --radius-field: 0.75rem;
+  --radius-box: 1.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1.5px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+  name: 'sos-night';
+  default: false;
+  prefersdark: true;
+  color-scheme: dark;
+  --color-base-100: oklch(25% 0.045 255);
+  --color-base-200: oklch(20% 0.04 255);
+  --color-base-300: oklch(16% 0.035 255);
+  --color-base-content: oklch(94% 0.012 80);
+  --color-primary: oklch(70% 0.2 40);
+  --color-primary-content: oklch(18% 0.04 255);
+  --color-secondary: oklch(80% 0.07 240);
+  --color-secondary-content: oklch(20% 0.04 255);
+  --color-accent: oklch(87% 0.17 95);
+  --color-accent-content: oklch(20% 0.04 255);
+  --color-neutral: oklch(13% 0.03 255);
+  --color-neutral-content: oklch(94% 0.012 80);
+  --color-info: oklch(72% 0.12 240);
+  --color-info-content: oklch(18% 0.04 255);
+  --color-success: oklch(74% 0.15 160);
+  --color-success-content: oklch(18% 0.04 255);
+  --color-warning: oklch(83% 0.16 85);
+  --color-warning-content: oklch(18% 0.04 255);
+  --color-error: oklch(66% 0.2 15);
+  --color-error-content: oklch(18% 0.04 255);
+  --radius-selector: 1rem;
+  --radius-field: 0.75rem;
+  --radius-box: 1.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1.5px;
+  --depth: 0;
+  --noise: 0;
 }
 
 @theme {
   --font-display: 'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif;
-  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic',
-    'Noto Sans KR', sans-serif;
-
-  --color-paper: var(--paper);
-  --color-card: var(--card);
-  --color-line: var(--line);
-  --color-ink: var(--ink);
-  --color-muted: var(--muted);
-  --color-signal: var(--signal);
-  --color-signal-ink: var(--signal-ink);
-  --color-signal-text: var(--signal-text);
-  --color-frame: var(--frame);
-  --color-frame-ink: var(--frame-ink);
 }
 
 @layer base {
-  html {
-    background: var(--paper);
-    color: var(--ink);
-    -webkit-text-size-adjust: 100%;
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
   }
+}
 
+/*
+ * Site-only additions. Everything above is copied from the apps
+ * (sos-my-english and sos-my-interview share frontend/src/style.css); keep it in step with them.
+ */
+@layer base {
   body {
-    background: var(--paper);
     word-break: keep-all;
     overflow-wrap: anywhere;
   }
@@ -69,12 +105,6 @@
   h1,
   h2,
   h3 {
-    font-family: var(--font-display);
     text-wrap: balance;
-  }
-
-  :focus-visible {
-    outline: 3px solid var(--signal);
-    outline-offset: 2px;
   }
 }
