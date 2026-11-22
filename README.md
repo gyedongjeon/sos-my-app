@@ -27,7 +27,7 @@ npm run preview  # serve dist/
 | `src/components/HomePage.astro`, `AppPage.astro` | The page bodies, rendered once per language |
 | `src/pages/` | Routes: `index`, `interview`, `english`, and the same under `en/`; `404` |
 | `src/layouts/Base.astro` | `<head>`, header, and footer |
-| `src/styles/global.css` | Tailwind CSS and the SOS colors (light and dark) |
+| `src/styles/global.css` | Tailwind CSS and daisyUI with the SOS themes, copied from the apps' `frontend/src/style.css` |
 | `src/assets/` | App icons and screenshots, copied from each app's repository |
 | `public/CNAME` | The custom domain |
 

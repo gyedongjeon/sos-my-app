@@ -44,7 +44,7 @@ Follow Kent Beck's Tidy First, and test-first where there is logic to test.
     - [`sos-my-english`](https://github.com/gyedongjeon/sos-my-english) — speaking-first English practice.
 - **Architecture**: A static site.
     - **Framework**: Astro, producing plain HTML/CSS with no client-side JavaScript unless a feature needs it.
-    - **Styling**: Tailwind CSS. Match the look of the SOS apps (theme colors, life-ring brand) where it makes sense.
+    - **Styling**: Tailwind CSS with daisyUI, sharing the SOS apps' design system. `src/styles/global.css` starts with a verbatim copy of the apps' `frontend/src/style.css` (`sos` and `sos-night` themes); keep it in step with the apps, and add site-only rules after it. Prefer daisyUI component classes and theme colors over custom CSS, as the apps do.
     - **Hosting**: GitHub Pages, deployed by GitHub Actions on every push to `main`, with the custom domain `sosmy.app` (`site: 'https://sosmy.app'`, no `base` path). `.app` domains are HTTPS-only.
     - **Structure**: One site with a page per app under a path (`/interview`, `/english`), not a subdomain per app. Korean is served at `/`, English under `/en/`.
     - **Content**: App copy lives in `src/data/apps.ts` and follows each app's README (`README.ko.md` for Korean). When an app's features or supported platforms change, update it here too.
