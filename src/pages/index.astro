@@ -1,5 +1,7 @@
 ---
+// The home page in the default language (English). Other languages: src/pages/[locale]/.
 import HomePage from '../components/HomePage.astro';
+import { defaultLocale } from '../i18n';
 ---
 
-<HomePage locale="ko" />
+<HomePage locale={defaultLocale} />
