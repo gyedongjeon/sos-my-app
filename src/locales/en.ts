@@ -3,11 +3,11 @@ import type { Messages } from './types';
 export default {
   ui: {
     siteDescription:
-      'A series of practice apps for when your English needs rescuing. Practise English interviews and speaking out loud, on your own computer.',
-    heroTitle: 'English letting you down?',
+      'A series of practice apps for when your English or German needs rescuing. Practise interviews and speaking out loud, on your own computer.',
+    heroTitle: 'Language letting you down?',
     heroAccent: 'Send a signal.',
     heroLead:
-      'An interview coming up, or stuck for words: the SOS series is a set of free desktop apps for practising English out loud. They run on your own computer, and the AI you choose fixes your English as you go.',
+      'An interview coming up, or stuck for words: the SOS series is a set of free desktop apps for practising English and German out loud. They run on your own computer, and the AI you choose fixes your mistakes as you go.',
     appsHeading: 'Apps',
     language: 'Language',
     download: 'Download the latest version',
@@ -28,7 +28,7 @@ export default {
       { title: 'On your computer', body: 'Install and use it with no sign-up. Your history stays on your machine.' },
       {
         title: 'Explained in your language',
-        body: 'Corrections are explained in Korean, Japanese, Spanish, and more; the practice stays in English.',
+        body: 'Corrections are explained in Korean, Japanese, Spanish, and more; the practice stays in the language you are learning.',
       },
       { title: 'Free and open source', body: 'Released under the MIT license. You only pay your AI provider for what you use.' },
     ],
@@ -103,6 +103,43 @@ export default {
         "A conversation in SOS My English: what you said, its correction, and your partner's next line",
         'The home page of SOS My English: conversation topics by category',
       ],
+    },
+    german: {
+      tagline: 'German speaking practice',
+      hookTitle: 'Stuck for words?',
+      hookAccent: 'Help is on the way.',
+      summary:
+        'An app for practising spoken German, running on your own machine. Pick a topic, talk it through out loud with an AI partner that answers by voice, and get your German fixed as you go.',
+      features: [
+        { title: 'Speaking first', body: 'You answer by voice, not by typing; what you said is transcribed for you.' },
+        {
+          title: 'Corrections as you go',
+          body: 'After each thing you say, the most valuable fix is shown with the better sentence and why, and you can hear the better sentence.',
+        },
+        { title: 'How clearly you spoke', body: 'Each line shows a clarity score, the words that were hard to recognize, and your pace.' },
+        {
+          title: '40 topics in 9 categories',
+          body: 'Everyday chat, work, school, shopping, food, travel, services, home, and giving your opinion, plus topics of your own.',
+        },
+        {
+          title: 'Sentence patterns by level',
+          body: '100 patterns from A1 to C2. You see a sentence in your own language and say it in German.',
+        },
+        {
+          title: 'Study with YouTube videos',
+          body: 'Paste a link and listen one sentence at a time, with repeat, slower speeds, and shadowing.',
+        },
+        {
+          title: 'Practise your corrections',
+          body: 'Every fix is collected in one place, where you say the better sentence until it comes out right.',
+        },
+        {
+          title: 'A summary at the end',
+          body: 'Wrap up a conversation to see what you did well, what to work on, and expressions to try next time.',
+        },
+      ],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
+      screenshots: [],
     },
   },
 } satisfies Messages;

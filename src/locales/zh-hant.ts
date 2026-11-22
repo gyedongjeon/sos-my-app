@@ -3,11 +3,11 @@ import type { Messages } from './types';
 export default {
   ui: {
     siteDescription:
-      '英文卡關時拿出來用的練習 App 系列。在自己的電腦上，開口練習英文面試和英文口說。',
-    heroTitle: '英文卡關了嗎？',
+      '英文、德文卡關時拿出來用的練習 App 系列。在自己的電腦上，開口練習面試和口說。',
+    heroTitle: '外語卡關了嗎？',
     heroAccent: '發出求救訊號吧。',
     heroLead:
-      '面試在即，或是話到嘴邊說不出口。SOS 系列是一組開口練英文的免費桌面 App。在你自己的電腦上執行，由你選擇的 AI 隨時幫你修正英文。',
+      '面試在即，或是話到嘴邊說不出口。SOS 系列是一組開口練英文和德文的免費桌面 App。在你自己的電腦上執行，由你選擇的 AI 隨時幫你修正。',
     appsHeading: 'App',
     language: '語言',
     download: '下載最新版本',
@@ -22,11 +22,11 @@ export default {
     privacy:
       '不需要帳號，也沒有伺服器。語音辨識和語音朗讀都在電腦上處理，紀錄也只存在你的電腦裡。',
     readme: '安裝步驟和完整功能請看 README。',
-    commonTitle: '兩款 App 的共同特色',
+    commonTitle: '這些 App 的共同特色',
     common: [
       { title: '開口說、用耳聽', body: '用說的回答，不用打字；對方的話先用聽的，再看文字。' },
       { title: '在你的電腦上', body: '不用註冊，安裝就能用。紀錄只留在你的電腦裡。' },
-      { title: '中文解說', body: '修正和回饋可以用繁體中文說明，練習本身維持英文。' },
+      { title: '中文解說', body: '修正和回饋可以用繁體中文說明，練習本身維持所學的語言。' },
       { title: '免費開源', body: '以 MIT 授權公開。只需向你選擇的 AI 服務支付實際用量的費用。' },
     ],
     notFoundTitle: '在海上迷路了？',
@@ -88,6 +88,34 @@ export default {
         'SOS My English 對話畫面：你說的話、修正，以及對方的下一句',
         'SOS My English 首頁：依類別分的對話主題',
       ],
+    },
+    german: {
+      tagline: '德文口說練習',
+      hookTitle: '話卡在嘴邊？',
+      hookAccent: '救援馬上就到。',
+      summary:
+        '在自己的電腦上練習德文口說的 App。選一個主題，開口和用語音回應的 AI 對話夥伴聊天，你說的德文會隨時被修正。',
+      features: [
+        { title: '以說為主', body: '用聲音回答，不用打字；你說的話會自動轉成文字。' },
+        {
+          title: '即時修正',
+          body: '每說完一句，就挑出最值得改的一點，附上更好的說法和原因，還能聽更好的句子怎麼唸。',
+        },
+        { title: '說得清不清楚', body: '每一句都會顯示清晰度分數、不易辨識的單字和你的語速。' },
+        {
+          title: '9 大類、40 個主題',
+          body: '日常閒聊、工作、學校、購物、飲食、旅行、生活服務、居家、發表意見，也能自己新增主題。',
+        },
+        { title: '分級句型練習', body: '從 A1 到 C2 共 100 個句型。看中文句子，用德文說出來。' },
+        {
+          title: '用 YouTube 影片學習',
+          body: '貼上連結，就能一句一句聽，支援重複播放、放慢速度和跟讀（shadowing）。',
+        },
+        { title: '複習修正', body: '所有修正都集中在同一個地方，反覆說出正確的句子，直到說對為止。' },
+        { title: '對話總結', body: '結束對話後，整理出你做得好的地方、要加強的地方，以及下次可以試試的說法。' },
+      ],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64 位元)'],
+      screenshots: [],
     },
   },
 } satisfies Messages;

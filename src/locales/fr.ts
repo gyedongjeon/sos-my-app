@@ -3,11 +3,11 @@ import type { Messages } from './types';
 export default {
   ui: {
     siteDescription:
-      "Une série d'applis d'entraînement pour quand votre anglais a besoin d'un coup de main. Entraînez-vous aux entretiens et à parler anglais à voix haute, sur votre propre ordinateur.",
-    heroTitle: "L'anglais vous fait défaut ?",
+      "Une série d'applis d'entraînement pour quand votre anglais ou votre allemand a besoin d'un coup de main. Entraînez-vous aux entretiens et à parler à voix haute, sur votre propre ordinateur.",
+    heroTitle: 'Une langue vous fait défaut ?',
     heroAccent: 'Lancez un SOS.',
     heroLead:
-      "Un entretien en vue, ou les mots qui ne viennent pas : la série SOS, ce sont des applis de bureau gratuites pour pratiquer l'anglais à voix haute. Elles tournent sur votre ordinateur, et l'IA de votre choix corrige votre anglais au fil de l'eau.",
+      "Un entretien en vue, ou les mots qui ne viennent pas : la série SOS, ce sont des applis de bureau gratuites pour pratiquer l'anglais et l'allemand à voix haute. Elles tournent sur votre ordinateur, et l'IA de votre choix vous corrige au fil de l'eau.",
     appsHeading: 'Applis',
     language: 'Langue',
     download: 'Télécharger la dernière version',
@@ -34,7 +34,7 @@ export default {
       },
       {
         title: 'Explications en français',
-        body: "Les corrections et les retours peuvent être expliqués en français ; l'entraînement, lui, reste en anglais.",
+        body: "Les corrections et les retours peuvent être expliqués en français ; l'entraînement, lui, reste dans la langue que vous apprenez.",
       },
       {
         title: 'Gratuit et open source',
@@ -127,6 +127,49 @@ export default {
         "Une conversation dans SOS My English : ce que vous avez dit, sa correction et la réplique suivante de votre partenaire",
         "L'accueil de SOS My English : sujets de conversation par catégorie",
       ],
+    },
+    german: {
+      tagline: "Entraînement à l'allemand oral",
+      hookTitle: 'Les mots vous manquent ?',
+      hookAccent: 'Les secours arrivent.',
+      summary:
+        "Une appli pour pratiquer l'allemand oral, sur votre propre ordinateur. Choisissez un sujet, discutez à voix haute avec un partenaire IA qui vous répond de vive voix, et votre allemand est corrigé au fil de la conversation.",
+      features: [
+        {
+          title: "D'abord l'oral",
+          body: 'Vous répondez à la voix, pas au clavier ; ce que vous dites est transcrit pour vous.',
+        },
+        {
+          title: "Corrections au fil de l'eau",
+          body: "Après chacune de vos phrases, la correction la plus utile s'affiche avec une meilleure formulation et l'explication, et vous pouvez écouter la phrase corrigée.",
+        },
+        {
+          title: "Votre clarté à l'oral",
+          body: 'Chaque phrase affiche un score de clarté, les mots difficiles à reconnaître et votre débit.',
+        },
+        {
+          title: '40 sujets en 9 catégories',
+          body: 'Discussions du quotidien, travail, études, shopping, repas, voyages, services, maison et donner son avis, plus vos propres sujets.',
+        },
+        {
+          title: 'Structures de phrases par niveau',
+          body: "100 structures, de A1 à C2. Vous voyez une phrase dans votre langue et vous la dites en allemand.",
+        },
+        {
+          title: 'Apprendre avec des vidéos YouTube',
+          body: 'Collez un lien et écoutez phrase par phrase, avec répétition, vitesse ralentie et shadowing.',
+        },
+        {
+          title: 'Revoir vos corrections',
+          body: "Toutes vos corrections sont réunies au même endroit, où vous répétez la bonne phrase jusqu'à ce qu'elle sorte correctement.",
+        },
+        {
+          title: 'Un bilan à la fin',
+          body: 'Terminez une conversation pour voir ce que vous avez bien fait, ce qui reste à travailler et des expressions à essayer la prochaine fois.',
+        },
+      ],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64 bits)'],
+      screenshots: [],
     },
   },
 } satisfies Messages;

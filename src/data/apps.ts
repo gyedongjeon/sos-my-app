@@ -4,17 +4,19 @@
 import type { ImageMetadata } from 'astro';
 import interviewIcon from '../assets/icons/interview.svg';
 import englishIcon from '../assets/icons/english.svg';
+import germanIcon from '../assets/icons/german.svg';
 import interviewHome from '../assets/screens/interview-home.png';
 import englishPractice from '../assets/screens/english-practice.png';
 import englishHome from '../assets/screens/english-home.png';
 
-export type AppSlug = 'interview' | 'english';
+export type AppSlug = 'interview' | 'english' | 'german';
 
 export interface App {
   slug: AppSlug;
   name: string;
   repo: string;
   icon: ImageMetadata;
+  /** Screenshots, the first one shown on the home page. May be empty until the app has some. */
   images: ImageMetadata[];
 }
 
@@ -32,6 +34,13 @@ export const apps: App[] = [
     repo: 'https://github.com/gyedongjeon/sos-my-english',
     icon: englishIcon,
     images: [englishPractice, englishHome],
+  },
+  {
+    slug: 'german',
+    name: 'SOS My German',
+    repo: 'https://github.com/gyedongjeon/sos-my-german',
+    icon: germanIcon,
+    images: [],
   },
 ];
 

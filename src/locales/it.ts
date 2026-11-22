@@ -3,11 +3,11 @@ import type { Messages } from './types';
 export default {
   ui: {
     siteDescription:
-      "Una serie di app per quando il tuo inglese ha bisogno di soccorso. Allenati ai colloqui e a parlare inglese ad alta voce, sul tuo computer.",
-    heroTitle: "L'inglese ti mette in difficoltà?",
+      'Una serie di app per quando il tuo inglese o il tuo tedesco ha bisogno di soccorso. Allenati ai colloqui e a parlare ad alta voce, sul tuo computer.',
+    heroTitle: 'La lingua ti mette in difficoltà?',
     heroAccent: "Lancia un SOS.",
     heroLead:
-      "Un colloquio in arrivo, o non ti vengono le parole? La serie SOS è un insieme di app desktop gratuite per esercitarti a parlare inglese ad alta voce. Funzionano sul tuo computer e l'IA che scegli corregge il tuo inglese mentre parli.",
+      "Un colloquio in arrivo, o non ti vengono le parole? La serie SOS è un insieme di app desktop gratuite per esercitarti a parlare inglese e tedesco ad alta voce. Funzionano sul tuo computer e l'IA che scegli ti corregge mentre parli.",
     appsHeading: "App",
     language: "Lingua",
     download: "Scarica l'ultima versione",
@@ -29,7 +29,7 @@ export default {
         body: "Rispondi a voce invece di scrivere, e ascolta il tuo interlocutore prima di leggere cosa dice.",
       },
       { title: "Sul tuo computer", body: "Installa e usa senza registrarti. La tua cronologia resta sul tuo computer." },
-      { title: "Spiegazioni in italiano", body: "Le correzioni ti vengono spiegate in italiano; la pratica resta in inglese." },
+      { title: "Spiegazioni in italiano", body: "Le correzioni ti vengono spiegate in italiano; la pratica resta nella lingua che stai imparando." },
       {
         title: "Gratis e open source",
         body: "Rilasciate con licenza MIT. Paghi solo il tuo fornitore di IA, per quello che usi.",
@@ -118,6 +118,46 @@ export default {
         "Una conversazione in SOS My English: quello che hai detto, la correzione e la battuta successiva del tuo interlocutore",
         "La schermata principale di SOS My English: argomenti di conversazione per categoria",
       ],
+    },
+    german: {
+      tagline: "Pratica di tedesco parlato",
+      hookTitle: "Non ti vengono le parole?",
+      hookAccent: "I soccorsi stanno arrivando.",
+      summary:
+        "Un'app per allenare il tedesco parlato, che funziona sul tuo computer. Scegli un argomento, parlane ad alta voce con un partner IA che ti risponde a voce, e il tuo tedesco viene corretto mentre parli.",
+      features: [
+        { title: "Prima di tutto parlare", body: "Rispondi a voce, non scrivendo; quello che dici viene trascritto per te." },
+        {
+          title: "Correzioni in tempo reale",
+          body: "Dopo ogni tua frase vedi la correzione più utile, con la frase migliore e il perché. Puoi anche ascoltare la frase migliore.",
+        },
+        {
+          title: "Quanto hai parlato chiaro",
+          body: "Per ogni frase, un punteggio di chiarezza, le parole difficili da riconoscere e la tua velocità.",
+        },
+        {
+          title: "40 argomenti in 9 categorie",
+          body: "Chiacchiere quotidiane, lavoro, scuola, shopping, cibo, viaggi, servizi, casa ed esprimere la tua opinione, più argomenti tutti tuoi.",
+        },
+        {
+          title: "Strutture di frase per livello",
+          body: "100 strutture, da A1 a C2. Vedi una frase nella tua lingua e la dici in tedesco.",
+        },
+        {
+          title: "Studia con i video di YouTube",
+          body: "Incolla un link e ascolta una frase alla volta, con ripetizione, velocità ridotta e shadowing.",
+        },
+        {
+          title: "Ripassa le tue correzioni",
+          body: "Tutte le correzioni sono raccolte in un unico posto, dove ripeti la frase migliore finché non ti viene giusta.",
+        },
+        {
+          title: "Un riepilogo finale",
+          body: "Chiudi una conversazione per vedere cosa hai fatto bene, su cosa lavorare e le espressioni da provare la prossima volta.",
+        },
+      ],
+      platforms: ["macOS (Apple Silicon)", "Windows (64 bit)"],
+      screenshots: [],
     },
   },
 } satisfies Messages;

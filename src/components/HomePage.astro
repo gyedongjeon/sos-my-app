@@ -47,15 +47,17 @@ const t = messages[locale].ui;
                   </div>
                   <p class="text-base-content/70">{text.summary}</p>
                 </div>
-                <figure class="px-6">
-                  <Image
-                    src={app.images[0]}
-                    alt=""
-                    widths={[640, 960]}
-                    sizes="(min-width: 768px) 460px, 100vw"
-                    class="aspect-[16/10] w-full rounded-t-box border border-b-0 border-base-300 object-cover object-top"
-                  />
-                </figure>
+                {app.images[0] && (
+                  <figure class="px-6">
+                    <Image
+                      src={app.images[0]}
+                      alt=""
+                      widths={[640, 960]}
+                      sizes="(min-width: 768px) 460px, 100vw"
+                      class="aspect-[16/10] w-full rounded-t-box border border-b-0 border-base-300 object-cover object-top"
+                    />
+                  </figure>
+                )}
               </li>
             );
           })

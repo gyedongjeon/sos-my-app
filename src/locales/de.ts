@@ -3,11 +3,11 @@ import type { Messages } from './types';
 export default {
   ui: {
     siteDescription:
-      'Eine Reihe von Übungs-Apps für den Moment, in dem dein Englisch Rettung braucht. Übe Vorstellungsgespräche und freies Sprechen auf Englisch, laut und auf deinem eigenen Computer.',
-    heroTitle: 'Englisch lässt dich im Stich?',
+      'Eine Reihe von Übungs-Apps für den Moment, in dem dein Englisch oder Deutsch Rettung braucht. Übe Vorstellungsgespräche und freies Sprechen, laut und auf deinem eigenen Computer.',
+    heroTitle: 'Die Sprache lässt dich im Stich?',
     heroAccent: 'Setz einen Notruf ab.',
     heroLead:
-      'Ein Vorstellungsgespräch steht an, oder dir fehlen die Worte: Die SOS-Reihe besteht aus kostenlosen Desktop-Apps, mit denen du Englisch laut sprechen übst. Sie laufen auf deinem Computer, und die KI deiner Wahl korrigiert dein Englisch direkt beim Üben.',
+      'Ein Vorstellungsgespräch steht an, oder dir fehlen die Worte: Die SOS-Reihe besteht aus kostenlosen Desktop-Apps, mit denen du Englisch und Deutsch laut sprechen übst. Sie laufen auf deinem Computer, und die KI deiner Wahl korrigiert dich direkt beim Üben.',
     appsHeading: 'Apps',
     language: 'Sprache',
     download: 'Neueste Version herunterladen',
@@ -22,7 +22,7 @@ export default {
     privacy:
       'Kein Konto, kein Server. Spracherkennung und Sprachausgabe laufen auf deinem Computer, und dort wird auch dein Verlauf gespeichert.',
     readme: 'Installationsschritte und alle Funktionen findest du in der README.',
-    commonTitle: 'Was beide Apps gemeinsam haben',
+    commonTitle: 'Was die Apps gemeinsam haben',
     common: [
       {
         title: 'Sprechen und zuhören',
@@ -34,7 +34,7 @@ export default {
       },
       {
         title: 'Erklärungen auf Deutsch',
-        body: 'Korrekturen und Feedback kannst du dir auf Deutsch erklären lassen; geübt wird weiter auf Englisch.',
+        body: 'Korrekturen und Feedback kannst du dir auf Deutsch erklären lassen; geübt wird in der Sprache, die du lernst.',
       },
       {
         title: 'Kostenlos und Open Source',
@@ -127,6 +127,49 @@ export default {
         'Ein Gespräch in SOS My English: was du gesagt hast, die Korrektur und die nächste Antwort deines Gegenübers',
         'Die Startseite von SOS My English: Gesprächsthemen nach Kategorie',
       ],
+    },
+    german: {
+      tagline: 'Deutsch sprechen üben',
+      hookTitle: 'Dir fehlen die Worte?',
+      hookAccent: 'Hilfe ist unterwegs.',
+      summary:
+        'Eine App zum Üben von gesprochenem Deutsch, die auf deinem eigenen Rechner läuft. Such dir ein Thema aus, sprich es laut mit einem KI-Partner durch, der dir mit Stimme antwortet, und lass dein Deutsch direkt korrigieren.',
+      features: [
+        {
+          title: 'Sprechen im Mittelpunkt',
+          body: 'Du antwortest mit deiner Stimme statt mit der Tastatur; was du sagst, wird für dich mitgeschrieben.',
+        },
+        {
+          title: 'Korrekturen beim Sprechen',
+          body: 'Nach jeder Äußerung siehst du die wichtigste Verbesserung mit dem besseren Satz und der Begründung, und du kannst dir den besseren Satz anhören.',
+        },
+        {
+          title: 'Wie deutlich du sprichst',
+          body: 'Zu jeder Zeile gibt es einen Verständlichkeitswert, die schwer erkannten Wörter und dein Sprechtempo.',
+        },
+        {
+          title: '40 Themen in 9 Kategorien',
+          body: 'Smalltalk, Arbeit, Schule, Einkaufen, Essen, Reisen, Dienstleistungen, Zuhause und die eigene Meinung sagen, dazu eigene Themen.',
+        },
+        {
+          title: 'Satzmuster nach Niveau',
+          body: '100 Muster von A1 bis C2. Du siehst einen Satz in deiner Sprache und sagst ihn auf Deutsch.',
+        },
+        {
+          title: 'Lernen mit YouTube-Videos',
+          body: 'Füg einen Link ein und hör Satz für Satz zu, mit Wiederholen, langsamerem Tempo und Shadowing.',
+        },
+        {
+          title: 'Korrekturen üben',
+          body: 'Alle Korrekturen landen an einem Ort, wo du den besseren Satz sprichst, bis er sitzt.',
+        },
+        {
+          title: 'Eine Zusammenfassung zum Schluss',
+          body: 'Beende ein Gespräch und sieh, was gut lief, woran du arbeiten kannst und welche Ausdrücke du nächstes Mal ausprobieren kannst.',
+        },
+      ],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64-Bit)'],
+      screenshots: [],
     },
   },
 } satisfies Messages;
