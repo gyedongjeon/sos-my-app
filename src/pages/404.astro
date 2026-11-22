@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import MorseSignal from '../components/MorseSignal.astro';
+import { localePath, ui } from '../i18n';
+
+// GitHub Pages serves this page for every missing URL, so it speaks both languages.
+const ko = ui.ko;
+const en = ui.en;
+---
+
+<Base locale="ko" path="/" title="404">
+  <section class="mx-auto max-w-5xl px-4 py-24 sm:px-6">
+    <MorseSignal />
+    <h1 class="mt-5 text-4xl font-extrabold tracking-tight sm:text-6xl">
+      {ko.notFoundTitle}<br />
+      <span class="text-signal-text" lang="en">{en.notFoundTitle}</span>
+    </h1>
+    <p class="mt-6 text-lg text-muted">{ko.notFoundBody} <span lang="en">{en.notFoundBody}</span></p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href={localePath('ko')} class="rounded-2xl bg-signal px-6 py-3 font-display font-bold text-signal-ink">{ko.backHome}</a>
+      <a href={localePath('en')} lang="en" class="rounded-2xl px-4 py-3 font-semibold underline-offset-4 hover:underline">{en.backHome}</a>
+    </div>
+  </section>
+</Base>

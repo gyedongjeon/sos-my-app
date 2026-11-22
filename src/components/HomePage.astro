@@ -1,0 +1,80 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import MorseSignal from './MorseSignal.astro';
+import { apps } from '../data/apps';
+import { localePath, ui, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = ui[locale];
+---
+
+<Base locale={locale} path="/">
+  <section class="mx-auto max-w-5xl px-4 pt-16 pb-12 sm:px-6 sm:pt-24">
+    <MorseSignal />
+    <h1 class="mt-5 text-4xl leading-[1.08] font-extrabold tracking-tight sm:text-6xl">
+      {t.heroTitle}<br />
+      <span class="text-signal-text">{t.heroAccent}</span>
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg text-muted">{t.heroLead}</p>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-4 pb-16 sm:px-6" aria-labelledby="apps-heading">
+    <h2 id="apps-heading" class="sr-only">{t.appsHeading}</h2>
+    <ul class="grid gap-6 md:grid-cols-2">
+      {
+        apps.map((app) => {
+          const text = app.text[locale];
+          return (
+            <li class="group relative flex flex-col overflow-hidden rounded-3xl border border-line bg-card transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/5">
+              <div class="flex items-center gap-4 p-6 pb-4">
+                <Image src={app.icon} alt="" width={64} height={64} class="size-16 shrink-0" />
+                <div>
+                  <h3 class="text-2xl font-bold">
+                    <a href={localePath(locale, `/${app.slug}/`)} class="after:absolute after:inset-0">
+                      {app.name}
+                    </a>
+                  </h3>
+                  <p class="text-sm font-semibold text-signal-text">{text.tagline}</p>
+                </div>
+              </div>
+              <p class="px-6 text-muted">{text.summary}</p>
+              <div class="mt-6 px-6">
+                <Image
+                  src={app.images[0]}
+                  alt=""
+                  widths={[640, 960]}
+                  sizes="(min-width: 768px) 460px, 100vw"
+                  class="aspect-[16/10] w-full rounded-t-xl border border-b-0 border-line object-cover object-top"
+                />
+              </div>
+              <span class="absolute top-6 right-6 text-xl font-bold text-signal-text transition group-hover:translate-x-1" aria-hidden="true">
+                ›
+              </span>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </section>
+
+  <section class="border-t border-line bg-card/50">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+      <h2 class="text-2xl font-bold sm:text-3xl">{t.commonTitle}</h2>
+      <ul class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          t.common.map((item) => (
+            <li>
+              <h3 class="text-lg font-bold">{item.title}</h3>
+              <p class="mt-1 text-muted">{item.body}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</Base>

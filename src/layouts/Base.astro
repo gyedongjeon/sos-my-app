@@ -1,0 +1,104 @@
+---
+import '../styles/global.css';
+import BrandMark from '../components/BrandMark.astro';
+import { apps } from '../data/apps';
+import { defaultLocale, localePath, locales, ui, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+  /** The page's path as written in the Korean site, e.g. `/interview/`. */
+  path: string;
+  title?: string;
+  description?: string;
+}
+
+const { locale, path, title, description } = Astro.props;
+const t = ui[locale];
+const other: Locale = locale === 'ko' ? 'en' : 'ko';
+const pageTitle = title ? `${title} · SOS` : 'SOS — sosmy.app';
+const pageDescription = description ?? t.siteDescription;
+const canonical = new URL(localePath(locale, path), Astro.site);
+const current = localePath(locale, path);
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <link rel="canonical" href={canonical} />
+    {locales.map((l) => <link rel="alternate" hreflang={l} href={new URL(localePath(l, path), Astro.site)} />)}
+    <link rel="alternate" hreflang="x-default" href={new URL(localePath(defaultLocale, path), Astro.site)} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#111d35" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={locale === 'ko' ? 'ko_KR' : 'en_US'} />
+  </head>
+  <body class="flex min-h-dvh flex-col font-sans antialiased">
+    <header class="bg-frame text-frame-ink">
+      <nav class="mx-auto flex max-w-5xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3 sm:px-6">
+        <a href={localePath(locale)} class="flex items-center gap-2 font-display text-lg font-bold">
+          <BrandMark class="size-7" />
+          <span><span class="text-signal">SOS</span> My App</span>
+        </a>
+        <ul class="ms-auto flex items-center gap-1 text-sm font-medium">
+          {
+            apps.map((app) => {
+              const href = localePath(locale, `/${app.slug}/`);
+              return (
+                <li>
+                  <a
+                    href={href}
+                    aria-current={href === current ? 'page' : undefined}
+                    class="rounded-full px-3 py-1.5 hover:bg-white/10 aria-[current=page]:bg-signal aria-[current=page]:text-signal-ink"
+                  >
+                    {app.name.replace('SOS ', '')}
+                  </a>
+                </li>
+              );
+            })
+          }
+          <li>
+            <a
+              href={localePath(other, path)}
+              hreflang={other}
+              lang={other}
+              class="ms-1 rounded-full border border-white/25 px-3 py-1.5 hover:bg-white/10"
+            >
+              {t.switchTo}
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="border-t border-line">
+      <div class="mx-auto flex max-w-5xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-8 text-sm text-muted sm:px-6">
+        <span class="flex items-center gap-2">
+          <BrandMark class="size-5" />
+          <span>SOS series · {t.footer}</span>
+        </span>
+        <ul class="ms-auto flex gap-4">
+          {
+            apps.map((app) => (
+              <li>
+                <a href={app.repo} class="underline-offset-4 hover:text-ink hover:underline">
+                  {app.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
