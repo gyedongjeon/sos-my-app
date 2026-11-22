@@ -11,6 +11,7 @@ import es from './locales/es';
 import fr from './locales/fr';
 import de from './locales/de';
 import pt from './locales/pt';
+import ru from './locales/ru';
 import vi from './locales/vi';
 import id from './locales/id';
 import hi from './locales/hi';
@@ -25,6 +26,7 @@ export const messages = {
   fr,
   de,
   pt,
+  ru,
   vi,
   id,
   hi,
@@ -45,6 +47,7 @@ export const languageNames: Record<Locale, string> = {
   fr: 'Français',
   de: 'Deutsch',
   pt: 'Português',
+  ru: 'Русский',
   vi: 'Tiếng Việt',
   id: 'Bahasa Indonesia',
   hi: 'हिन्दी',
@@ -61,6 +64,7 @@ export const langTags: Record<Locale, string> = {
   fr: 'fr',
   de: 'de',
   pt: 'pt',
+  ru: 'ru',
   vi: 'vi',
   id: 'id',
   hi: 'hi',
@@ -77,6 +81,7 @@ export const ogLocales: Record<Locale, string> = {
   fr: 'fr_FR',
   de: 'de_DE',
   pt: 'pt_BR',
+  ru: 'ru_RU',
   vi: 'vi_VN',
   id: 'id_ID',
   hi: 'hi_IN',
