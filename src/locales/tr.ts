@@ -148,7 +148,10 @@ export default {
         },
       ],
       platforms: ["macOS (Apple Silicon)", "Windows (64 bit)"],
-      screenshots: [],
+      screenshots: [
+        "SOS My German'te bir sohbet: söylediğin cümle, düzeltmesi ve partnerinin sıradaki cümlesi",
+        "SOS My German ana ekranı: kategorilere göre sohbet konuları",
+      ],
     },
   },
 } satisfies Messages;

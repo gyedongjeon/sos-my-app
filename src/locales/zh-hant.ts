@@ -115,7 +115,10 @@ export default {
         { title: '對話總結', body: '結束對話後，整理出你做得好的地方、要加強的地方，以及下次可以試試的說法。' },
       ],
       platforms: ['macOS (Apple Silicon)', 'Windows (64 位元)'],
-      screenshots: [],
+      screenshots: [
+        'SOS My German 對話畫面：你說的話、修正，以及對方的下一句',
+        'SOS My German 首頁：依類別分的對話主題',
+      ],
     },
   },
 } satisfies Messages;

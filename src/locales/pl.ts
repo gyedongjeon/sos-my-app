@@ -148,7 +148,10 @@ export default {
         },
       ],
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bitowy)'],
-      screenshots: [],
+      screenshots: [
+        'Rozmowa w SOS My German: twoja wypowiedź, jej poprawka i kolejna kwestia rozmówcy',
+        'Ekran główny SOS My German: tematy rozmów według kategorii',
+      ],
     },
   },
 } satisfies Messages;

@@ -136,7 +136,10 @@ export default {
         },
       ],
       platforms: ['macOS (Apple Silicon)', 'Windows (64 บิต)'],
-      screenshots: [],
+      screenshots: [
+        'บทสนทนาใน SOS My German: สิ่งที่คุณพูด การแก้ไข และประโยคถัดไปของคู่สนทนา',
+        'หน้าแรกของ SOS My German: หัวข้อสนทนาแยกตามหมวด',
+      ],
     },
   },
 } satisfies Messages;

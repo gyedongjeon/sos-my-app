@@ -139,7 +139,10 @@ export default {
         },
       ],
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
-      screenshots: [],
+      screenshots: [
+        'Percakapan di SOS My German: ucapanmu, koreksinya, dan kalimat berikutnya dari partnermu',
+        'Halaman utama SOS My German: topik percakapan per kategori',
+      ],
     },
   },
 } satisfies Messages;

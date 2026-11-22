@@ -115,7 +115,10 @@ export default {
         { title: '最後にまとめ', body: '会話を終えると、良かった点、次に練習したい点、次に使ってみたい表現をまとめます。' },
       ],
       platforms: ['macOS (Apple Silicon)', 'Windows (64ビット)'],
-      screenshots: [],
+      screenshots: [
+        'SOS My Germanの会話画面: 自分の発言、その添削、相手の次のセリフ',
+        'SOS My Germanのホーム画面: カテゴリー別の会話トピック',
+      ],
     },
   },
 } satisfies Messages;

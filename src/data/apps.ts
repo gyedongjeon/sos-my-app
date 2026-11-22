@@ -8,6 +8,8 @@ import germanIcon from '../assets/icons/german.svg';
 import interviewHome from '../assets/screens/interview-home.png';
 import englishPractice from '../assets/screens/english-practice.png';
 import englishHome from '../assets/screens/english-home.png';
+import germanPractice from '../assets/screens/german-practice.png';
+import germanHome from '../assets/screens/german-home.png';
 
 export type AppSlug = 'interview' | 'english' | 'german';
 
@@ -16,7 +18,7 @@ export interface App {
   name: string;
   repo: string;
   icon: ImageMetadata;
-  /** Screenshots, the first one shown on the home page. May be empty until the app has some. */
+  /** Screenshots, the first one shown on the home page. May be empty until an app has some. */
   images: ImageMetadata[];
 }
 
@@ -40,7 +42,7 @@ export const apps: App[] = [
     name: 'SOS My German',
     repo: 'https://github.com/gyedongjeon/sos-my-german',
     icon: germanIcon,
-    images: [],
+    images: [germanPractice, germanHome],
   },
 ];
 

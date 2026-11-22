@@ -139,7 +139,10 @@ export default {
         },
       ],
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
-      screenshots: [],
+      screenshots: [
+        "A conversation in SOS My German: what you said, its correction, and your partner's next line",
+        'The home page of SOS My German: conversation topics by category',
+      ],
     },
   },
 } satisfies Messages;

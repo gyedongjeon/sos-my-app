@@ -139,7 +139,10 @@ export default {
         },
       ],
       platforms: ['macOS (Apple Silicon)', 'Windows (64-बिट)'],
-      screenshots: [],
+      screenshots: [
+        'SOS My German में बातचीत: आपने क्या कहा, उसका सुधार, और आपके पार्टनर की अगली लाइन',
+        'SOS My German का होम पेज: कैटेगरी के हिसाब से बातचीत के टॉपिक',
+      ],
     },
   },
 } satisfies Messages;

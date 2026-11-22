@@ -114,7 +114,10 @@ export default {
         { title: '结束时的总结', body: '结束对话后，总结你做得好的地方、需要加强的地方，以及下次可以试试的表达。' },
       ],
       platforms: ['macOS (Apple Silicon)', 'Windows (64 位)'],
-      screenshots: [],
+      screenshots: [
+        'SOS My German 对话界面：你说的话、对应的纠错和对方的下一句',
+        'SOS My German 首页：按类别分组的对话话题',
+      ],
     },
   },
 } satisfies Messages;

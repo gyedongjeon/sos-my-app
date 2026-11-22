@@ -16,9 +16,14 @@ series. Add it to the site.
   `desktop/assets/icon.svg`, copied to `src/assets/icons/german.svg`. A new default-language
   page, `src/pages/german.astro`, serves `/german/`; the other languages get `/<locale>/german/`
   from the existing `[locale]/[app].astro`. The header and footer list the app on their own.
-- **No screenshots yet**: the app's repository has none (`docs/images/` is empty), so `images` is
-  empty. The app page leaves out its screenshot section, and the home card its preview, when an
-  app has no screenshots. Add them to `src/assets/screens/` once the app has some.
+- **Screenshots**: the conversation and home screens (`docs/images/practice.png` and
+  `home.png` on the app's `main`), copied to `src/assets/screens/german-*.png`, the same pair the
+  English app shows. Each locale's alt text is the English app's with the app name changed. The
+  app's third screenshot, `video.png`, is left out: most of it is a third-party YouTube video's
+  thumbnail.
+- **Apps without screenshots**: the app page leaves out its screenshot section, and the home
+  card its preview, when an app has no screenshots. The German app had none when this branch
+  started; the case is kept for the next app.
 - **App copy, in all 19 languages**: follows the app's README, which describes it as SOS My
   English for German. Each locale's `apps.german` is its `apps.english` with English changed to
   German in the tagline, summary, and the sentence-pattern feature; the remaining features and
@@ -41,8 +46,9 @@ series. Add it to the site.
 - No `apps.german` block in any locale still mentions English (checked with a grep for the word
   "English" in all 19 languages).
 - Screenshots from headless Chrome of the English home page and the Korean German page at
-  1280px, and the English home and German pages at 390px: the home page shows three cards (the
-  German one without a preview), the German page has no empty screenshot section, the header
-  fits the three apps, and there is no horizontal scrolling.
+  1280px, and the English home and German pages at 390px: the home page shows three cards, each
+  with a preview; the German page shows both screenshots; the header fits the three apps; and
+  there is no horizontal scrolling. Before the screenshots were added, the same pages were
+  checked with no screenshot section and no preview.
 - The German repository, its latest release, and its `README.ko.md` answer 200.
 - Not verified: the translated copy by a native speaker of each language.

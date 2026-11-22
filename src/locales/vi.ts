@@ -145,7 +145,10 @@ export default {
         },
       ],
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
-      screenshots: [],
+      screenshots: [
+        'Một cuộc trò chuyện trong SOS My German: câu bạn nói, phần sửa và câu tiếp theo của người đối diện',
+        'Trang chủ SOS My German: các chủ đề trò chuyện theo nhóm',
+      ],
     },
   },
 } satisfies Messages;

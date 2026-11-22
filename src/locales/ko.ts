@@ -115,7 +115,10 @@ export default {
         { title: '마무리 요약', body: '대화를 마치면 잘한 점, 다음에 연습할 점, 써 볼 만한 표현을 정리해 줍니다.' },
       ],
       platforms: ['macOS (Apple Silicon)', 'Windows (64비트)'],
-      screenshots: [],
+      screenshots: [
+        'SOS My German 대화 화면: 내가 한 말, 교정, 상대의 다음 말',
+        'SOS My German 홈 화면: 카테고리별 대화 주제',
+      ],
     },
   },
 } satisfies Messages;
