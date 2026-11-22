@@ -15,6 +15,12 @@ import ru from './locales/ru';
 import vi from './locales/vi';
 import id from './locales/id';
 import hi from './locales/hi';
+import tr from './locales/tr';
+import it from './locales/it';
+import pl from './locales/pl';
+import uk from './locales/uk';
+import th from './locales/th';
+import bn from './locales/bn';
 
 export const messages = {
   en,
@@ -30,6 +36,12 @@ export const messages = {
   vi,
   id,
   hi,
+  tr,
+  it,
+  pl,
+  uk,
+  th,
+  bn,
 } satisfies Record<string, Messages>;
 
 export type Locale = keyof typeof messages;
@@ -51,6 +63,12 @@ export const languageNames: Record<Locale, string> = {
   vi: 'Tiếng Việt',
   id: 'Bahasa Indonesia',
   hi: 'हिन्दी',
+  tr: 'Türkçe',
+  it: 'Italiano',
+  pl: 'Polski',
+  uk: 'Українська',
+  th: 'ไทย',
+  bn: 'বাংলা',
 };
 
 /** The BCP 47 tag for `<html lang>` and `hreflang`. */
@@ -68,6 +86,12 @@ export const langTags: Record<Locale, string> = {
   vi: 'vi',
   id: 'id',
   hi: 'hi',
+  tr: 'tr',
+  it: 'it',
+  pl: 'pl',
+  uk: 'uk',
+  th: 'th',
+  bn: 'bn',
 };
 
 /** The Open Graph locale. */
@@ -85,6 +109,12 @@ export const ogLocales: Record<Locale, string> = {
   vi: 'vi_VN',
   id: 'id_ID',
   hi: 'hi_IN',
+  tr: 'tr_TR',
+  it: 'it_IT',
+  pl: 'pl_PL',
+  uk: 'uk_UA',
+  th: 'th_TH',
+  bn: 'bn_BD',
 };
 
 /** The URL of `path` (written as in the default-language site, e.g. `/interview/`) in `locale`. */
