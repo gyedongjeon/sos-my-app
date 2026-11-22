@@ -61,7 +61,7 @@ export default {
         },
         { title: 'Riwayat', body: 'Setiap jawaban disimpan beserta transkrip, nilai, dan rekamannya, jadi kamu bisa melihat perkembanganmu.' },
       ],
-      platforms: ['macOS (Apple Silicon)'],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
       screenshots: ['Halaman utama SOS My Interview: menambahkan lowongan kerja dan pertanyaan umum'],
     },
     english: {

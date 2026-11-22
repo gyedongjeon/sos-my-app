@@ -64,7 +64,7 @@ export default {
           body: "Her cevap; metni, puanları ve ses kaydıyla saklanır. Böylece nasıl geliştiğini görebilirsin.",
         },
       ],
-      platforms: ["macOS (Apple Silicon)"],
+      platforms: ["macOS (Apple Silicon)", "Windows (64 bit)"],
       screenshots: ["SOS My Interview ana ekranı: iş ilanı ekleme ve sık sorulan sorular"],
     },
     english: {

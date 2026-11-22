@@ -70,7 +70,7 @@ export default {
         },
         { title: 'Історія', body: 'Кожна відповідь зберігається з розшифровкою, оцінками й записом, тож видно, як ви прогресуєте.' },
       ],
-      platforms: ['macOS (Apple Silicon)'],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64-біт)'],
       screenshots: ['Головний екран SOS My Interview: додавання вакансії та загальні запитання'],
     },
     english: {

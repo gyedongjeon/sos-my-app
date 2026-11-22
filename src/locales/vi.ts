@@ -67,7 +67,7 @@ export default {
           body: 'Mỗi câu trả lời được lưu cùng bản ghi lời nói, điểm số và bản ghi hình, để bạn thấy mình tiến bộ ra sao.',
         },
       ],
-      platforms: ['macOS (Apple Silicon)'],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
       screenshots: ['Trang chủ SOS My Interview: thêm tin tuyển dụng và các câu hỏi thường gặp'],
     },
     english: {

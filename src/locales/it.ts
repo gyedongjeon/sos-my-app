@@ -73,7 +73,7 @@ export default {
           body: "Ogni risposta viene salvata con trascrizione, punteggi e registrazione, così vedi come migliori.",
         },
       ],
-      platforms: ["macOS (Apple Silicon)"],
+      platforms: ["macOS (Apple Silicon)", "Windows (64 bit)"],
       screenshots: ["La schermata principale di SOS My Interview: aggiunta di un annuncio di lavoro e domande frequenti"],
     },
     english: {

@@ -55,7 +55,7 @@ export default {
         { title: '한국어 피드백', body: '설명은 한국어로 받을 수 있습니다. 질문과 모범 답안은 영어 그대로입니다.' },
         { title: '기록', body: '모든 답변이 전사문, 점수, 녹화와 함께 저장되어 실력이 느는 과정을 볼 수 있습니다.' },
       ],
-      platforms: ['macOS (Apple Silicon)'],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64비트)'],
       screenshots: ['SOS My Interview 홈 화면: 채용 공고 추가와 공통 질문'],
     },
     english: {

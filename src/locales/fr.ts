@@ -79,7 +79,7 @@ export default {
           body: 'Chaque réponse est conservée avec sa transcription, ses notes et son enregistrement, pour suivre vos progrès.',
         },
       ],
-      platforms: ['macOS (Apple Silicon)'],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64 bits)'],
       screenshots: ["L'accueil de SOS My Interview : ajout d'une offre d'emploi et questions courantes"],
     },
     english: {

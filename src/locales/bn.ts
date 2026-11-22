@@ -61,7 +61,7 @@ export default {
         },
         { title: 'ইতিহাস', body: 'প্রতিটি উত্তর তার লিখিত রূপ, স্কোর আর রেকর্ডিংসহ সংরক্ষিত থাকে, যাতে আপনার উন্নতি দেখতে পান।' },
       ],
-      platforms: ['macOS (Apple Silicon)'],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64-বিট)'],
       screenshots: ['SOS My Interview-এর হোম পেজ: চাকরির বিজ্ঞপ্তি যোগ করা আর সাধারণ প্রশ্ন'],
     },
     english: {

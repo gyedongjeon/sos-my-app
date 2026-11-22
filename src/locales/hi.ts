@@ -61,7 +61,7 @@ export default {
         },
         { title: 'हिस्ट्री', body: 'हर जवाब उसके ट्रांसक्रिप्ट, स्कोर और रिकॉर्डिंग के साथ सेव रहता है, ताकि आप अपना सुधार देख सकें।' },
       ],
-      platforms: ['macOS (Apple Silicon)'],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64-बिट)'],
       screenshots: ['SOS My Interview का होम पेज: जॉब पोस्टिंग जोड़ना और आम सवाल'],
     },
     english: {

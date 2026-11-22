@@ -64,7 +64,7 @@ export default {
         },
         { title: 'Historia', body: 'Każda odpowiedź zapisuje się z transkrypcją, ocenami i nagraniem, więc widzisz swoje postępy.' },
       ],
-      platforms: ['macOS (Apple Silicon)'],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64-bitowy)'],
       screenshots: ['Ekran główny SOS My Interview: dodawanie ogłoszenia o pracę i typowe pytania'],
     },
     english: {

@@ -55,7 +55,7 @@ export default {
         { title: '中文回饋', body: '解說可以用繁體中文接收。問題和範例回答維持英文。' },
         { title: '練習紀錄', body: '每次回答都連同逐字稿、分數和錄影一起保存，看得到自己的進步。' },
       ],
-      platforms: ['macOS (Apple Silicon)'],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64 位元)'],
       screenshots: ['SOS My Interview 首頁：新增職缺與常見問題'],
     },
     english: {
@@ -83,7 +83,7 @@ export default {
         { title: '複習修正', body: '所有修正都集中在同一個地方，反覆說出正確的句子，直到說對為止。' },
         { title: '對話總結', body: '結束對話後，整理出你做得好的地方、要加強的地方，以及下次可以試試的說法。' },
       ],
-      platforms: ['macOS (Apple Silicon)', 'Windows（64 位元）'],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64 位元)'],
       screenshots: [
         'SOS My English 對話畫面：你說的話、修正，以及對方的下一句',
         'SOS My English 首頁：依類別分的對話主題',

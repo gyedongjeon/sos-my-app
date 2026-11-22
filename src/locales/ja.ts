@@ -55,7 +55,7 @@ export default {
         { title: '日本語でフィードバック', body: '解説は日本語で受け取れます。質問と模範解答は英語のままです。' },
         { title: '履歴', body: 'すべての回答が文字起こし、点数、録画と一緒に保存され、上達の様子を確かめられます。' },
       ],
-      platforms: ['macOS (Apple Silicon)'],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64ビット)'],
       screenshots: ['SOS My Interviewのホーム画面: 求人情報の追加とよくある質問'],
     },
     english: {
