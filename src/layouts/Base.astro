@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import BrandMark from '../components/BrandMark.astro';
 import { apps } from '../data/apps';
-import { defaultLocale, localePath, locales, ui, type Locale } from '../i18n';
+import { defaultLocale, langTags, languageNames, localePath, locales, messages, ogLocales, type Locale } from '../i18n';
 
 interface Props {
   locale: Locale;
@@ -13,7 +13,7 @@ interface Props {
 }
 
 const { locale, path, title, description } = Astro.props;
-const t = ui[locale];
+const t = messages[locale].ui;
 const other: Locale = locale === 'ko' ? 'en' : 'ko';
 const pageTitle = title ? `${title} · SOS` : 'SOS — sosmy.app';
 const pageDescription = description ?? t.siteDescription;
@@ -25,14 +25,14 @@ const ACTIVE = 'bg-primary text-primary-content hover:bg-primary';
 ---
 
 <!doctype html>
-<html lang={locale}>
+<html lang={langTags[locale]}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
     <link rel="canonical" href={canonical} />
-    {locales.map((l) => <link rel="alternate" hreflang={l} href={new URL(localePath(l, path), Astro.site)} />)}
+    {locales.map((l) => <link rel="alternate" hreflang={langTags[l]} href={new URL(localePath(l, path), Astro.site)} />)}
     <link rel="alternate" hreflang="x-default" href={new URL(localePath(defaultLocale, path), Astro.site)} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="theme-color" content="#111d35" />
@@ -40,7 +40,7 @@ const ACTIVE = 'bg-primary text-primary-content hover:bg-primary';
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:locale" content={locale === 'ko' ? 'ko_KR' : 'en_US'} />
+    <meta property="og:locale" content={ogLocales[locale]} />
   </head>
   <body class="flex min-h-dvh flex-col bg-base-200 text-base-content">
     <nav class="navbar bg-neutral text-neutral-content">
@@ -64,7 +64,7 @@ const ACTIVE = 'bg-primary text-primary-content hover:bg-primary';
             })
           }
           <li>
-            <a class={LINK} href={localePath(other, path)} hreflang={other} lang={other}>{t.switchTo}</a>
+            <a class={LINK} href={localePath(other, path)} hreflang={langTags[other]} lang={langTags[other]}>{languageNames[other]}</a>
           </li>
         </ul>
       </div>

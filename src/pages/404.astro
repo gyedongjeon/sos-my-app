@@ -1,11 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
 import MorseSignal from '../components/MorseSignal.astro';
-import { localePath, ui } from '../i18n';
+import { localePath, messages } from '../i18n';
 
 // GitHub Pages serves this page for every missing URL, so it speaks both languages.
-const ko = ui.ko;
-const en = ui.en;
+const ko = messages.ko.ui;
+const en = messages.en.ui;
 ---
 
 <Base locale="ko" path="/" title="404">

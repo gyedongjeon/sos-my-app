@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import MorseSignal from './MorseSignal.astro';
 import { getApp, latestRelease, type AppSlug } from '../data/apps';
-import { ui, type Locale } from '../i18n';
+import { messages, type Locale } from '../i18n';
 
 interface Props {
   locale: Locale;
@@ -11,9 +11,9 @@ interface Props {
 }
 
 const { locale, slug } = Astro.props;
-const t = ui[locale];
+const t = messages[locale].ui;
 const app = getApp(slug);
-const text = app.text[locale];
+const text = messages[locale].apps[slug];
 const readme = locale === 'ko' ? `${app.repo}/blob/main/README.ko.md` : `${app.repo}#readme`;
 ---
 
@@ -52,7 +52,7 @@ const readme = locale === 'ko' ? `${app.repo}/blob/main/README.ko.md` : `${app.r
           <figure class="card card-border overflow-hidden bg-base-100">
             <Image
               src={image}
-              alt={text.screenshots[i]?.alt ?? ''}
+              alt={text.screenshots[i] ?? ''}
               widths={[640, 1280, 1920]}
               sizes="(min-width: 1024px) 976px, 100vw"
               loading={i === 0 ? 'eager' : 'lazy'}
