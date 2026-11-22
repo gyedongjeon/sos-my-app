@@ -21,11 +21,14 @@ download button leads to a release without one.
   with a small script that copied the second line over the first in each file, and stopped if a
   file did not have exactly two `platforms` lines.
 - Nothing else on the page names a platform, so no other text changed.
+- Traditional Chinese wrote Windows with full-width parentheses (`Windows（64 位元）`) next to the
+  half-width `macOS (Apple Silicon)`. Both platform lines in `zh-hant.ts` now use half-width
+  parentheses, as every other language does: `Windows (64 位元)`.
 
 ## Verification
 
 - `npm run build`: `astro check` 0 errors, 0 warnings; 58 pages built.
-- `git diff`: 19 files, one line each, and only the interview `platforms` line.
+- `git diff`: 19 files, one line each and only the `platforms` lines (in `zh-hant.ts`, both).
 - In `dist/`, the interview page shows two platform badges in English ("Windows (64-bit)"),
   Korean ("Windows (64비트)"), and Thai ("Windows (64 บิต)").
 - Not verified: the SOS My Interview Windows installer itself, which is not released yet.
