@@ -10,7 +10,7 @@ This file provides specific context and operational rules for AI assistants work
     - [README.md](README.md) - Project overview and structure.
 - **Commits**: Use Conventional Commits as defined in [docs/git-workflow/commit-convention.md](docs/git-workflow/commit-convention.md).
 - **Language**: Documentation and code comments should be in **English**. User interaction can be in Korean or English as per user preference.
-    - Exception: the site's visitor-facing copy may be in Korean and English. Keep both languages in step: when a page's content changes in one language, update the other in the same PR.
+    - Exception: the site's visitor-facing copy is in every language in `src/i18n.ts` (the feedback languages of the SOS apps), one file per language in `src/locales/`. Keep them in step: when the copy changes in one language, update every language in the same PR. `astro check` fails if a language is missing a key.
 - **Security & Data Protection**: Never add secrets, API keys, credentials, or personal data to the repository. Worklog/PR text also follows the anonymization rules in **Worklog**.
 
 ## Development Method
@@ -46,8 +46,8 @@ Follow Kent Beck's Tidy First, and test-first where there is logic to test.
     - **Framework**: Astro, producing plain HTML/CSS with no client-side JavaScript unless a feature needs it.
     - **Styling**: Tailwind CSS with daisyUI, sharing the SOS apps' design system. `src/styles/global.css` starts with a verbatim copy of the apps' `frontend/src/style.css` (`sos` and `sos-night` themes); keep it in step with the apps, and add site-only rules after it. Prefer daisyUI component classes and theme colors over custom CSS, as the apps do.
     - **Hosting**: GitHub Pages, deployed by GitHub Actions on every push to `main`, with the custom domain `sosmy.app` (`site: 'https://sosmy.app'`, no `base` path). `.app` domains are HTTPS-only.
-    - **Structure**: One site with a page per app under a path (`/interview`, `/english`), not a subdomain per app. Korean is served at `/`, English under `/en/`.
-    - **Content**: App copy lives in `src/data/apps.ts` and follows each app's README (`README.ko.md` for Korean). When an app's features or supported platforms change, update it here too.
+    - **Structure**: One site with a page per app under a path (`/interview`, `/english`), not a subdomain per app. Korean is served at `/`, every other language under `/<locale>/` (e.g. `/en/`, `/zh-hans/`).
+    - **Content**: App data (name, repository, icon, screenshots) lives in `src/data/apps.ts`; all text lives in `src/locales/<locale>.ts`. App copy follows each app's README (`README.ko.md` for Korean). When an app's features or supported platforms change, update every locale.
 - **Scope**: An informational site. Do not add a backend, authentication, analytics, cookies, or third-party trackers unless explicitly requested.
 
 ## Operational Preferences

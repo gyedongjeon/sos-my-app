@@ -98,8 +98,12 @@
  */
 @layer base {
   body {
-    word-break: keep-all;
     overflow-wrap: anywhere;
+  }
+
+  /* Break Korean between words, not syllables. Japanese and Chinese must keep breaking anywhere. */
+  :lang(ko) {
+    word-break: keep-all;
   }
 
   h1,

@@ -5,7 +5,7 @@ The website of the SOS app series, served at **https://sosmy.app**. It introduce
 - [SOS My Interview](https://github.com/gyedongjeon/sos-my-interview): English interview practice.
 - [SOS My English](https://github.com/gyedongjeon/sos-my-english): English speaking practice.
 
-Korean is served at `/`, English at `/en/`.
+Korean is served at `/`; English, Japanese, Chinese (Simplified and Traditional), Spanish, French, German, Portuguese, Vietnamese, Indonesian, and Hindi under `/<locale>/`, the same languages the apps give feedback in.
 
 ## Run locally
 
@@ -22,16 +22,19 @@ npm run preview  # serve dist/
 
 | Path | What it holds |
 | :--- | :--- |
-| `src/i18n.ts` | Languages, URL helper, and the text shared by every page (Korean and English) |
-| `src/data/apps.ts` | Each app's copy, features, platforms, icon, and screenshots |
+| `src/i18n.ts` | The list of languages, their names and tags, and the URL helper |
+| `src/locales/<locale>.ts` | All text of one language: shared copy and each app's copy (shape in `types.ts`) |
+| `src/data/apps.ts` | Each app's name, repository, icon, and screenshots |
 | `src/components/HomePage.astro`, `AppPage.astro` | The page bodies, rendered once per language |
-| `src/pages/` | Routes: `index`, `interview`, `english`, and the same under `en/`; `404` |
+| `src/pages/` | Routes: `index`, `interview`, `english` for Korean; `[locale]/` for every other language; `404` |
 | `src/layouts/Base.astro` | `<head>`, header, and footer |
 | `src/styles/global.css` | Tailwind CSS and daisyUI with the SOS themes, copied from the apps' `frontend/src/style.css` |
 | `src/assets/` | App icons and screenshots, copied from each app's repository |
 | `public/CNAME` | The custom domain |
 
-To add an app: add its entry to `src/data/apps.ts`, its icon and screenshots to `src/assets/`, and a page in `src/pages/` and `src/pages/en/`.
+To add an app: add its entry to `src/data/apps.ts`, its icon and screenshots to `src/assets/`, its text to every file in `src/locales/` (and its key to `types.ts`), and a Korean page in `src/pages/`.
+
+To add a language: copy `src/locales/en.ts` to `src/locales/<locale>.ts`, translate it, and register it in `src/i18n.ts`.
 
 ## Deployment
 
