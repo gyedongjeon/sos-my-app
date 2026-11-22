@@ -3,11 +3,11 @@ import type { Messages } from './types';
 export default {
   ui: {
     siteDescription:
-      'Uma série de apps de prática para quando o seu inglês precisa de resgate. Pratique entrevistas e conversação em inglês em voz alta, no seu próprio computador.',
-    heroTitle: 'O inglês te deixou na mão?',
+      'Uma série de apps de prática para quando o seu inglês ou alemão precisa de resgate. Pratique entrevistas e conversação em voz alta, no seu próprio computador.',
+    heroTitle: 'O idioma te deixou na mão?',
     heroAccent: 'Mande um sinal de socorro.',
     heroLead:
-      'Uma entrevista chegando ou faltam palavras? A série SOS reúne apps gratuitos para computador para praticar inglês em voz alta. Eles rodam no seu computador, e a IA que você escolher corrige o seu inglês na hora.',
+      'Uma entrevista chegando ou faltam palavras? A série SOS reúne apps gratuitos para computador para praticar inglês e alemão em voz alta. Eles rodam no seu computador, e a IA que você escolher corrige você na hora.',
     appsHeading: 'Apps',
     language: 'Idioma',
     download: 'Baixar a versão mais recente',
@@ -26,7 +26,7 @@ export default {
     common: [
       { title: 'Fale e ouça', body: 'Responda em voz alta em vez de digitar, e ouça o seu interlocutor antes de ler.' },
       { title: 'No seu computador', body: 'Instale e use sem cadastro. Seu histórico fica na sua máquina.' },
-      { title: 'Explicações em português', body: 'As correções são explicadas em português; a prática continua em inglês.' },
+      { title: 'Explicações em português', body: 'As correções são explicadas em português; a prática continua no idioma que você está aprendendo.' },
       { title: 'Gratuito e de código aberto', body: 'Publicado sob a licença MIT. Você só paga ao seu provedor de IA pelo que usar.' },
     ],
     notFoundTitle: 'À deriva?',
@@ -108,6 +108,49 @@ export default {
       screenshots: [
         'Uma conversa no SOS My English: o que você disse, a correção e a próxima fala do seu interlocutor',
         'Tela inicial do SOS My English: temas de conversa por categoria',
+      ],
+    },
+    german: {
+      tagline: 'Prática de conversação em alemão',
+      hookTitle: 'Faltam palavras?',
+      hookAccent: 'A ajuda está a caminho.',
+      summary:
+        'Um app para praticar alemão falado no seu próprio computador. Escolha um tema, converse em voz alta com uma IA que responde por voz e receba correções na hora.',
+      features: [
+        { title: 'Falar primeiro', body: 'Você responde com a voz, não digitando; o que você diz é transcrito automaticamente.' },
+        {
+          title: 'Correções na hora',
+          body: 'Depois de cada fala, aparece a correção mais útil, com uma frase melhor e o porquê, e você pode ouvir essa frase.',
+        },
+        {
+          title: 'Clareza da sua fala',
+          body: 'Cada fala mostra uma nota de clareza, as palavras difíceis de reconhecer e o seu ritmo.',
+        },
+        {
+          title: '40 temas em 9 categorias',
+          body: 'Bate-papo do dia a dia, trabalho, estudos, compras, comida, viagem, serviços, casa e dar a sua opinião, além de temas criados por você.',
+        },
+        {
+          title: 'Estruturas de frase por nível',
+          body: '100 estruturas do A1 ao C2. Você vê uma frase no seu idioma e fala em alemão.',
+        },
+        {
+          title: 'Estude com vídeos do YouTube',
+          body: 'Cole um link e ouça uma frase de cada vez, com repetição, velocidade reduzida e shadowing (repetir junto).',
+        },
+        {
+          title: 'Pratique suas correções',
+          body: 'Todas as correções ficam reunidas em um só lugar, onde você repete a frase melhor até sair certinho.',
+        },
+        {
+          title: 'Um resumo no final',
+          body: 'Encerre uma conversa para ver o que você fez bem, o que melhorar e expressões para usar da próxima vez.',
+        },
+      ],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64 bits)'],
+      screenshots: [
+        'Uma conversa no SOS My German: o que você disse, a correção e a próxima fala do seu interlocutor',
+        'Tela inicial do SOS My German: temas de conversa por categoria',
       ],
     },
   },

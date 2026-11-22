@@ -46,22 +46,24 @@ const readme = locale === 'ko' ? `${app.repo}/blob/main/README.ko.md` : `${app.r
       </p>
     </header>
 
-    <section class="grid gap-4" aria-label={t.screenshots}>
-      {
-        app.images.map((image, i) => (
-          <figure class="card card-border overflow-hidden bg-base-100">
-            <Image
-              src={image}
-              alt={text.screenshots[i] ?? ''}
-              widths={[640, 1280, 1920]}
-              sizes="(min-width: 1024px) 976px, 100vw"
-              loading={i === 0 ? 'eager' : 'lazy'}
-              class="w-full"
-            />
-          </figure>
-        ))
-      }
-    </section>
+    {app.images.length > 0 && (
+      <section class="grid gap-4" aria-label={t.screenshots}>
+        {
+          app.images.map((image, i) => (
+            <figure class="card card-border overflow-hidden bg-base-100">
+              <Image
+                src={image}
+                alt={text.screenshots[i] ?? ''}
+                widths={[640, 1280, 1920]}
+                sizes="(min-width: 1024px) 976px, 100vw"
+                loading={i === 0 ? 'eager' : 'lazy'}
+                class="w-full"
+              />
+            </figure>
+          ))
+        }
+      </section>
+    )}
 
     <section class="py-12">
       <h2 class="text-2xl font-bold sm:text-3xl">{t.features}</h2>
