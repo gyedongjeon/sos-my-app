@@ -79,7 +79,7 @@ export default {
           body: 'Jede Antwort wird mit Transkript, Bewertung und Aufnahme gespeichert, so siehst du deine Fortschritte.',
         },
       ],
-      platforms: ['macOS (Apple Silicon)'],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64-Bit)'],
       screenshots: ['Die Startseite von SOS My Interview: Stellenanzeige hinzufügen und häufige Fragen'],
     },
     english: {

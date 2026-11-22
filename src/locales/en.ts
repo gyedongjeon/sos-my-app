@@ -61,7 +61,7 @@ export default {
         },
         { title: 'History', body: 'Every answer is kept with its transcript, scores, and recording, so you can see how you improve.' },
       ],
-      platforms: ['macOS (Apple Silicon)'],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
       screenshots: ['The home page of SOS My Interview: adding a job posting and common questions'],
     },
     english: {

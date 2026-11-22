@@ -58,7 +58,7 @@ export default {
         },
         { title: 'ประวัติการฝึก', body: 'ทุกคำตอบถูกเก็บไว้พร้อมข้อความถอดเสียง คะแนน และไฟล์เสียง ให้คุณเห็นพัฒนาการของตัวเอง' },
       ],
-      platforms: ['macOS (Apple Silicon)'],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64 บิต)'],
       screenshots: ['หน้าแรกของ SOS My Interview: การเพิ่มประกาศรับสมัครงานและคำถามทั่วไป'],
     },
     english: {

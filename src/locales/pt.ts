@@ -64,7 +64,7 @@ export default {
           body: 'Cada resposta fica salva com a transcrição, as notas e a gravação, para você acompanhar a sua evolução.',
         },
       ],
-      platforms: ['macOS (Apple Silicon)'],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64 bits)'],
       screenshots: ['Tela inicial do SOS My Interview: adicionar uma vaga e perguntas comuns'],
     },
     english: {

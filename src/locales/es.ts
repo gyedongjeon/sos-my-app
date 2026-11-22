@@ -64,7 +64,7 @@ export default {
           body: 'Cada respuesta se guarda con su transcripción, puntuaciones y grabación, para que veas cómo mejoras.',
         },
       ],
-      platforms: ['macOS (Apple Silicon)'],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64 bits)'],
       screenshots: ['Página de inicio de SOS My Interview: añadir una oferta de empleo y preguntas frecuentes'],
     },
     english: {

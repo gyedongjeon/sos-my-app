@@ -55,7 +55,7 @@ export default {
         { title: '中文回饋', body: '解說可以用繁體中文接收。問題和範例回答維持英文。' },
         { title: '練習紀錄', body: '每次回答都連同逐字稿、分數和錄影一起保存，看得到自己的進步。' },
       ],
-      platforms: ['macOS (Apple Silicon)'],
+      platforms: ['macOS (Apple Silicon)', 'Windows（64 位元）'],
       screenshots: ['SOS My Interview 首頁：新增職缺與常見問題'],
     },
     english: {

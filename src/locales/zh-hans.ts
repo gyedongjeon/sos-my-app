@@ -54,7 +54,7 @@ export default {
         { title: '中文反馈', body: '讲解可以用中文接收；问题和参考答案仍然是英语。' },
         { title: '练习记录', body: '每次回答都会连同文字稿、分数和录像一起保存，进步看得见。' },
       ],
-      platforms: ['macOS (Apple Silicon)'],
+      platforms: ['macOS (Apple Silicon)', 'Windows (64 位)'],
       screenshots: ['SOS My Interview 首页：添加招聘信息和常见问题'],
     },
     english: {
