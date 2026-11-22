@@ -1,4 +1,4 @@
-// The site's languages. Korean is served at the root, every other language under /<locale>/.
+// The site's languages. English is served at the root, every other language under /<locale>/.
 // Each language's text is in src/locales/<locale>.ts. The list follows the feedback languages
 // of the SOS apps (LANGUAGES in their frontend/src/stores/settings.ts).
 import type { Messages } from './locales/types';
@@ -16,8 +16,8 @@ import id from './locales/id';
 import hi from './locales/hi';
 
 export const messages = {
-  ko,
   en,
+  ko,
   ja,
   'zh-hans': zhHans,
   'zh-hant': zhHant,
@@ -32,12 +32,12 @@ export const messages = {
 
 export type Locale = keyof typeof messages;
 export const locales = Object.keys(messages) as Locale[];
-export const defaultLocale: Locale = 'ko';
+export const defaultLocale: Locale = 'en';
 
 /** Each language's name in itself, for the language menu. */
 export const languageNames: Record<Locale, string> = {
-  ko: '한국어',
   en: 'English',
+  ko: '한국어',
   ja: '日本語',
   'zh-hans': '简体中文',
   'zh-hant': '繁體中文',
@@ -82,7 +82,7 @@ export const ogLocales: Record<Locale, string> = {
   hi: 'hi_IN',
 };
 
-/** The URL of `path` (written as in the Korean site, e.g. `/interview/`) in `locale`. */
+/** The URL of `path` (written as in the default-language site, e.g. `/interview/`) in `locale`. */
 export function localePath(locale: Locale, path = '/'): string {
   return locale === defaultLocale ? path : `/${locale}${path}`;
 }

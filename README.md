@@ -5,7 +5,7 @@ The website of the SOS app series, served at **https://sosmy.app**. It introduce
 - [SOS My Interview](https://github.com/gyedongjeon/sos-my-interview): English interview practice.
 - [SOS My English](https://github.com/gyedongjeon/sos-my-english): English speaking practice.
 
-Korean is served at `/`; English, Japanese, Chinese (Simplified and Traditional), Spanish, French, German, Portuguese, Vietnamese, Indonesian, and Hindi under `/<locale>/`, the same languages the apps give feedback in.
+English is served at `/`; Korean, Japanese, Chinese (Simplified and Traditional), Spanish, French, German, Portuguese, Vietnamese, Indonesian, and Hindi under `/<locale>/`, the same languages the apps give feedback in.
 
 ## Run locally
 
@@ -26,13 +26,13 @@ npm run preview  # serve dist/
 | `src/locales/<locale>.ts` | All text of one language: shared copy and each app's copy (shape in `types.ts`) |
 | `src/data/apps.ts` | Each app's name, repository, icon, and screenshots |
 | `src/components/HomePage.astro`, `AppPage.astro` | The page bodies, rendered once per language |
-| `src/pages/` | Routes: `index`, `interview`, `english` for Korean; `[locale]/` for every other language; `404` |
+| `src/pages/` | Routes: `index`, `interview`, `english` for English (the default language); `[locale]/` for every other language; `404` |
 | `src/layouts/Base.astro` | `<head>`, header, and footer |
 | `src/styles/global.css` | Tailwind CSS and daisyUI with the SOS themes, copied from the apps' `frontend/src/style.css` |
 | `src/assets/` | App icons and screenshots, copied from each app's repository |
 | `public/CNAME` | The custom domain |
 
-To add an app: add its entry to `src/data/apps.ts`, its icon and screenshots to `src/assets/`, its text to every file in `src/locales/` (and its key to `types.ts`), and a Korean page in `src/pages/`.
+To add an app: add its entry to `src/data/apps.ts`, its icon and screenshots to `src/assets/`, its text to every file in `src/locales/` (and its key to `types.ts`), and a default-language page in `src/pages/`.
 
 To add a language: copy `src/locales/en.ts` to `src/locales/<locale>.ts`, translate it, and register it in `src/i18n.ts`.
 

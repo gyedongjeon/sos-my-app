@@ -1,5 +1,7 @@
 ---
+// The interview page in the default language (English). Other languages: src/pages/[locale]/[app].astro.
 import AppPage from '../components/AppPage.astro';
+import { defaultLocale } from '../i18n';
 ---
 
-<AppPage locale="ko" slug="interview" />
+<AppPage locale={defaultLocale} slug="interview" />
