@@ -29,11 +29,15 @@ branching, the worklog, and an `AGENTS.md` for AI assistants.
       the custom domain `sosmy.app` with no `base` path, and one path per app instead of
       subdomains. The Astro project itself is not set up yet; that is a later branch.
     - Visitor-facing copy may be in Korean and English, kept in step in the same PR.
+- **New `.gitignore`** for an Astro/Node project: `dist/`, `.astro/`, `node_modules/`, logs,
+  `.env` files (except `.env.example`), `.DS_Store`, editor folders, and local AI assistant
+  settings. Added now so that build output and secrets are never committed once the project is
+  set up.
 
 ## Verification
 
 - Compared each copied or adapted file with its `sos-my-english` source; every link in the new
   documents points to a file that exists in this branch.
-- `grep -rn versioning docs AGENTS.md .github` finds no leftover references.
+- `grep -rn versioning docs AGENTS.md .github` finds no references outside this worklog.
 - Not verified: the `npm run build` / `npm run dev` commands named in `AGENTS.md`, since the
   Astro project does not exist yet.
