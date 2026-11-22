@@ -25,7 +25,8 @@ Follow Kent Beck's Tidy First, and test-first where there is logic to test.
     - The site is mostly static content, so a test is not required for markup or copy changes.
     - When a change adds logic (for example a script, a data transform, or a build helper), follow TDD: write one small failing test first, make it pass with the least code, then refactor. For a bug in such logic, first write a test that reproduces it.
 - **Checking a change**:
-    - Run `npm run build` before every commit; never commit a change that does not build.
+    - Use the Node.js version in `.nvmrc` (`fnm use`); Astro refuses to run on older versions.
+    - Run `npm run build` (type check and build) before every commit; never commit a change that does not build.
     - Look at every changed page in the browser (`npm run dev` or `npm run preview`), at desktop and phone widths, before opening a PR.
     - Check that links to the apps (GitHub repositories, downloads) still resolve.
 
@@ -45,7 +46,8 @@ Follow Kent Beck's Tidy First, and test-first where there is logic to test.
     - **Framework**: Astro, producing plain HTML/CSS with no client-side JavaScript unless a feature needs it.
     - **Styling**: Tailwind CSS. Match the look of the SOS apps (theme colors, life-ring brand) where it makes sense.
     - **Hosting**: GitHub Pages, deployed by GitHub Actions on every push to `main`, with the custom domain `sosmy.app` (`site: 'https://sosmy.app'`, no `base` path). `.app` domains are HTTPS-only.
-    - **Structure**: One site with a page per app under a path (`/interview`, `/english`), not a subdomain per app.
+    - **Structure**: One site with a page per app under a path (`/interview`, `/english`), not a subdomain per app. Korean is served at `/`, English under `/en/`.
+    - **Content**: App copy lives in `src/data/apps.ts` and follows each app's README (`README.ko.md` for Korean). When an app's features or supported platforms change, update it here too.
 - **Scope**: An informational site. Do not add a backend, authentication, analytics, cookies, or third-party trackers unless explicitly requested.
 
 ## Operational Preferences
