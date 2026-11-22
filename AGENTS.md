@@ -1,0 +1,52 @@
+# Agent Instructions
+
+This file provides specific context and operational rules for AI assistants working within the `sos-my-app` project.
+
+## Core Directives
+- **Source of Truth**: Always refer to the following documents for project rules and conventions:
+    - [docs/git-workflow/commit-convention.md](docs/git-workflow/commit-convention.md) - Rules for commit messages.
+    - [docs/git-workflow/branching-strategy.md](docs/git-workflow/branching-strategy.md) - Branch naming, GitHub Flow / merge strategy, and deployment.
+    - [docs/git-workflow/pr-convention.md](docs/git-workflow/pr-convention.md) - PR title, description, and process conventions.
+    - [README.md](README.md) - Project overview and structure.
+- **Commits**: Use Conventional Commits as defined in [docs/git-workflow/commit-convention.md](docs/git-workflow/commit-convention.md).
+- **Language**: Documentation and code comments should be in **English**. User interaction can be in Korean or English as per user preference.
+    - Exception: the site's visitor-facing copy may be in Korean and English. Keep both languages in step: when a page's content changes in one language, update the other in the same PR.
+- **Security & Data Protection**: Never add secrets, API keys, credentials, or personal data to the repository. Worklog/PR text also follows the anonymization rules in **Worklog**.
+
+## Development Method
+Follow Kent Beck's Tidy First, and test-first where there is logic to test.
+
+- **Tidy First (separate structural from behavioral changes)**:
+    - A **structural** change rearranges code without changing what it does (rename, extract a component, move, reorder). A **behavioral** change adds or alters what the site shows or does.
+    - Never mix the two in one commit. When both are needed, tidy first: make the structural change, confirm the site still builds and looks the same, commit it, then make the behavioral change.
+    - Commit structural changes as `refactor:` and behavioral ones as `feat:` or `fix:`, per the commit convention.
+    - Tidy only what makes the next change easier; keep each tidying small.
+- **Tests**:
+    - The site is mostly static content, so a test is not required for markup or copy changes.
+    - When a change adds logic (for example a script, a data transform, or a build helper), follow TDD: write one small failing test first, make it pass with the least code, then refactor. For a bug in such logic, first write a test that reproduces it.
+- **Checking a change**:
+    - Run `npm run build` before every commit; never commit a change that does not build.
+    - Look at every changed page in the browser (`npm run dev` or `npm run preview`), at desktop and phone widths, before opening a PR.
+    - Check that links to the apps (GitHub repositories, downloads) still resolve.
+
+## Worklog (MANDATORY for every PR)
+- Every PR must include exactly one branch-specific worklog file named `docs/worklog/YYYY-MM-DD-<branch-slug>.md`. This count excludes [docs/worklog/_template.md](docs/worklog/_template.md).
+- Create the worklog file on the same branch as the change and commit it **before opening the PR**.
+- **The worklog file is the source of truth for the PR**: PR title = the worklog `title` field; PR description = the worklog body (from `## Request` down). Generate the PR from the file, never the other way around.
+- If the scope changes during review, update the worklog file first, then sync the PR description to match.
+- The Security & Data Protection rules apply to worklog files too. Never name individuals — including requesters or reviewers — in a worklog. Refer to request sources by channel/system and date, not by name.
+- Never modify another branch's worklog file.
+
+## Project Mission
+- **Project**: `sos-my-app` — the website for the SOS app series, served at `https://sosmy.app`. It introduces the series' apps and links to them:
+    - [`sos-my-interview`](https://github.com/gyedongjeon/sos-my-interview) — interview practice.
+    - [`sos-my-english`](https://github.com/gyedongjeon/sos-my-english) — speaking-first English practice.
+- **Architecture**: A static site.
+    - **Framework**: Astro, producing plain HTML/CSS with no client-side JavaScript unless a feature needs it.
+    - **Styling**: Tailwind CSS. Match the look of the SOS apps (theme colors, life-ring brand) where it makes sense.
+    - **Hosting**: GitHub Pages, deployed by GitHub Actions on every push to `main`, with the custom domain `sosmy.app` (`site: 'https://sosmy.app'`, no `base` path). `.app` domains are HTTPS-only.
+    - **Structure**: One site with a page per app under a path (`/interview`, `/english`), not a subdomain per app.
+- **Scope**: An informational site. Do not add a backend, authentication, analytics, cookies, or third-party trackers unless explicitly requested.
+
+## Operational Preferences
+- **Conciseness**: Be concise and technical in your responses.
