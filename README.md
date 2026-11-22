@@ -5,7 +5,7 @@ The website of the SOS app series, served at **https://sosmy.app**. It introduce
 - [SOS My Interview](https://github.com/gyedongjeon/sos-my-interview): English interview practice.
 - [SOS My English](https://github.com/gyedongjeon/sos-my-english): English speaking practice.
 
-English is served at `/`; Korean, Japanese, Chinese (Simplified and Traditional), Spanish, French, German, Portuguese, Russian, Vietnamese, Indonesian, and Hindi under `/<locale>/`, the same languages the apps give feedback in.
+English is served at `/`; Korean, Japanese, Chinese (Simplified and Traditional), Spanish, French, German, Portuguese, Russian, Vietnamese, Indonesian, Hindi, Turkish, Italian, Polish, Ukrainian, Thai, and Bengali under `/<locale>/`, the same languages the apps give feedback in.
 
 ## Run locally
 
