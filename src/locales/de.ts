@@ -82,13 +82,17 @@ export default {
       platforms: ['macOS (Apple Silicon)', 'Windows (64-Bit)'],
       screenshots: ['Die Startseite von SOS My Interview: Stellenanzeige hinzufügen und häufige Fragen'],
     },
-    english: {
-      tagline: 'Englisch sprechen üben',
+    language: {
+      tagline: 'Englisch und Deutsch sprechen üben',
       hookTitle: 'Dir fehlen die Worte?',
       hookAccent: 'Hilfe ist unterwegs.',
       summary:
-        'Eine App zum Üben von gesprochenem Englisch, die auf deinem eigenen Rechner läuft. Such dir ein Thema aus, sprich es laut mit einem KI-Partner durch, der dir mit Stimme antwortet, und lass dein Englisch direkt korrigieren.',
+        'Eine App zum Sprechenüben in der Sprache, die du lernst, und sie läuft auf deinem eigenen Rechner. Wähl Englisch oder Deutsch, such dir ein Thema aus, sprich es laut mit einem KI-Partner durch, der dir mit Stimme antwortet, und lass das Gesagte direkt korrigieren.',
       features: [
+        {
+          title: 'Mehrere Sprachen in einer App',
+          body: 'Beim ersten Start wählst du Englisch oder Deutsch und kannst jederzeit wechseln. Jede Sprache behält ihre eigenen Themen, Korrekturen, Verläufe und Stimmen.',
+        },
         {
           title: 'Sprechen im Mittelpunkt',
           body: 'Du antwortest mit deiner Stimme statt mit der Tastatur; was du sagst, wird für dich mitgeschrieben.',
@@ -107,7 +111,7 @@ export default {
         },
         {
           title: 'Satzmuster nach Niveau',
-          body: '100 Muster von A1 bis C2. Du siehst einen Satz in deiner Sprache und sagst ihn auf Englisch.',
+          body: '100 Muster von A1 bis C2. Du siehst einen Satz in deiner Sprache und sagst ihn in der Sprache, die du übst.',
         },
         {
           title: 'Lernen mit YouTube-Videos',
@@ -124,54 +128,9 @@ export default {
       ],
       platforms: ['macOS (Apple Silicon)', 'Windows (64-Bit)'],
       screenshots: [
-        'Ein Gespräch in SOS My English: was du gesagt hast, die Korrektur und die nächste Antwort deines Gegenübers',
-        'Die Startseite von SOS My English: Gesprächsthemen nach Kategorie',
-      ],
-    },
-    german: {
-      tagline: 'Deutsch sprechen üben',
-      hookTitle: 'Dir fehlen die Worte?',
-      hookAccent: 'Hilfe ist unterwegs.',
-      summary:
-        'Eine App zum Üben von gesprochenem Deutsch, die auf deinem eigenen Rechner läuft. Such dir ein Thema aus, sprich es laut mit einem KI-Partner durch, der dir mit Stimme antwortet, und lass dein Deutsch direkt korrigieren.',
-      features: [
-        {
-          title: 'Sprechen im Mittelpunkt',
-          body: 'Du antwortest mit deiner Stimme statt mit der Tastatur; was du sagst, wird für dich mitgeschrieben.',
-        },
-        {
-          title: 'Korrekturen beim Sprechen',
-          body: 'Nach jeder Äußerung siehst du die wichtigste Verbesserung mit dem besseren Satz und der Begründung, und du kannst dir den besseren Satz anhören.',
-        },
-        {
-          title: 'Wie deutlich du sprichst',
-          body: 'Zu jeder Zeile gibt es einen Verständlichkeitswert, die schwer erkannten Wörter und dein Sprechtempo.',
-        },
-        {
-          title: '40 Themen in 9 Kategorien',
-          body: 'Smalltalk, Arbeit, Schule, Einkaufen, Essen, Reisen, Dienstleistungen, Zuhause und die eigene Meinung sagen, dazu eigene Themen.',
-        },
-        {
-          title: 'Satzmuster nach Niveau',
-          body: '100 Muster von A1 bis C2. Du siehst einen Satz in deiner Sprache und sagst ihn auf Deutsch.',
-        },
-        {
-          title: 'Lernen mit YouTube-Videos',
-          body: 'Füg einen Link ein und hör Satz für Satz zu, mit Wiederholen, langsamerem Tempo und Shadowing.',
-        },
-        {
-          title: 'Korrekturen üben',
-          body: 'Alle Korrekturen landen an einem Ort, wo du den besseren Satz sprichst, bis er sitzt.',
-        },
-        {
-          title: 'Eine Zusammenfassung zum Schluss',
-          body: 'Beende ein Gespräch und sieh, was gut lief, woran du arbeiten kannst und welche Ausdrücke du nächstes Mal ausprobieren kannst.',
-        },
-      ],
-      platforms: ['macOS (Apple Silicon)', 'Windows (64-Bit)'],
-      screenshots: [
-        'Ein Gespräch in SOS My German: was du gesagt hast, die Korrektur und die nächste Antwort deines Gegenübers',
-        'Die Startseite von SOS My German: Gesprächsthemen nach Kategorie',
+        'Ein Gespräch in SOS My Language: was du gesagt hast, die Korrektur und die nächste Antwort deines Partners',
+        'Die Sprachauswahl in SOS My Language: Englisch oder Deutsch',
+        'Die Startseite von SOS My Language: Gesprächsthemen nach Kategorie',
       ],
     },
   },

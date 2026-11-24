@@ -67,13 +67,17 @@ export default {
       platforms: ['macOS (Apple Silicon)', 'Windows (64 bits)'],
       screenshots: ['Página de inicio de SOS My Interview: añadir una oferta de empleo y preguntas frecuentes'],
     },
-    english: {
-      tagline: 'Práctica de conversación en inglés',
+    language: {
+      tagline: 'Práctica de conversación en inglés y alemán',
       hookTitle: '¿Te quedas sin palabras?',
       hookAccent: 'La ayuda va en camino.',
       summary:
-        'Una app para practicar inglés hablado en tu propio equipo. Elige un tema, conversa en voz alta con una IA que te responde con voz y recibe correcciones sobre la marcha.',
+        'Una app para practicar en voz alta el idioma que estás aprendiendo, en tu propio equipo. Elige inglés o alemán, escoge un tema, conversa con una IA que te responde con voz y recibe correcciones sobre la marcha.',
       features: [
+        {
+          title: 'Varios idiomas en una sola app',
+          body: 'Elige inglés o alemán al abrirla por primera vez y cambia cuando quieras. Cada idioma guarda sus propios temas, correcciones, historial y voces.',
+        },
         { title: 'Hablar primero', body: 'Respondes con la voz, no escribiendo; lo que dices se transcribe automáticamente.' },
         {
           title: 'Correcciones sobre la marcha',
@@ -89,7 +93,7 @@ export default {
         },
         {
           title: 'Estructuras de frases por nivel',
-          body: '100 estructuras del A1 al C2. Ves una frase en tu idioma y la dices en inglés.',
+          body: '100 estructuras del A1 al C2. Ves una frase en tu idioma y la dices en el idioma que practicas.',
         },
         {
           title: 'Aprende con videos de YouTube',
@@ -106,51 +110,9 @@ export default {
       ],
       platforms: ['macOS (Apple Silicon)', 'Windows (64 bits)'],
       screenshots: [
-        'Una conversación en SOS My English: lo que dijiste, su corrección y la siguiente frase de tu interlocutor',
-        'Página de inicio de SOS My English: temas de conversación por categoría',
-      ],
-    },
-    german: {
-      tagline: 'Práctica de conversación en alemán',
-      hookTitle: '¿Te quedas sin palabras?',
-      hookAccent: 'La ayuda va en camino.',
-      summary:
-        'Una app para practicar alemán hablado en tu propio equipo. Elige un tema, conversa en voz alta con una IA que te responde con voz y recibe correcciones sobre la marcha.',
-      features: [
-        { title: 'Hablar primero', body: 'Respondes con la voz, no escribiendo; lo que dices se transcribe automáticamente.' },
-        {
-          title: 'Correcciones sobre la marcha',
-          body: 'Después de cada intervención, ves la corrección más útil con una frase mejor y el porqué, y puedes escuchar esa frase.',
-        },
-        {
-          title: 'Claridad al hablar',
-          body: 'Cada frase muestra una puntuación de claridad, las palabras difíciles de reconocer y tu ritmo.',
-        },
-        {
-          title: '40 temas en 9 categorías',
-          body: 'Charla cotidiana, trabajo, estudios, compras, comida, viajes, servicios, hogar y dar tu opinión, además de tus propios temas.',
-        },
-        {
-          title: 'Estructuras de frases por nivel',
-          body: '100 estructuras del A1 al C2. Ves una frase en tu idioma y la dices en alemán.',
-        },
-        {
-          title: 'Aprende con videos de YouTube',
-          body: 'Pega un enlace y escucha frase por frase, con repetición, velocidad reducida y shadowing (repetir a la vez).',
-        },
-        {
-          title: 'Repasa tus correcciones',
-          body: 'Todas las correcciones se reúnen en un solo lugar, donde dices la frase mejorada hasta que te salga bien.',
-        },
-        {
-          title: 'Un resumen al final',
-          body: 'Cierra una conversación para ver qué hiciste bien, qué mejorar y expresiones para probar la próxima vez.',
-        },
-      ],
-      platforms: ['macOS (Apple Silicon)', 'Windows (64 bits)'],
-      screenshots: [
-        'Una conversación en SOS My German: lo que dijiste, su corrección y la siguiente frase de tu interlocutor',
-        'Página de inicio de SOS My German: temas de conversación por categoría',
+        'Una conversación en SOS My Language: lo que dijiste, su corrección y la siguiente frase de tu compañero',
+        'Elegir el idioma que practicar en SOS My Language: inglés o alemán',
+        'La página de inicio de SOS My Language: temas de conversación por categoría',
       ],
     },
   },

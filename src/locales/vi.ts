@@ -70,13 +70,17 @@ export default {
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
       screenshots: ['Trang chủ SOS My Interview: thêm tin tuyển dụng và các câu hỏi thường gặp'],
     },
-    english: {
-      tagline: 'Luyện nói tiếng Anh',
+    language: {
+      tagline: 'Luyện nói tiếng Anh và tiếng Đức',
       hookTitle: 'Bí từ rồi sao?',
       hookAccent: 'Cứu viện đang tới rồi.',
       summary:
-        'Ứng dụng luyện nói tiếng Anh, chạy ngay trên máy của bạn. Chọn một chủ đề, nói chuyện thành tiếng với bạn đồng hành AI biết trả lời bằng giọng nói, và được sửa tiếng Anh ngay trong lúc nói.',
+        'Ứng dụng luyện nói ngôn ngữ bạn đang học, chạy ngay trên máy của bạn. Chọn tiếng Anh hoặc tiếng Đức, chọn một chủ đề, nói chuyện thành tiếng với bạn đồng hành AI biết trả lời bằng giọng nói, và được sửa ngay trong lúc nói.',
       features: [
+        {
+          title: 'Nhiều ngôn ngữ trong một ứng dụng',
+          body: 'Chọn tiếng Anh hoặc tiếng Đức khi mở lần đầu và đổi bất cứ lúc nào. Mỗi ngôn ngữ giữ riêng chủ đề, lỗi đã sửa, lịch sử và giọng nói.',
+        },
         { title: 'Nói là chính', body: 'Bạn trả lời bằng giọng nói, không cần gõ; những gì bạn nói được tự động chép lại.' },
         {
           title: 'Sửa lỗi ngay khi nói',
@@ -89,7 +93,7 @@ export default {
         },
         {
           title: 'Mẫu câu theo trình độ',
-          body: '100 mẫu câu từ A1 đến C2. Bạn xem một câu bằng tiếng Việt và nói lại bằng tiếng Anh.',
+          body: '100 mẫu câu từ A1 đến C2. Bạn xem một câu bằng tiếng Việt và nói lại bằng ngôn ngữ bạn đang luyện.',
         },
         {
           title: 'Học qua video YouTube',
@@ -106,48 +110,9 @@ export default {
       ],
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
       screenshots: [
-        'Một cuộc trò chuyện trong SOS My English: câu bạn nói, phần sửa và câu tiếp theo của người đối diện',
-        'Trang chủ SOS My English: các chủ đề trò chuyện theo nhóm',
-      ],
-    },
-    german: {
-      tagline: 'Luyện nói tiếng Đức',
-      hookTitle: 'Bí từ rồi sao?',
-      hookAccent: 'Cứu viện đang tới rồi.',
-      summary:
-        'Ứng dụng luyện nói tiếng Đức, chạy ngay trên máy của bạn. Chọn một chủ đề, nói chuyện thành tiếng với bạn đồng hành AI biết trả lời bằng giọng nói, và được sửa tiếng Đức ngay trong lúc nói.',
-      features: [
-        { title: 'Nói là chính', body: 'Bạn trả lời bằng giọng nói, không cần gõ; những gì bạn nói được tự động chép lại.' },
-        {
-          title: 'Sửa lỗi ngay khi nói',
-          body: 'Sau mỗi lượt nói, ứng dụng chỉ ra lỗi đáng sửa nhất, kèm câu tốt hơn và lý do. Bạn có thể nghe đọc câu tốt hơn đó.',
-        },
-        { title: 'Bạn nói rõ đến đâu', body: 'Mỗi câu đều có điểm độ rõ, những từ khó nhận dạng và tốc độ nói của bạn.' },
-        {
-          title: '40 chủ đề, 9 nhóm',
-          body: 'Trò chuyện hằng ngày, công việc, trường học, mua sắm, ăn uống, du lịch, dịch vụ, nhà cửa và nêu ý kiến; bạn cũng có thể tự thêm chủ đề.',
-        },
-        {
-          title: 'Mẫu câu theo trình độ',
-          body: '100 mẫu câu từ A1 đến C2. Bạn xem một câu bằng tiếng Việt và nói lại bằng tiếng Đức.',
-        },
-        {
-          title: 'Học qua video YouTube',
-          body: 'Dán đường link rồi nghe từng câu một, có phát lại, giảm tốc độ và nói nhại theo (shadowing).',
-        },
-        {
-          title: 'Ôn lại phần đã sửa',
-          body: 'Mọi lỗi đã sửa được gom về một chỗ, để bạn nói câu đúng cho đến khi nói chuẩn.',
-        },
-        {
-          title: 'Tổng kết cuối buổi',
-          body: 'Kết thúc cuộc trò chuyện để xem bạn đã làm tốt điều gì, cần luyện thêm gì và những cách diễn đạt nên thử lần sau.',
-        },
-      ],
-      platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
-      screenshots: [
-        'Một cuộc trò chuyện trong SOS My German: câu bạn nói, phần sửa và câu tiếp theo của người đối diện',
-        'Trang chủ SOS My German: các chủ đề trò chuyện theo nhóm',
+        'Một cuộc trò chuyện trong SOS My Language: câu bạn nói, phần sửa lỗi và câu tiếp theo của bạn đồng hành',
+        'Chọn ngôn ngữ để luyện trong SOS My Language: tiếng Anh hoặc tiếng Đức',
+        'Trang chủ của SOS My Language: các chủ đề trò chuyện theo danh mục',
       ],
     },
   },

@@ -64,13 +64,17 @@ export default {
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
       screenshots: ['Halaman utama SOS My Interview: menambahkan lowongan kerja dan pertanyaan umum'],
     },
-    english: {
-      tagline: 'Latihan berbicara bahasa Inggris',
+    language: {
+      tagline: 'Latihan berbicara bahasa Inggris dan Jerman',
       hookTitle: 'Kehabisan kata-kata?',
       hookAccent: 'Bantuan segera datang.',
       summary:
-        'Aplikasi latihan berbicara bahasa Inggris yang berjalan di komputermu sendiri. Pilih topik, ngobrol dengan suara bersama partner AI yang menjawab dengan suara juga, dan bahasa Inggrismu langsung dibetulkan.',
+        'Aplikasi latihan berbicara dalam bahasa yang sedang kamu pelajari, berjalan di komputermu sendiri. Pilih bahasa Inggris atau Jerman, pilih topik, ngobrol dengan suara bersama partner AI yang menjawab dengan suara juga, dan ucapanmu langsung dibetulkan.',
       features: [
+        {
+          title: 'Beberapa bahasa dalam satu aplikasi',
+          body: 'Pilih bahasa Inggris atau Jerman saat pertama kali membuka, dan ganti kapan saja. Setiap bahasa menyimpan topik, koreksi, riwayat, dan suaranya sendiri.',
+        },
         { title: 'Utamakan berbicara', body: 'Kamu menjawab dengan suara, bukan mengetik; ucapanmu otomatis ditranskripsikan.' },
         {
           title: 'Koreksi langsung',
@@ -83,7 +87,7 @@ export default {
         },
         {
           title: 'Pola kalimat per level',
-          body: '100 pola dari A1 sampai C2. Kamu melihat kalimat dalam bahasamu sendiri, lalu mengucapkannya dalam bahasa Inggris.',
+          body: '100 pola dari A1 sampai C2. Kamu melihat kalimat dalam bahasamu sendiri, lalu mengucapkannya dalam bahasa yang kamu latih.',
         },
         {
           title: 'Belajar dari video YouTube',
@@ -100,48 +104,9 @@ export default {
       ],
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
       screenshots: [
-        'Percakapan di SOS My English: ucapanmu, koreksinya, dan kalimat berikutnya dari partnermu',
-        'Halaman utama SOS My English: topik percakapan per kategori',
-      ],
-    },
-    german: {
-      tagline: 'Latihan berbicara bahasa Jerman',
-      hookTitle: 'Kehabisan kata-kata?',
-      hookAccent: 'Bantuan segera datang.',
-      summary:
-        'Aplikasi latihan berbicara bahasa Jerman yang berjalan di komputermu sendiri. Pilih topik, ngobrol dengan suara bersama partner AI yang menjawab dengan suara juga, dan bahasa Jermanmu langsung dibetulkan.',
-      features: [
-        { title: 'Utamakan berbicara', body: 'Kamu menjawab dengan suara, bukan mengetik; ucapanmu otomatis ditranskripsikan.' },
-        {
-          title: 'Koreksi langsung',
-          body: 'Setiap kali kamu bicara, koreksi paling penting ditampilkan bersama kalimat yang lebih baik dan alasannya, dan kamu bisa mendengarkan kalimat itu.',
-        },
-        { title: 'Seberapa jelas ucapanmu', body: 'Setiap kalimat menampilkan skor kejelasan, kata-kata yang sulit dikenali, dan kecepatan bicaramu.' },
-        {
-          title: '40 topik dalam 9 kategori',
-          body: 'Obrolan sehari-hari, kerja, sekolah, belanja, makanan, jalan-jalan, layanan, rumah, dan menyampaikan pendapat, plus topik buatanmu sendiri.',
-        },
-        {
-          title: 'Pola kalimat per level',
-          body: '100 pola dari A1 sampai C2. Kamu melihat kalimat dalam bahasamu sendiri, lalu mengucapkannya dalam bahasa Jerman.',
-        },
-        {
-          title: 'Belajar dari video YouTube',
-          body: 'Tempel tautan dan dengarkan kalimat demi kalimat, dengan pengulangan, kecepatan lebih lambat, dan shadowing.',
-        },
-        {
-          title: 'Latih koreksimu',
-          body: 'Semua koreksi terkumpul di satu tempat, dan kamu bisa mengucapkan kalimat yang lebih baik sampai benar.',
-        },
-        {
-          title: 'Ringkasan di akhir',
-          body: 'Akhiri percakapan untuk melihat apa yang sudah bagus, apa yang perlu dilatih, dan ungkapan yang bisa dicoba lain kali.',
-        },
-      ],
-      platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
-      screenshots: [
-        'Percakapan di SOS My German: ucapanmu, koreksinya, dan kalimat berikutnya dari partnermu',
-        'Halaman utama SOS My German: topik percakapan per kategori',
+        'Percakapan di SOS My Language: ucapanmu, koreksinya, dan kalimat berikutnya dari partnermu',
+        'Memilih bahasa yang dilatih di SOS My Language: Inggris atau Jerman',
+        'Halaman beranda SOS My Language: topik percakapan per kategori',
       ],
     },
   },

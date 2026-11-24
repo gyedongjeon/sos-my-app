@@ -3,15 +3,13 @@
 // where it runs, update every locale too.
 import type { ImageMetadata } from 'astro';
 import interviewIcon from '../assets/icons/interview.svg';
-import englishIcon from '../assets/icons/english.svg';
-import germanIcon from '../assets/icons/german.svg';
+import languageIcon from '../assets/icons/language.svg';
 import interviewHome from '../assets/screens/interview-home.png';
-import englishPractice from '../assets/screens/english-practice.png';
-import englishHome from '../assets/screens/english-home.png';
-import germanPractice from '../assets/screens/german-practice.png';
-import germanHome from '../assets/screens/german-home.png';
+import languageConversation from '../assets/screens/language-conversation.png';
+import languageChoice from '../assets/screens/language-language.png';
+import languageHome from '../assets/screens/language-home.png';
 
-export type AppSlug = 'interview' | 'english' | 'german';
+export type AppSlug = 'interview' | 'language';
 
 export interface App {
   slug: AppSlug;
@@ -31,18 +29,11 @@ export const apps: App[] = [
     images: [interviewHome],
   },
   {
-    slug: 'english',
-    name: 'SOS My English',
-    repo: 'https://github.com/gyedongjeon/sos-my-english',
-    icon: englishIcon,
-    images: [englishPractice, englishHome],
-  },
-  {
-    slug: 'german',
-    name: 'SOS My German',
-    repo: 'https://github.com/gyedongjeon/sos-my-german',
-    icon: germanIcon,
-    images: [germanPractice, germanHome],
+    slug: 'language',
+    name: 'SOS My Language',
+    repo: 'https://github.com/gyedongjeon/sos-my-language',
+    icon: languageIcon,
+    images: [languageConversation, languageChoice, languageHome],
   },
 ];
 

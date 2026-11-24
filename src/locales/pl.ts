@@ -67,13 +67,17 @@ export default {
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bitowy)'],
       screenshots: ['Ekran główny SOS My Interview: dodawanie ogłoszenia o pracę i typowe pytania'],
     },
-    english: {
-      tagline: 'Ćwiczenie mówienia po angielsku',
+    language: {
+      tagline: 'Ćwiczenie mówienia po angielsku i niemiecku',
       hookTitle: 'Brakuje ci słów?',
       hookAccent: 'Pomoc już płynie.',
       summary:
-        'Aplikacja do ćwiczenia mówienia po angielsku, która działa na twoim komputerze. Wybierz temat i porozmawiaj o nim na głos z partnerem AI, który odpowiada głosem i na bieżąco poprawia twój angielski.',
+        'Aplikacja do ćwiczenia mówienia w języku, którego się uczysz, działająca na twoim komputerze. Wybierz angielski lub niemiecki, wybierz temat i porozmawiaj o nim na głos z partnerem AI, który odpowiada głosem i na bieżąco poprawia to, co mówisz.',
       features: [
+        {
+          title: 'Kilka języków w jednej aplikacji',
+          body: 'Przy pierwszym uruchomieniu wybierz angielski lub niemiecki i zmieniaj w dowolnej chwili. Każdy język ma własne tematy, poprawki, historię i głosy.',
+        },
         { title: 'Przede wszystkim mówienie', body: 'Odpowiadasz głosem, nie piszesz; twoje słowa są automatycznie zapisywane.' },
         {
           title: 'Poprawki na bieżąco',
@@ -89,7 +93,7 @@ export default {
         },
         {
           title: 'Wzorce zdań według poziomu',
-          body: '100 wzorców od A1 do C2. Widzisz zdanie w swoim języku i mówisz je po angielsku.',
+          body: '100 wzorców od A1 do C2. Widzisz zdanie w swoim języku i mówisz je w języku, który ćwiczysz.',
         },
         {
           title: 'Nauka z filmami z YouTube',
@@ -106,51 +110,9 @@ export default {
       ],
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bitowy)'],
       screenshots: [
-        'Rozmowa w SOS My English: twoja wypowiedź, jej poprawka i kolejna kwestia rozmówcy',
-        'Ekran główny SOS My English: tematy rozmów według kategorii',
-      ],
-    },
-    german: {
-      tagline: 'Ćwiczenie mówienia po niemiecku',
-      hookTitle: 'Brakuje ci słów?',
-      hookAccent: 'Pomoc już płynie.',
-      summary:
-        'Aplikacja do ćwiczenia mówienia po niemiecku, która działa na twoim komputerze. Wybierz temat i porozmawiaj o nim na głos z partnerem AI, który odpowiada głosem i na bieżąco poprawia twój niemiecki.',
-      features: [
-        { title: 'Przede wszystkim mówienie', body: 'Odpowiadasz głosem, nie piszesz; twoje słowa są automatycznie zapisywane.' },
-        {
-          title: 'Poprawki na bieżąco',
-          body: 'Po każdej twojej wypowiedzi widzisz najważniejszą poprawkę: lepsze zdanie i wyjaśnienie. Lepsze zdanie możesz też odsłuchać.',
-        },
-        {
-          title: 'Jak wyraźnie mówisz',
-          body: 'Przy każdej wypowiedzi: ocena wyrazistości, słowa trudne do rozpoznania i tempo mówienia.',
-        },
-        {
-          title: '40 tematów w 9 kategoriach',
-          body: 'Codzienne rozmowy, praca, szkoła, zakupy, jedzenie, podróże, usługi, dom i wyrażanie opinii, a do tego własne tematy.',
-        },
-        {
-          title: 'Wzorce zdań według poziomu',
-          body: '100 wzorców od A1 do C2. Widzisz zdanie w swoim języku i mówisz je po niemiecku.',
-        },
-        {
-          title: 'Nauka z filmami z YouTube',
-          body: 'Wklej link i słuchaj zdanie po zdaniu: z powtórkami, wolniejszym tempem i powtarzaniem za lektorem (shadowing).',
-        },
-        {
-          title: 'Ćwicz swoje poprawki',
-          body: 'Wszystkie poprawki trafiają w jedno miejsce, gdzie powtarzasz lepsze zdanie, aż wyjdzie dobrze.',
-        },
-        {
-          title: 'Podsumowanie na koniec',
-          body: 'Zakończ rozmowę i zobacz, co ci wyszło, nad czym popracować i jakie wyrażenia wypróbować następnym razem.',
-        },
-      ],
-      platforms: ['macOS (Apple Silicon)', 'Windows (64-bitowy)'],
-      screenshots: [
-        'Rozmowa w SOS My German: twoja wypowiedź, jej poprawka i kolejna kwestia rozmówcy',
-        'Ekran główny SOS My German: tematy rozmów według kategorii',
+        'Rozmowa w SOS My Language: to, co powiedziałeś, poprawka i kolejna kwestia partnera',
+        'Wybór języka do ćwiczeń w SOS My Language: angielski lub niemiecki',
+        'Strona główna SOS My Language: tematy rozmów według kategorii',
       ],
     },
   },
