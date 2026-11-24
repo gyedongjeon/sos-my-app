@@ -67,13 +67,17 @@ export default {
       platforms: ["macOS (Apple Silicon)", "Windows (64 bit)"],
       screenshots: ["SOS My Interview ana ekranı: iş ilanı ekleme ve sık sorulan sorular"],
     },
-    english: {
-      tagline: "İngilizce konuşma pratiği",
+    language: {
+      tagline: 'İngilizce ve Almanca konuşma pratiği',
       hookTitle: "Kelimeler dilinin ucunda mı kalıyor?",
       hookAccent: "Yardım yolda.",
       summary:
-        "Kendi bilgisayarında çalışan bir İngilizce konuşma pratiği uygulaması. Bir konu seç, sesle cevap veren yapay zekâ partnerinle sesli konuş; İngilizcen sen konuştukça düzeltilsin.",
+        'Öğrendiğin dilde konuşma pratiği yapmak için kendi bilgisayarında çalışan bir uygulama. İngilizce ya da Almancayı seç, bir konu seç, sesle cevap veren yapay zekâ partnerinle sesli konuş; söylediklerin sen konuştukça düzeltilsin.',
       features: [
+        {
+          title: 'Tek uygulamada birden fazla dil',
+          body: 'İlk açılışta İngilizce ya da Almancayı seç, istediğin zaman değiştir. Her dilin konuları, düzeltmeleri, geçmişi ve sesleri ayrı tutulur.',
+        },
         { title: "Önce konuşma", body: "Yazarak değil, sesinle cevap verirsin; söylediklerin otomatik olarak yazıya dökülür." },
         {
           title: "Anında düzeltme",
@@ -89,7 +93,7 @@ export default {
         },
         {
           title: "Seviyeye göre cümle kalıpları",
-          body: "A1'den C2'ye 100 kalıp. Cümleyi kendi dilinde görür, İngilizce söylersin.",
+          body: "A1'den C2'ye 100 kalıp. Cümleyi kendi dilinde görür, pratik yaptığın dilde söylersin.",
         },
         {
           title: "YouTube videolarıyla çalış",
@@ -106,51 +110,9 @@ export default {
       ],
       platforms: ["macOS (Apple Silicon)", "Windows (64 bit)"],
       screenshots: [
-        "SOS My English'te bir sohbet: söylediğin cümle, düzeltmesi ve partnerinin sıradaki cümlesi",
-        "SOS My English ana ekranı: kategorilere göre sohbet konuları",
-      ],
-    },
-    german: {
-      tagline: "Almanca konuşma pratiği",
-      hookTitle: "Kelimeler dilinin ucunda mı kalıyor?",
-      hookAccent: "Yardım yolda.",
-      summary:
-        "Kendi bilgisayarında çalışan bir Almanca konuşma pratiği uygulaması. Bir konu seç, sesle cevap veren yapay zekâ partnerinle sesli konuş; Almancan sen konuştukça düzeltilsin.",
-      features: [
-        { title: "Önce konuşma", body: "Yazarak değil, sesinle cevap verirsin; söylediklerin otomatik olarak yazıya dökülür." },
-        {
-          title: "Anında düzeltme",
-          body: "Söylediğin her cümleden sonra en faydalı düzeltme, daha iyi cümle ve nedeniyle birlikte gösterilir. Daha iyi cümleyi dinleyebilirsin de.",
-        },
-        {
-          title: "Ne kadar net konuştun?",
-          body: "Her cümlede netlik puanı, tanınması zor olan kelimeler ve konuşma hızın gösterilir.",
-        },
-        {
-          title: "9 kategoride 40 konu",
-          body: "Günlük sohbet, iş, okul, alışveriş, yemek, seyahat, hizmetler, ev ve fikrini söyleme. Kendi konularını da ekleyebilirsin.",
-        },
-        {
-          title: "Seviyeye göre cümle kalıpları",
-          body: "A1'den C2'ye 100 kalıp. Cümleyi kendi dilinde görür, Almanca söylersin.",
-        },
-        {
-          title: "YouTube videolarıyla çalış",
-          body: "Bir bağlantı yapıştır ve videoyu cümle cümle dinle: tekrar, yavaşlatma ve gölge okuma (shadowing) ile.",
-        },
-        {
-          title: "Düzeltmelerini çalış",
-          body: "Tüm düzeltmeler tek bir yerde toplanır; daha iyi cümleyi doğru çıkana kadar tekrar söylersin.",
-        },
-        {
-          title: "Sonunda bir özet",
-          body: "Sohbeti bitirince neleri iyi yaptığını, nelere çalışman gerektiğini ve bir dahaki sefere deneyebileceğin ifadeleri gör.",
-        },
-      ],
-      platforms: ["macOS (Apple Silicon)", "Windows (64 bit)"],
-      screenshots: [
-        "SOS My German'te bir sohbet: söylediğin cümle, düzeltmesi ve partnerinin sıradaki cümlesi",
-        "SOS My German ana ekranı: kategorilere göre sohbet konuları",
+        "SOS My Language'da bir konuşma: söylediğin, düzeltmesi ve partnerinin sıradaki cümlesi",
+        "SOS My Language'da pratik yapılacak dili seçme: İngilizce ya da Almanca",
+        'SOS My Language ana sayfası: kategorilere göre konuşma konuları',
       ],
     },
   },

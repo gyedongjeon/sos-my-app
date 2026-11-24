@@ -49,7 +49,6 @@ export interface Messages {
   ui: UI;
   apps: {
     interview: AppText;
-    english: AppText;
-    german: AppText;
+    language: AppText;
   };
 }

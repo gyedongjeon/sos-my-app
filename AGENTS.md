@@ -41,13 +41,12 @@ Follow Kent Beck's Tidy First, and test-first where there is logic to test.
 ## Project Mission
 - **Project**: `sos-my-app` — the website for the SOS app series, served at `https://sosmy.app`. It introduces the series' apps and links to them:
     - [`sos-my-interview`](https://github.com/gyedongjeon/sos-my-interview) — interview practice.
-    - [`sos-my-english`](https://github.com/gyedongjeon/sos-my-english) — speaking-first English practice.
-    - [`sos-my-german`](https://github.com/gyedongjeon/sos-my-german) — speaking-first German practice.
+    - [`sos-my-language`](https://github.com/gyedongjeon/sos-my-language) — speaking-first practice for English and German (it replaced `sos-my-english` and `sos-my-german`).
 - **Architecture**: A static site.
     - **Framework**: Astro, producing plain HTML/CSS with no client-side JavaScript unless a feature needs it.
     - **Styling**: Tailwind CSS with daisyUI, sharing the SOS apps' design system. `src/styles/global.css` starts with a verbatim copy of the apps' `frontend/src/style.css` (`sos` and `sos-night` themes); keep it in step with the apps, and add site-only rules after it. Prefer daisyUI component classes and theme colors over custom CSS, as the apps do.
     - **Hosting**: GitHub Pages, deployed by GitHub Actions on every push to `main`, with the custom domain `sosmy.app` (`site: 'https://sosmy.app'`, no `base` path). `.app` domains are HTTPS-only.
-    - **Structure**: One site with a page per app under a path (`/interview`, `/english`, `/german`), not a subdomain per app. English is served at `/`, every other language under `/<locale>/` (e.g. `/ko/`, `/zh-hans/`).
+    - **Structure**: One site with a page per app under a path (`/interview`, `/language`), not a subdomain per app. English is served at `/`, every other language under `/<locale>/` (e.g. `/ko/`, `/zh-hans/`).
     - **Content**: App data (name, repository, icon, screenshots) lives in `src/data/apps.ts`; all text lives in `src/locales/<locale>.ts`. App copy follows each app's README (`README.ko.md` for Korean). When an app's features or supported platforms change, update every locale.
 - **Scope**: An informational site. Do not add a backend, authentication, analytics, cookies, or third-party trackers unless explicitly requested.
 

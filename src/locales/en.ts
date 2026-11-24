@@ -64,13 +64,17 @@ export default {
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
       screenshots: ['The home page of SOS My Interview: adding a job posting and common questions'],
     },
-    english: {
-      tagline: 'English speaking practice',
+    language: {
+      tagline: 'English and German speaking practice',
       hookTitle: 'Stuck for words?',
       hookAccent: 'Help is on the way.',
       summary:
-        'An app for practising spoken English, running on your own machine. Pick a topic, talk it through out loud with an AI partner that answers by voice, and get your English fixed as you go.',
+        'An app for practising a language you are learning out loud, running on your own machine. Choose English or German, pick a topic, talk it through with an AI partner that answers by voice, and get what you said fixed as you go.',
       features: [
+        {
+          title: 'Several languages in one app',
+          body: 'Choose English or German on the first start and switch at any time. Each language keeps its own topics, corrections, history, and voices.',
+        },
         { title: 'Speaking first', body: 'You answer by voice, not by typing; what you said is transcribed for you.' },
         {
           title: 'Corrections as you go',
@@ -83,7 +87,7 @@ export default {
         },
         {
           title: 'Sentence patterns by level',
-          body: '100 patterns from A1 to C2. You see a sentence in your own language and say it in English.',
+          body: '100 patterns from A1 to C2. You see a sentence in your own language and say it in the language you practise.',
         },
         {
           title: 'Study with YouTube videos',
@@ -100,48 +104,9 @@ export default {
       ],
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
       screenshots: [
-        "A conversation in SOS My English: what you said, its correction, and your partner's next line",
-        'The home page of SOS My English: conversation topics by category',
-      ],
-    },
-    german: {
-      tagline: 'German speaking practice',
-      hookTitle: 'Stuck for words?',
-      hookAccent: 'Help is on the way.',
-      summary:
-        'An app for practising spoken German, running on your own machine. Pick a topic, talk it through out loud with an AI partner that answers by voice, and get your German fixed as you go.',
-      features: [
-        { title: 'Speaking first', body: 'You answer by voice, not by typing; what you said is transcribed for you.' },
-        {
-          title: 'Corrections as you go',
-          body: 'After each thing you say, the most valuable fix is shown with the better sentence and why, and you can hear the better sentence.',
-        },
-        { title: 'How clearly you spoke', body: 'Each line shows a clarity score, the words that were hard to recognize, and your pace.' },
-        {
-          title: '40 topics in 9 categories',
-          body: 'Everyday chat, work, school, shopping, food, travel, services, home, and giving your opinion, plus topics of your own.',
-        },
-        {
-          title: 'Sentence patterns by level',
-          body: '100 patterns from A1 to C2. You see a sentence in your own language and say it in German.',
-        },
-        {
-          title: 'Study with YouTube videos',
-          body: 'Paste a link and listen one sentence at a time, with repeat, slower speeds, and shadowing.',
-        },
-        {
-          title: 'Practise your corrections',
-          body: 'Every fix is collected in one place, where you say the better sentence until it comes out right.',
-        },
-        {
-          title: 'A summary at the end',
-          body: 'Wrap up a conversation to see what you did well, what to work on, and expressions to try next time.',
-        },
-      ],
-      platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
-      screenshots: [
-        "A conversation in SOS My German: what you said, its correction, and your partner's next line",
-        'The home page of SOS My German: conversation topics by category',
+        "A conversation in SOS My Language: what you said, its correction, and your partner's next line",
+        'Choosing the language to practise in SOS My Language: English or German',
+        'The home page of SOS My Language: conversation topics by category',
       ],
     },
   },

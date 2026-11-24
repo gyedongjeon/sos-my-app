@@ -76,13 +76,17 @@ export default {
       platforms: ["macOS (Apple Silicon)", "Windows (64 bit)"],
       screenshots: ["La schermata principale di SOS My Interview: aggiunta di un annuncio di lavoro e domande frequenti"],
     },
-    english: {
-      tagline: "Pratica di inglese parlato",
+    language: {
+      tagline: 'Pratica di inglese e tedesco parlato',
       hookTitle: "Non ti vengono le parole?",
       hookAccent: "I soccorsi stanno arrivando.",
       summary:
-        "Un'app per allenare l'inglese parlato, che funziona sul tuo computer. Scegli un argomento, parlane ad alta voce con un partner IA che ti risponde a voce, e il tuo inglese viene corretto mentre parli.",
+        "Un'app per allenare a voce la lingua che stai imparando, che funziona sul tuo computer. Scegli inglese o tedesco, poi un argomento, parlane ad alta voce con un partner IA che ti risponde a voce, e quello che dici viene corretto mentre parli.",
       features: [
+        {
+          title: "Più lingue in un'unica app",
+          body: 'Scegli inglese o tedesco al primo avvio e cambia quando vuoi. Ogni lingua conserva i propri argomenti, correzioni, cronologia e voci.',
+        },
         { title: "Prima di tutto parlare", body: "Rispondi a voce, non scrivendo; quello che dici viene trascritto per te." },
         {
           title: "Correzioni in tempo reale",
@@ -98,7 +102,7 @@ export default {
         },
         {
           title: "Strutture di frase per livello",
-          body: "100 strutture, da A1 a C2. Vedi una frase nella tua lingua e la dici in inglese.",
+          body: '100 strutture, da A1 a C2. Vedi una frase nella tua lingua e la dici nella lingua che stai allenando.',
         },
         {
           title: "Studia con i video di YouTube",
@@ -115,51 +119,9 @@ export default {
       ],
       platforms: ["macOS (Apple Silicon)", "Windows (64 bit)"],
       screenshots: [
-        "Una conversazione in SOS My English: quello che hai detto, la correzione e la battuta successiva del tuo interlocutore",
-        "La schermata principale di SOS My English: argomenti di conversazione per categoria",
-      ],
-    },
-    german: {
-      tagline: "Pratica di tedesco parlato",
-      hookTitle: "Non ti vengono le parole?",
-      hookAccent: "I soccorsi stanno arrivando.",
-      summary:
-        "Un'app per allenare il tedesco parlato, che funziona sul tuo computer. Scegli un argomento, parlane ad alta voce con un partner IA che ti risponde a voce, e il tuo tedesco viene corretto mentre parli.",
-      features: [
-        { title: "Prima di tutto parlare", body: "Rispondi a voce, non scrivendo; quello che dici viene trascritto per te." },
-        {
-          title: "Correzioni in tempo reale",
-          body: "Dopo ogni tua frase vedi la correzione più utile, con la frase migliore e il perché. Puoi anche ascoltare la frase migliore.",
-        },
-        {
-          title: "Quanto hai parlato chiaro",
-          body: "Per ogni frase, un punteggio di chiarezza, le parole difficili da riconoscere e la tua velocità.",
-        },
-        {
-          title: "40 argomenti in 9 categorie",
-          body: "Chiacchiere quotidiane, lavoro, scuola, shopping, cibo, viaggi, servizi, casa ed esprimere la tua opinione, più argomenti tutti tuoi.",
-        },
-        {
-          title: "Strutture di frase per livello",
-          body: "100 strutture, da A1 a C2. Vedi una frase nella tua lingua e la dici in tedesco.",
-        },
-        {
-          title: "Studia con i video di YouTube",
-          body: "Incolla un link e ascolta una frase alla volta, con ripetizione, velocità ridotta e shadowing.",
-        },
-        {
-          title: "Ripassa le tue correzioni",
-          body: "Tutte le correzioni sono raccolte in un unico posto, dove ripeti la frase migliore finché non ti viene giusta.",
-        },
-        {
-          title: "Un riepilogo finale",
-          body: "Chiudi una conversazione per vedere cosa hai fatto bene, su cosa lavorare e le espressioni da provare la prossima volta.",
-        },
-      ],
-      platforms: ["macOS (Apple Silicon)", "Windows (64 bit)"],
-      screenshots: [
-        "Una conversazione in SOS My German: quello che hai detto, la correzione e la battuta successiva del tuo interlocutore",
-        "La schermata principale di SOS My German: argomenti di conversazione per categoria",
+        'Una conversazione in SOS My Language: quello che hai detto, la correzione e la battuta successiva del partner',
+        'La scelta della lingua da allenare in SOS My Language: inglese o tedesco',
+        'La pagina iniziale di SOS My Language: argomenti di conversazione per categoria',
       ],
     },
   },
