@@ -19,8 +19,6 @@ export default {
     requirements:
       'AI 피드백에는 내가 고른 서비스(Google Gemini, Claude, OpenAI 등)의 API 키가 필요합니다. 처음이라면 무료 사용량이 있는 Google Gemini를 추천합니다.',
     privacyHeading: '내 데이터는 내 컴퓨터에',
-    privacy:
-      '계정도 서버도 없습니다. 음성 인식과 목소리는 컴퓨터 안에서 처리되고, 기록은 내 컴퓨터에만 저장됩니다.',
     readme: '설치 방법과 전체 기능은 README에서 볼 수 있습니다.',
     commonTitle: '앱들의 공통점',
     common: [
@@ -55,6 +53,8 @@ export default {
         { title: '한국어 피드백', body: '설명은 한국어로 받을 수 있습니다. 질문과 모범 답안은 영어 그대로입니다.' },
         { title: '기록', body: '모든 답변이 전사문, 점수, 녹화와 함께 저장되어 실력이 느는 과정을 볼 수 있습니다.' },
       ],
+      privacy:
+        '계정도 서버도 없습니다. 음성 인식과 목소리는 컴퓨터 안에서 처리되고, 기록은 내 컴퓨터에만 저장됩니다.',
       platforms: ['macOS (Apple Silicon)', 'Windows (64비트)'],
       screenshots: ['SOS My Interview 홈 화면: 채용 공고 추가와 공통 질문'],
     },
@@ -87,6 +87,8 @@ export default {
         { title: '교정 복습', body: '받은 교정은 한곳에 모이고, 고친 문장이 맞게 나올 때까지 직접 말해 볼 수 있습니다.' },
         { title: '마무리 요약', body: '대화를 마치면 잘한 점, 다음에 연습할 점, 써 볼 만한 표현을 정리해 줍니다.' },
       ],
+      privacy:
+        '계정도 서버도 없습니다. 음성 인식과 목소리는 컴퓨터 안에서 처리되고, 기록은 내 컴퓨터에만 저장됩니다.',
       platforms: ['macOS (Apple Silicon)', 'Windows (64비트)'],
       screenshots: [
         'SOS My Language 대화 화면: 내가 한 말, 교정, 상대의 다음 말',

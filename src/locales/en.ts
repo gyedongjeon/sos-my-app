@@ -19,8 +19,6 @@ export default {
     requirements:
       'The AI feedback needs an API key for the provider you choose (Google Gemini, Claude, OpenAI, and more). If you are new to this, Google Gemini has a free tier.',
     privacyHeading: 'Your data stays on your computer',
-    privacy:
-      'There is no account and no server. Speech recognition and the voice run on your computer, and your history is kept there.',
     readme: 'Installation steps and the full feature list are in the README.',
     commonTitle: 'What the apps share',
     common: [
@@ -61,6 +59,8 @@ export default {
         },
         { title: 'History', body: 'Every answer is kept with its transcript, scores, and recording, so you can see how you improve.' },
       ],
+      privacy:
+        'There is no account and no server. Speech recognition and the voice run on your computer, and your history is kept there.',
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
       screenshots: ['The home page of SOS My Interview: adding a job posting and common questions'],
     },
@@ -102,6 +102,8 @@ export default {
           body: 'Wrap up a conversation to see what you did well, what to work on, and expressions to try next time.',
         },
       ],
+      privacy:
+        'There is no account and no server. Speech recognition and the voice run on your computer, and your history is kept there.',
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
       screenshots: [
         "A conversation in SOS My Language: what you said, its correction, and your partner's next line",

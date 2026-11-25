@@ -16,6 +16,8 @@ export interface App {
   name: string;
   repo: string;
   icon: ImageMetadata;
+  /** Whether the app needs an AI provider's API key; the app page then shows the shared `requirements` note. */
+  needsApiKey: boolean;
   /** Screenshots, the first one shown on the home page. May be empty until an app has some. */
   images: ImageMetadata[];
 }
@@ -26,6 +28,7 @@ export const apps: App[] = [
     name: 'SOS My Interview',
     repo: 'https://github.com/gyedongjeon/sos-my-interview',
     icon: interviewIcon,
+    needsApiKey: true,
     images: [interviewHome],
   },
   {
@@ -33,6 +36,7 @@ export const apps: App[] = [
     name: 'SOS My Language',
     repo: 'https://github.com/gyedongjeon/sos-my-language',
     icon: languageIcon,
+    needsApiKey: true,
     images: [languageConversation, languageChoice, languageHome],
   },
 ];

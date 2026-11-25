@@ -19,8 +19,6 @@ export default {
     requirements:
       'Do poprawek i ocen AI potrzebujesz klucza API wybranego dostawcy (Google Gemini, Claude, OpenAI i innych). Jeśli dopiero zaczynasz, Google Gemini ma darmowy plan.',
     privacyHeading: 'Twoje dane zostają u ciebie',
-    privacy:
-      'Bez konta i bez serwera. Rozpoznawanie mowy i głos działają na twoim komputerze i tam też zapisuje się historia.',
     readme: 'Instrukcja instalacji i pełna lista funkcji są w README.',
     commonTitle: 'Co łączy aplikacje',
     common: [
@@ -64,6 +62,8 @@ export default {
         },
         { title: 'Historia', body: 'Każda odpowiedź zapisuje się z transkrypcją, ocenami i nagraniem, więc widzisz swoje postępy.' },
       ],
+      privacy:
+        'Bez konta i bez serwera. Rozpoznawanie mowy i głos działają na twoim komputerze i tam też zapisuje się historia.',
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bitowy)'],
       screenshots: ['Ekran główny SOS My Interview: dodawanie ogłoszenia o pracę i typowe pytania'],
     },
@@ -108,6 +108,8 @@ export default {
           body: 'Zakończ rozmowę i zobacz, co ci wyszło, nad czym popracować i jakie wyrażenia wypróbować następnym razem.',
         },
       ],
+      privacy:
+        'Bez konta i bez serwera. Rozpoznawanie mowy i głos działają na twoim komputerze i tam też zapisuje się historia.',
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bitowy)'],
       screenshots: [
         'Rozmowa w SOS My Language: to, co powiedziałeś, poprawka i kolejna kwestia partnera',

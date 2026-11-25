@@ -19,8 +19,6 @@ export default {
     requirements:
       'O feedback da IA precisa de uma chave de API do provedor que você escolher (Google Gemini, Claude, OpenAI e outros). Se você está começando agora, o Google Gemini tem um plano gratuito.',
     privacyHeading: 'Seus dados ficam no seu computador',
-    privacy:
-      'Não há conta nem servidor. O reconhecimento de fala e a voz do app rodam no seu computador, e o seu histórico fica guardado nele.',
     readme: 'Os passos de instalação e a lista completa de recursos estão no README.',
     commonTitle: 'O que os apps têm em comum',
     common: [
@@ -64,6 +62,8 @@ export default {
           body: 'Cada resposta fica salva com a transcrição, as notas e a gravação, para você acompanhar a sua evolução.',
         },
       ],
+      privacy:
+        'Não há conta nem servidor. O reconhecimento de fala e a voz do app rodam no seu computador, e o seu histórico fica guardado nele.',
       platforms: ['macOS (Apple Silicon)', 'Windows (64 bits)'],
       screenshots: ['Tela inicial do SOS My Interview: adicionar uma vaga e perguntas comuns'],
     },
@@ -108,6 +108,8 @@ export default {
           body: 'Encerre uma conversa para ver o que você fez bem, o que melhorar e expressões para usar da próxima vez.',
         },
       ],
+      privacy:
+        'Não há conta nem servidor. O reconhecimento de fala e a voz do app rodam no seu computador, e o seu histórico fica guardado nele.',
       platforms: ['macOS (Apple Silicon)', 'Windows (64 bits)'],
       screenshots: [
         'Uma conversa no SOS My Language: o que você disse, a correção e a próxima fala do seu parceiro',

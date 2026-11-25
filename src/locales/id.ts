@@ -19,8 +19,6 @@ export default {
     requirements:
       'Umpan balik AI butuh kunci API dari layanan yang kamu pilih (Google Gemini, Claude, OpenAI, dan lainnya). Kalau baru pertama kali, Google Gemini punya paket gratis.',
     privacyHeading: 'Datamu tetap di komputermu',
-    privacy:
-      'Tanpa akun, tanpa server. Pengenalan ucapan dan suara diproses di komputermu, dan riwayatmu disimpan di sana.',
     readme: 'Cara instalasi dan daftar fitur lengkap ada di README.',
     commonTitle: 'Kesamaan aplikasi-aplikasinya',
     common: [
@@ -61,6 +59,8 @@ export default {
         },
         { title: 'Riwayat', body: 'Setiap jawaban disimpan beserta transkrip, nilai, dan rekamannya, jadi kamu bisa melihat perkembanganmu.' },
       ],
+      privacy:
+        'Tanpa akun, tanpa server. Pengenalan ucapan dan suara diproses di komputermu, dan riwayatmu disimpan di sana.',
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
       screenshots: ['Halaman utama SOS My Interview: menambahkan lowongan kerja dan pertanyaan umum'],
     },
@@ -102,6 +102,8 @@ export default {
           body: 'Akhiri percakapan untuk melihat apa yang sudah bagus, apa yang perlu dilatih, dan ungkapan yang bisa dicoba lain kali.',
         },
       ],
+      privacy:
+        'Tanpa akun, tanpa server. Pengenalan ucapan dan suara diproses di komputermu, dan riwayatmu disimpan di sana.',
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
       screenshots: [
         'Percakapan di SOS My Language: ucapanmu, koreksinya, dan kalimat berikutnya dari partnermu',

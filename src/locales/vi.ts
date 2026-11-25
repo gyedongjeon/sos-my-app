@@ -19,8 +19,6 @@ export default {
     requirements:
       'Phần nhận xét bằng AI cần API key của nhà cung cấp bạn chọn (Google Gemini, Claude, OpenAI và nhiều hơn nữa). Nếu mới bắt đầu, bạn có thể dùng Google Gemini với gói miễn phí.',
     privacyHeading: 'Dữ liệu của bạn nằm trên máy của bạn',
-    privacy:
-      'Không cần tài khoản, không có máy chủ. Nhận dạng giọng nói và giọng đọc đều chạy trên máy tính của bạn, lịch sử cũng được lưu tại đó.',
     readme: 'Hướng dẫn cài đặt và danh sách đầy đủ tính năng có trong README.',
     commonTitle: 'Điểm chung của các ứng dụng',
     common: [
@@ -67,6 +65,8 @@ export default {
           body: 'Mỗi câu trả lời được lưu cùng bản ghi lời nói, điểm số và bản ghi hình, để bạn thấy mình tiến bộ ra sao.',
         },
       ],
+      privacy:
+        'Không cần tài khoản, không có máy chủ. Nhận dạng giọng nói và giọng đọc đều chạy trên máy tính của bạn, lịch sử cũng được lưu tại đó.',
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
       screenshots: ['Trang chủ SOS My Interview: thêm tin tuyển dụng và các câu hỏi thường gặp'],
     },
@@ -108,6 +108,8 @@ export default {
           body: 'Kết thúc cuộc trò chuyện để xem bạn đã làm tốt điều gì, cần luyện thêm gì và những cách diễn đạt nên thử lần sau.',
         },
       ],
+      privacy:
+        'Không cần tài khoản, không có máy chủ. Nhận dạng giọng nói và giọng đọc đều chạy trên máy tính của bạn, lịch sử cũng được lưu tại đó.',
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bit)'],
       screenshots: [
         'Một cuộc trò chuyện trong SOS My Language: câu bạn nói, phần sửa lỗi và câu tiếp theo của bạn đồng hành',

@@ -23,7 +23,6 @@ export interface UI {
   requirementsHeading: string;
   requirements: string;
   privacyHeading: string;
-  privacy: string;
   readme: string;
   commonTitle: string;
   common: [Item, Item, Item, Item];
@@ -40,6 +39,8 @@ export interface AppText {
   hookAccent: string;
   summary: string;
   features: Item[];
+  /** What stays on the visitor's computer, shown under the shared `privacyHeading`. */
+  privacy: string;
   platforms: string[];
   /** Alt text of each screenshot, in the order of the app's `images`. */
   screenshots: string[];

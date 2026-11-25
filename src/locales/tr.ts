@@ -19,8 +19,6 @@ export default {
     requirements:
       "Yapay zekâ geri bildirimi için seçtiğin sağlayıcının API anahtarı gerekir (Google Gemini, Claude, OpenAI ve diğerleri). Yeni başlıyorsan Google Gemini'yi öneririz: ücretsiz bir kullanım kotası var.",
     privacyHeading: "Verilerin bilgisayarında kalır",
-    privacy:
-      "Hesap yok, sunucu yok. Konuşma tanıma ve seslendirme bilgisayarında çalışır, geçmişin de orada saklanır.",
     readme: "Kurulum adımları ve tüm özelliklerin listesi README'de.",
     commonTitle: "Uygulamaların ortak özellikleri",
     common: [
@@ -64,6 +62,8 @@ export default {
           body: "Her cevap; metni, puanları ve ses kaydıyla saklanır. Böylece nasıl geliştiğini görebilirsin.",
         },
       ],
+      privacy:
+        "Hesap yok, sunucu yok. Konuşma tanıma ve seslendirme bilgisayarında çalışır, geçmişin de orada saklanır.",
       platforms: ["macOS (Apple Silicon)", "Windows (64 bit)"],
       screenshots: ["SOS My Interview ana ekranı: iş ilanı ekleme ve sık sorulan sorular"],
     },
@@ -108,6 +108,8 @@ export default {
           body: "Sohbeti bitirince neleri iyi yaptığını, nelere çalışman gerektiğini ve bir dahaki sefere deneyebileceğin ifadeleri gör.",
         },
       ],
+      privacy:
+        "Hesap yok, sunucu yok. Konuşma tanıma ve seslendirme bilgisayarında çalışır, geçmişin de orada saklanır.",
       platforms: ["macOS (Apple Silicon)", "Windows (64 bit)"],
       screenshots: [
         "SOS My Language'da bir konuşma: söylediğin, düzeltmesi ve partnerinin sıradaki cümlesi",

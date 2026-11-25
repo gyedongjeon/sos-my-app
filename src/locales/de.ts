@@ -19,8 +19,6 @@ export default {
     requirements:
       'Für das KI-Feedback brauchst du einen API-Schlüssel des Anbieters deiner Wahl (Google Gemini, Claude, OpenAI und weitere). Wenn du neu dabei bist: Google Gemini hat ein kostenloses Kontingent.',
     privacyHeading: 'Deine Daten bleiben auf deinem Computer',
-    privacy:
-      'Kein Konto, kein Server. Spracherkennung und Sprachausgabe laufen auf deinem Computer, und dort wird auch dein Verlauf gespeichert.',
     readme: 'Installationsschritte und alle Funktionen findest du in der README.',
     commonTitle: 'Was die Apps gemeinsam haben',
     common: [
@@ -79,6 +77,8 @@ export default {
           body: 'Jede Antwort wird mit Transkript, Bewertung und Aufnahme gespeichert, so siehst du deine Fortschritte.',
         },
       ],
+      privacy:
+        'Kein Konto, kein Server. Spracherkennung und Sprachausgabe laufen auf deinem Computer, und dort wird auch dein Verlauf gespeichert.',
       platforms: ['macOS (Apple Silicon)', 'Windows (64-Bit)'],
       screenshots: ['Die Startseite von SOS My Interview: Stellenanzeige hinzufügen und häufige Fragen'],
     },
@@ -126,6 +126,8 @@ export default {
           body: 'Beende ein Gespräch und sieh, was gut lief, woran du arbeiten kannst und welche Ausdrücke du nächstes Mal ausprobieren kannst.',
         },
       ],
+      privacy:
+        'Kein Konto, kein Server. Spracherkennung und Sprachausgabe laufen auf deinem Computer, und dort wird auch dein Verlauf gespeichert.',
       platforms: ['macOS (Apple Silicon)', 'Windows (64-Bit)'],
       screenshots: [
         'Ein Gespräch in SOS My Language: was du gesagt hast, die Korrektur und die nächste Antwort deines Partners',

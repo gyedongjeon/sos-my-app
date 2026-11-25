@@ -19,8 +19,6 @@ export default {
     requirements:
       'AIのフィードバックには、選んだサービス（Google Gemini、Claude、OpenAIなど）のAPIキーが必要です。はじめての方には、無料枠のあるGoogle Geminiがおすすめです。',
     privacyHeading: 'データは自分のパソコンに',
-    privacy:
-      'アカウントもサーバーもありません。音声認識と読み上げはパソコンの中で動き、履歴もパソコンにだけ保存されます。',
     readme: 'インストール方法と機能の一覧はREADMEにあります。',
     commonTitle: 'アプリに共通すること',
     common: [
@@ -55,6 +53,8 @@ export default {
         { title: '日本語でフィードバック', body: '解説は日本語で受け取れます。質問と模範解答は英語のままです。' },
         { title: '履歴', body: 'すべての回答が文字起こし、点数、録画と一緒に保存され、上達の様子を確かめられます。' },
       ],
+      privacy:
+        'アカウントもサーバーもありません。音声認識と読み上げはパソコンの中で動き、履歴もパソコンにだけ保存されます。',
       platforms: ['macOS (Apple Silicon)', 'Windows (64ビット)'],
       screenshots: ['SOS My Interviewのホーム画面: 求人情報の追加とよくある質問'],
     },
@@ -87,6 +87,8 @@ export default {
         { title: '添削の復習', body: '受けた添削は1か所にまとまり、正しく言えるようになるまで声に出して練習できます。' },
         { title: '最後にまとめ', body: '会話を終えると、良かった点、次に練習したい点、次に使ってみたい表現をまとめます。' },
       ],
+      privacy:
+        'アカウントもサーバーもありません。音声認識と読み上げはパソコンの中で動き、履歴もパソコンにだけ保存されます。',
       platforms: ['macOS (Apple Silicon)', 'Windows (64ビット)'],
       screenshots: [
         'SOS My Language の会話画面：あなたの発言、その添削、相手の次のセリフ',

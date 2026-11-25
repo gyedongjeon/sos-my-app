@@ -19,7 +19,6 @@ export default {
     requirements:
       'AI 反馈需要你所选服务（Google Gemini、Claude、OpenAI 等）的 API 密钥。如果你是第一次用，推荐有免费额度的 Google Gemini。',
     privacyHeading: '数据只留在你的电脑上',
-    privacy: '没有账号，也没有服务器。语音识别和朗读都在你的电脑上运行，练习记录也只保存在本机。',
     readme: '安装步骤和完整功能列表请见 README。',
     commonTitle: '这些应用的共同点',
     common: [
@@ -54,6 +53,8 @@ export default {
         { title: '中文反馈', body: '讲解可以用中文接收；问题和参考答案仍然是英语。' },
         { title: '练习记录', body: '每次回答都会连同文字稿、分数和录像一起保存，进步看得见。' },
       ],
+      privacy:
+        '没有账号，也没有服务器。语音识别和朗读都在你的电脑上运行，练习记录也只保存在本机。',
       platforms: ['macOS (Apple Silicon)', 'Windows (64 位)'],
       screenshots: ['SOS My Interview 首页：添加招聘信息和常见问题'],
     },
@@ -86,6 +87,8 @@ export default {
         { title: '复习纠错', body: '所有纠错都集中在一处，你可以反复开口练，直到说对为止。' },
         { title: '结束时的总结', body: '结束对话后，总结你做得好的地方、需要加强的地方，以及下次可以试试的表达。' },
       ],
+      privacy:
+        '没有账号，也没有服务器。语音识别和朗读都在你的电脑上运行，练习记录也只保存在本机。',
       platforms: ['macOS (Apple Silicon)', 'Windows (64 位)'],
       screenshots: [
         'SOS My Language 的对话界面：你说的话、纠正和对方的下一句',
