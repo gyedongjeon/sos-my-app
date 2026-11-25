@@ -82,16 +82,18 @@ const readme = locale === 'ko' ? `${app.repo}/blob/main/README.ko.md` : `${app.r
     </section>
 
     <section class="grid gap-4 pb-12 md:grid-cols-2">
-      <div role="note" class="alert alert-info alert-soft items-start">
-        <div>
-          <h2 class="font-bold">{t.requirementsHeading}</h2>
-          <p class="mt-1">{t.requirements}</p>
+      {app.needsApiKey && (
+        <div role="note" class="alert alert-info alert-soft items-start">
+          <div>
+            <h2 class="font-bold">{t.requirementsHeading}</h2>
+            <p class="mt-1">{t.requirements}</p>
+          </div>
         </div>
-      </div>
-      <div role="note" class="alert alert-success alert-soft items-start">
+      )}
+      <div role="note" class:list={['alert alert-success alert-soft items-start', !app.needsApiKey && 'md:col-span-2']}>
         <div>
           <h2 class="font-bold">{t.privacyHeading}</h2>
-          <p class="mt-1">{t.privacy}</p>
+          <p class="mt-1">{text.privacy}</p>
         </div>
       </div>
       <p class="text-base-content/70 md:col-span-2">

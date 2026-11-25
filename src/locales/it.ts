@@ -3,11 +3,11 @@ import type { Messages } from './types';
 export default {
   ui: {
     siteDescription:
-      'Una serie di app per quando il tuo inglese o il tuo tedesco ha bisogno di soccorso. Allenati ai colloqui e a parlare ad alta voce, sul tuo computer.',
-    heroTitle: 'La lingua ti mette in difficoltà?',
+      'Una serie di piccole app desktop gratuite che vengono in soccorso. Funzionano sul tuo computer, senza account da creare.',
+    heroTitle: 'Hai bisogno di soccorso?',
     heroAccent: "Lancia un SOS.",
     heroLead:
-      "Un colloquio in arrivo, o non ti vengono le parole? La serie SOS è un insieme di app desktop gratuite per esercitarti a parlare inglese e tedesco ad alta voce. Funzionano sul tuo computer e l'IA che scegli ti corregge mentre parli.",
+      'Un colloquio in arrivo, non ti vengono le parole o hai troppe schede aperte? La serie SOS è un insieme di app desktop gratuite, ciascuna per un momento così. Funzionano sul tuo computer, senza account da creare.',
     appsHeading: "App",
     language: "Lingua",
     download: "Scarica l'ultima versione",
@@ -19,20 +19,15 @@ export default {
     requirements:
       "Per il feedback dell'IA serve una chiave API del fornitore che scegli (Google Gemini, Claude, OpenAI e altri). Se sei alle prime armi, Google Gemini ha un piano gratuito.",
     privacyHeading: "I tuoi dati restano sul tuo computer",
-    privacy:
-      "Nessun account, nessun server. Il riconoscimento vocale e la voce funzionano sul tuo computer, e lì resta anche la tua cronologia.",
     readme: "Le istruzioni di installazione e l'elenco completo delle funzionalità sono nel README.",
     commonTitle: "Cosa hanno in comune le app",
     common: [
+      { title: 'Sul tuo computer', body: 'Installale e usale senza registrarti, su macOS e Windows.' },
+      { title: 'I tuoi dati restano tuoi', body: 'Quello che fai nelle app resta sul tuo computer, non su un server.' },
+      { title: 'In italiano', body: "A seconda dell'app, le schermate o le spiegazioni sono in italiano." },
       {
-        title: "Parla e ascolta",
-        body: "Rispondi a voce invece di scrivere, e ascolta il tuo interlocutore prima di leggere cosa dice.",
-      },
-      { title: "Sul tuo computer", body: "Installa e usa senza registrarti. La tua cronologia resta sul tuo computer." },
-      { title: "Spiegazioni in italiano", body: "Le correzioni ti vengono spiegate in italiano; la pratica resta nella lingua che stai imparando." },
-      {
-        title: "Gratis e open source",
-        body: "Rilasciate con licenza MIT. Paghi solo il tuo fornitore di IA, per quello che usi.",
+        title: 'Gratis e open source',
+        body: "Rilasciate con licenza MIT. Le app che usano l'IA costano solo quanto chiede il tuo fornitore di IA.",
       },
     ],
     notFoundTitle: "Alla deriva?",
@@ -73,6 +68,8 @@ export default {
           body: "Ogni risposta viene salvata con trascrizione, punteggi e registrazione, così vedi come migliori.",
         },
       ],
+      privacy:
+        "Nessun account, nessun server. Il riconoscimento vocale e la voce funzionano sul tuo computer, e lì resta anche la tua cronologia.",
       platforms: ["macOS (Apple Silicon)", "Windows (64 bit)"],
       screenshots: ["La schermata principale di SOS My Interview: aggiunta di un annuncio di lavoro e domande frequenti"],
     },
@@ -117,11 +114,53 @@ export default {
           body: "Chiudi una conversazione per vedere cosa hai fatto bene, su cosa lavorare e le espressioni da provare la prossima volta.",
         },
       ],
+      privacy:
+        "Nessun account, nessun server. Il riconoscimento vocale e la voce funzionano sul tuo computer, e lì resta anche la tua cronologia.",
       platforms: ["macOS (Apple Silicon)", "Windows (64 bit)"],
       screenshots: [
         'Una conversazione in SOS My Language: quello che hai detto, la correzione e la battuta successiva del partner',
         'La scelta della lingua da allenare in SOS My Language: inglese o tedesco',
         'La pagina iniziale di SOS My Language: argomenti di conversazione per categoria',
+      ],
+    },
+    feed: {
+      tagline: 'Lettore di feed RSS e Atom',
+      hookTitle: 'Troppe schede aperte?',
+      hookAccent: 'I soccorsi stanno arrivando.',
+      summary:
+        "Un lettore per i feed RSS e Atom dei siti di notizie e dei blog che segui, che funziona sul tuo computer. Iscriviti a un feed, trova tutti i nuovi articoli in un'unica lista e leggili dentro l'app, pagina dopo pagina.",
+      features: [
+        {
+          title: "Un'unica lista per tutto ciò che segui",
+          body: 'Gli articoli di tutti i feed, dal più recente, oppure quelli di un solo feed.',
+        },
+        {
+          title: 'Leggere come un libro',
+          body: "L'articolo si apre come solo testo, senza pubblicità, menu o script della pagina, in pagine che giri con un tocco, una o due alla volta.",
+        },
+        {
+          title: 'Carta su misura',
+          body: "Sei colori di sfondo, e la dimensione del testo, l'interlinea e i margini che preferisci.",
+        },
+        {
+          title: 'Salva in Markdown',
+          body: 'Scarica il testo di un articolo come file Markdown, con titolo, indirizzo e data.',
+        },
+        {
+          title: 'Schermate in 19 lingue',
+          body: "Le schermate dell'app sono disponibili in 19 lingue, con un tema chiaro e uno scuro.",
+        },
+        {
+          title: 'Sempre aggiornata',
+          body: "All'avvio l'app cerca una nuova versione e, su macOS, si aggiorna con un clic.",
+        },
+      ],
+      privacy:
+        'Nessun account, nessun server. Le tue iscrizioni, i loro articoli e le tue impostazioni restano in un file sul tuo computer.',
+      platforms: ['macOS (Apple Silicon)', 'Windows (64 bit)'],
+      screenshots: [
+        "Il mio feed in SOS My Feed: gli articoli di tre feed in un'unica lista, dal più recente",
+        'Un articolo aperto nel lettore di SOS My Feed: due pagine affiancate su carta seppia',
       ],
     },
   },

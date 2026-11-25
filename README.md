@@ -4,6 +4,7 @@ The website of the SOS app series, served at **https://sosmy.app**. It introduce
 
 - [SOS My Interview](https://github.com/gyedongjeon/sos-my-interview): English interview practice.
 - [SOS My Language](https://github.com/gyedongjeon/sos-my-language): English and German speaking practice (it replaced SOS My English and SOS My German).
+- [SOS My Feed](https://github.com/gyedongjeon/sos-my-feed): a reader for RSS and Atom feeds.
 
 English is served at `/`; Korean, Japanese, Chinese (Simplified and Traditional), Spanish, French, German, Portuguese, Russian, Vietnamese, Indonesian, Hindi, Turkish, Italian, Polish, Ukrainian, Thai, and Bengali under `/<locale>/`, the same languages the apps give feedback in.
 
@@ -26,7 +27,7 @@ npm run preview  # serve dist/
 | `src/locales/<locale>.ts` | All text of one language: shared copy and each app's copy (shape in `types.ts`) |
 | `src/data/apps.ts` | Each app's name, repository, icon, and screenshots (none is fine until an app has some) |
 | `src/components/HomePage.astro`, `AppPage.astro` | The page bodies, rendered once per language |
-| `src/pages/` | Routes: `index`, `interview`, `language` for English (the default language); `[locale]/` for every other language; `404` |
+| `src/pages/` | Routes: `index`, `interview`, `language`, `feed` for English (the default language); `[locale]/` for every other language; `404` |
 | `src/layouts/Base.astro` | `<head>`, header, and footer |
 | `src/styles/global.css` | Tailwind CSS and daisyUI with the SOS themes, copied from the apps' `frontend/src/style.css` |
 | `src/assets/` | App icons and screenshots, copied from each app's repository |

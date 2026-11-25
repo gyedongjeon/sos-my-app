@@ -3,11 +3,11 @@ import type { Messages } from './types';
 export default {
   ui: {
     siteDescription:
-      'İngilizcen ya da Almancan imdat dediğinde yanında olan uygulamalar. Mülakat ve konuşma pratiğini sesli olarak, kendi bilgisayarında yap.',
-    heroTitle: 'Dil seni yarı yolda mı bırakıyor?',
+      'İmdadına yetişen küçük, ücretsiz masaüstü uygulamaları serisi. Hesap açmana gerek kalmadan kendi bilgisayarında çalışırlar.',
+    heroTitle: 'İmdat mı lazım?',
     heroAccent: "İmdat sinyali ver.",
     heroLead:
-      'Yaklaşan bir mülakat mı var, yoksa kelimeler mi bulamıyorsun? SOS serisi, İngilizceyi ve Almancayı sesli çalışman için ücretsiz masaüstü uygulamalarından oluşur. Kendi bilgisayarında çalışırlar ve seçtiğin yapay zekâ hatalarını anında düzeltir.',
+      'Yaklaşan bir mülakat mı var, kelimeler mi bulamıyorsun, yoksa açık sekmeler mi çok fazla? SOS serisi, her biri böyle bir an için yapılmış ücretsiz masaüstü uygulamalarından oluşur. Hesap açmana gerek kalmadan kendi bilgisayarında çalışırlar.',
     appsHeading: "Uygulamalar",
     language: "Dil",
     download: "Son sürümü indir",
@@ -19,17 +19,18 @@ export default {
     requirements:
       "Yapay zekâ geri bildirimi için seçtiğin sağlayıcının API anahtarı gerekir (Google Gemini, Claude, OpenAI ve diğerleri). Yeni başlıyorsan Google Gemini'yi öneririz: ücretsiz bir kullanım kotası var.",
     privacyHeading: "Verilerin bilgisayarında kalır",
-    privacy:
-      "Hesap yok, sunucu yok. Konuşma tanıma ve seslendirme bilgisayarında çalışır, geçmişin de orada saklanır.",
     readme: "Kurulum adımları ve tüm özelliklerin listesi README'de.",
     commonTitle: "Uygulamaların ortak özellikleri",
     common: [
-      { title: "Konuş ve dinle", body: "Yazmak yerine sesli cevap ver; karşındakini okumadan önce dinle." },
-      { title: "Kendi bilgisayarında", body: "Üyelik olmadan kur ve kullan. Geçmişin bilgisayarında kalır." },
-      { title: "Türkçe açıklamalar", body: "Düzeltmelerin açıklamalarını Türkçe alabilirsin; pratik öğrendiğin dilde devam eder." },
+      { title: 'Kendi bilgisayarında', body: 'Üyelik olmadan kur ve kullan; macOS ve Windows desteklenir.' },
       {
-        title: "Ücretsiz ve açık kaynak",
-        body: "MIT lisansıyla yayımlandı. Yalnızca kullandığın kadarını yapay zekâ sağlayıcına ödersin.",
+        title: 'Verilerin sende kalır',
+        body: 'Uygulamalarda yaptıkların bir sunucuda değil, kendi bilgisayarında saklanır.',
+      },
+      { title: 'Türkçe', body: 'Uygulamaya göre ekranlar ya da açıklamalar Türkçe.' },
+      {
+        title: 'Ücretsiz ve açık kaynak',
+        body: 'MIT lisansıyla yayımlandı. Yapay zekâ kullanan uygulamalarda yalnızca yapay zekâ sağlayıcının ücretini ödersin.',
       },
     ],
     notFoundTitle: "Rotanı mı kaybettin?",
@@ -64,6 +65,8 @@ export default {
           body: "Her cevap; metni, puanları ve ses kaydıyla saklanır. Böylece nasıl geliştiğini görebilirsin.",
         },
       ],
+      privacy:
+        "Hesap yok, sunucu yok. Konuşma tanıma ve seslendirme bilgisayarında çalışır, geçmişin de orada saklanır.",
       platforms: ["macOS (Apple Silicon)", "Windows (64 bit)"],
       screenshots: ["SOS My Interview ana ekranı: iş ilanı ekleme ve sık sorulan sorular"],
     },
@@ -108,11 +111,50 @@ export default {
           body: "Sohbeti bitirince neleri iyi yaptığını, nelere çalışman gerektiğini ve bir dahaki sefere deneyebileceğin ifadeleri gör.",
         },
       ],
+      privacy:
+        "Hesap yok, sunucu yok. Konuşma tanıma ve seslendirme bilgisayarında çalışır, geçmişin de orada saklanır.",
       platforms: ["macOS (Apple Silicon)", "Windows (64 bit)"],
       screenshots: [
         "SOS My Language'da bir konuşma: söylediğin, düzeltmesi ve partnerinin sıradaki cümlesi",
         "SOS My Language'da pratik yapılacak dili seçme: İngilizce ya da Almanca",
         'SOS My Language ana sayfası: kategorilere göre konuşma konuları',
+      ],
+    },
+    feed: {
+      tagline: 'RSS ve Atom akış okuyucu',
+      hookTitle: 'Çok mu sekme açık?',
+      hookAccent: 'Yardım yolda.',
+      summary:
+        'Takip ettiğin haber siteleri ve blogların RSS ve Atom akışları için, kendi bilgisayarında çalışan bir okuyucu. Bir akışa abone ol, tüm yeni yazıları tek bir listede gör ve her yazıyı uygulamanın içinde sayfa sayfa oku.',
+      features: [
+        {
+          title: 'Takip ettiğin her şey tek listede',
+          body: 'Tüm akışların yazıları en yeniden başlayarak ya da yalnızca tek bir akışınkiler.',
+        },
+        {
+          title: 'Kitap gibi okuma',
+          body: 'Yazı, sayfanın reklamları, menüleri ve betikleri olmadan düz metin olarak açılır; sayfaları bir dokunuşla, birer ya da ikişer çevirirsin.',
+        },
+        {
+          title: 'Zevkine göre kâğıt',
+          body: 'Altı arka plan rengi, ayrıca seçtiğin yazı boyutu, satır aralığı ve kenar boşlukları.',
+        },
+        {
+          title: 'Markdown olarak kaydet',
+          body: 'Bir yazının metnini başlığı, adresi ve tarihiyle birlikte Markdown dosyası olarak indir.',
+        },
+        { title: '19 dilde ekranlar', body: 'Uygulamanın ekranları açık ve koyu temayla 19 dilde.' },
+        {
+          title: 'Kendini güncel tutar',
+          body: "Uygulama açılırken yeni sürüm olup olmadığına bakar ve macOS'ta tek tıklamayla güncellenir.",
+        },
+      ],
+      privacy:
+        'Hesap yok, sunucu yok. Aboneliklerin, onların yazıları ve ayarların bilgisayarındaki bir dosyada saklanır.',
+      platforms: ['macOS (Apple Silicon)', 'Windows (64 bit)'],
+      screenshots: [
+        "SOS My Feed'de akışım: üç akışın yazıları en yeniden başlayarak tek listede",
+        'SOS My Feed okuyucusunda açık bir yazı: sepya kâğıt üzerinde yan yana iki sayfa',
       ],
     },
   },

@@ -3,11 +3,11 @@ import type { Messages } from './types';
 export default {
   ui: {
     siteDescription:
-      "Une série d'applis d'entraînement pour quand votre anglais ou votre allemand a besoin d'un coup de main. Entraînez-vous aux entretiens et à parler à voix haute, sur votre propre ordinateur.",
-    heroTitle: 'Une langue vous fait défaut ?',
+      'Une série de petites applis de bureau gratuites qui viennent à la rescousse. Elles tournent sur votre propre ordinateur, sans compte à créer.',
+    heroTitle: "Besoin d'aide ?",
     heroAccent: 'Lancez un SOS.',
     heroLead:
-      "Un entretien en vue, ou les mots qui ne viennent pas : la série SOS, ce sont des applis de bureau gratuites pour pratiquer l'anglais et l'allemand à voix haute. Elles tournent sur votre ordinateur, et l'IA de votre choix vous corrige au fil de l'eau.",
+      "Un entretien en vue, les mots qui ne viennent pas, ou trop d'onglets ouverts : la série SOS, ce sont des applis de bureau gratuites, chacune pour un moment comme celui-là. Elles tournent sur votre propre ordinateur, sans compte à créer.",
     appsHeading: 'Applis',
     language: 'Langue',
     download: 'Télécharger la dernière version',
@@ -19,26 +19,21 @@ export default {
     requirements:
       "Les retours de l'IA nécessitent une clé API du fournisseur de votre choix (Google Gemini, Claude, OpenAI, etc.). Si vous débutez, Google Gemini propose une offre gratuite.",
     privacyHeading: 'Vos données restent sur votre ordinateur',
-    privacy:
-      "Ni compte, ni serveur. La reconnaissance vocale et la voix fonctionnent sur votre ordinateur, et votre historique y reste.",
     readme: "Les étapes d'installation et la liste complète des fonctionnalités se trouvent dans le README.",
     commonTitle: 'Ce que les applis ont en commun',
     common: [
       {
-        title: 'Parler et écouter',
-        body: "Répondez à voix haute au lieu de taper, et écoutez votre interlocuteur avant de le lire.",
-      },
-      {
         title: 'Sur votre ordinateur',
-        body: "Installez et utilisez sans inscription. Votre historique reste sur votre machine.",
+        body: 'Installez-les et utilisez-les sans inscription, sur macOS et Windows.',
       },
       {
-        title: 'Explications en français',
-        body: "Les corrections et les retours peuvent être expliqués en français ; l'entraînement, lui, reste dans la langue que vous apprenez.",
+        title: 'Vos données restent à vous',
+        body: 'Ce que vous faites dans les applis reste sur votre machine, pas sur un serveur.',
       },
+      { title: 'En français', body: "Selon l'appli, les écrans ou les explications sont en français." },
       {
         title: 'Gratuit et open source',
-        body: "Publié sous licence MIT. Vous ne payez que votre fournisseur d'IA, selon votre usage.",
+        body: "Publié sous licence MIT. Les applis qui utilisent l'IA ne coûtent que ce que facture votre fournisseur d'IA.",
       },
     ],
     notFoundTitle: 'Perdu en mer ?',
@@ -79,6 +74,8 @@ export default {
           body: 'Chaque réponse est conservée avec sa transcription, ses notes et son enregistrement, pour suivre vos progrès.',
         },
       ],
+      privacy:
+        "Ni compte, ni serveur. La reconnaissance vocale et la voix fonctionnent sur votre ordinateur, et votre historique y reste.",
       platforms: ['macOS (Apple Silicon)', 'Windows (64 bits)'],
       screenshots: ["L'accueil de SOS My Interview : ajout d'une offre d'emploi et questions courantes"],
     },
@@ -126,11 +123,53 @@ export default {
           body: 'Terminez une conversation pour voir ce que vous avez bien fait, ce qui reste à travailler et des expressions à essayer la prochaine fois.',
         },
       ],
+      privacy:
+        "Ni compte, ni serveur. La reconnaissance vocale et la voix fonctionnent sur votre ordinateur, et votre historique y reste.",
       platforms: ['macOS (Apple Silicon)', 'Windows (64 bits)'],
       screenshots: [
         'Une conversation dans SOS My Language : ce que vous avez dit, sa correction et la réplique suivante de votre partenaire',
         'Le choix de la langue à pratiquer dans SOS My Language : anglais ou allemand',
         "La page d'accueil de SOS My Language : sujets de conversation par catégorie",
+      ],
+    },
+    feed: {
+      tagline: 'Lecteur de flux RSS et Atom',
+      hookTitle: "Trop d'onglets ouverts ?",
+      hookAccent: 'Les secours arrivent.',
+      summary:
+        "Un lecteur des flux RSS et Atom des sites d'actualité et des blogs que vous suivez, qui tourne sur votre propre ordinateur. Abonnez-vous à un flux, retrouvez tous les nouveaux articles dans une seule liste, et lisez-les dans l'appli, page par page.",
+      features: [
+        {
+          title: 'Une liste pour tout ce que vous suivez',
+          body: "Les articles de tous vos flux, du plus récent au plus ancien, ou ceux d'un seul flux.",
+        },
+        {
+          title: 'Lire comme dans un livre',
+          body: "Un article s'ouvre en texte seul, sans les publicités, menus ni scripts de la page, en pages que l'on tourne d'un tap, une ou deux à la fois.",
+        },
+        {
+          title: 'Un papier à votre goût',
+          body: "Six couleurs de fond, et la taille du texte, l'interligne et les marges de votre choix.",
+        },
+        {
+          title: 'Enregistrer en Markdown',
+          body: "Téléchargez le texte d'un article en fichier Markdown, avec son titre, son adresse et sa date.",
+        },
+        {
+          title: 'Des écrans en 19 langues',
+          body: "Les écrans de l'appli existent en 19 langues, avec un thème clair et un thème sombre.",
+        },
+        {
+          title: 'Toujours à jour',
+          body: "L'appli cherche une nouvelle version au démarrage et, sur macOS, se met à jour en un clic.",
+        },
+      ],
+      privacy:
+        'Ni compte, ni serveur. Vos abonnements, leurs articles et vos réglages sont enregistrés dans un fichier sur votre ordinateur.',
+      platforms: ['macOS (Apple Silicon)', 'Windows (64 bits)'],
+      screenshots: [
+        'Mon flux dans SOS My Feed : les articles de trois flux dans une seule liste, du plus récent au plus ancien',
+        'Un article ouvert dans le lecteur de SOS My Feed : deux pages côte à côte sur fond sépia',
       ],
     },
   },

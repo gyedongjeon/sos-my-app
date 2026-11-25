@@ -3,11 +3,11 @@ import type { Messages } from './types';
 export default {
   ui: {
     siteDescription:
-      'Una serie de apps de práctica para cuando tu inglés o tu alemán necesitan un rescate. Practica entrevistas y conversación en voz alta, en tu propio equipo.',
-    heroTitle: '¿El idioma te falla?',
+      'Una serie de pequeñas apps de escritorio gratuitas que acuden al rescate. Funcionan en tu propio equipo, sin cuentas que crear.',
+    heroTitle: '¿Necesitas un rescate?',
     heroAccent: 'Lanza una señal de auxilio.',
     heroLead:
-      '¿Se acerca una entrevista o te quedas sin palabras? La serie SOS son apps de escritorio gratuitas para practicar inglés y alemán en voz alta. Funcionan en tu equipo, y la IA que elijas te corrige sobre la marcha.',
+      '¿Se acerca una entrevista, te quedas sin palabras o tienes demasiadas pestañas abiertas? La serie SOS son apps de escritorio gratuitas, cada una para un momento así. Funcionan en tu propio equipo, sin cuentas que crear.',
     appsHeading: 'Apps',
     language: 'Idioma',
     download: 'Descargar la última versión',
@@ -19,15 +19,19 @@ export default {
     requirements:
       'Para las correcciones de la IA necesitas una clave de API del proveedor que elijas (Google Gemini, Claude, OpenAI y otros). Si es tu primera vez, Google Gemini tiene un nivel gratuito.',
     privacyHeading: 'Tus datos se quedan en tu equipo',
-    privacy:
-      'No hay cuentas ni servidores. El reconocimiento de voz y la voz de la app funcionan en tu equipo, y tu historial se guarda ahí.',
     readme: 'Los pasos de instalación y la lista completa de funciones están en el README.',
     commonTitle: 'Lo que tienen en común',
     common: [
-      { title: 'Habla y escucha', body: 'Responde en voz alta en lugar de escribir, y escucha a tu interlocutor antes de leerlo.' },
-      { title: 'En tu equipo', body: 'Se instala y se usa sin registrarse. Tu historial se queda en tu equipo.' },
-      { title: 'Explicaciones en español', body: 'Las correcciones se explican en español; la práctica sigue siendo en el idioma que aprendes.' },
-      { title: 'Gratis y de código abierto', body: 'Publicado con licencia MIT. Solo pagas a tu proveedor de IA por lo que uses.' },
+      { title: 'En tu equipo', body: 'Se instalan y se usan sin registrarse, en macOS y Windows.' },
+      {
+        title: 'Tus datos son tuyos',
+        body: 'Lo que haces en las apps se queda en tu equipo, no en un servidor.',
+      },
+      { title: 'En español', body: 'Según la app, las pantallas o las explicaciones están en español.' },
+      {
+        title: 'Gratis y de código abierto',
+        body: 'Publicado con licencia MIT. Las apps que usan IA solo cuestan lo que cobre tu proveedor de IA.',
+      },
     ],
     notFoundTitle: '¿A la deriva?',
     notFoundBody: 'Esta página no existe.',
@@ -64,6 +68,8 @@ export default {
           body: 'Cada respuesta se guarda con su transcripción, puntuaciones y grabación, para que veas cómo mejoras.',
         },
       ],
+      privacy:
+        'No hay cuentas ni servidores. El reconocimiento de voz y la voz de la app funcionan en tu equipo, y tu historial se guarda ahí.',
       platforms: ['macOS (Apple Silicon)', 'Windows (64 bits)'],
       screenshots: ['Página de inicio de SOS My Interview: añadir una oferta de empleo y preguntas frecuentes'],
     },
@@ -108,11 +114,53 @@ export default {
           body: 'Cierra una conversación para ver qué hiciste bien, qué mejorar y expresiones para probar la próxima vez.',
         },
       ],
+      privacy:
+        'No hay cuentas ni servidores. El reconocimiento de voz y la voz de la app funcionan en tu equipo, y tu historial se guarda ahí.',
       platforms: ['macOS (Apple Silicon)', 'Windows (64 bits)'],
       screenshots: [
         'Una conversación en SOS My Language: lo que dijiste, su corrección y la siguiente frase de tu compañero',
         'Elegir el idioma que practicar en SOS My Language: inglés o alemán',
         'La página de inicio de SOS My Language: temas de conversación por categoría',
+      ],
+    },
+    feed: {
+      tagline: 'Lector de feeds RSS y Atom',
+      hookTitle: '¿Demasiadas pestañas?',
+      hookAccent: 'La ayuda está en camino.',
+      summary:
+        'Un lector de los feeds RSS y Atom de los sitios de noticias y blogs que sigues, que funciona en tu propio equipo. Suscríbete a un feed, ve todos los artículos nuevos en una sola lista y lee cada artículo dentro de la app, página a página.',
+      features: [
+        {
+          title: 'Una lista para todo lo que sigues',
+          body: 'Los artículos de todos los feeds, del más reciente al más antiguo, o solo los de un feed.',
+        },
+        {
+          title: 'Leer como un libro',
+          body: 'Un artículo se abre como texto limpio, sin anuncios, menús ni scripts de la página, en páginas que pasas con un toque, de una en una o de dos en dos.',
+        },
+        {
+          title: 'El papel a tu gusto',
+          body: 'Seis colores de fondo, y el tamaño de letra, el interlineado y los márgenes que prefieras.',
+        },
+        {
+          title: 'Guardar en Markdown',
+          body: 'Descarga el texto de un artículo como archivo Markdown, con su título, dirección y fecha.',
+        },
+        {
+          title: 'Pantallas en 19 idiomas',
+          body: 'Las pantallas de la app están en 19 idiomas, con tema claro y oscuro.',
+        },
+        {
+          title: 'Se mantiene al día',
+          body: 'La app busca una versión nueva al iniciarse y, en macOS, se actualiza con un clic.',
+        },
+      ],
+      privacy:
+        'No hay cuentas ni servidores. Tus suscripciones, sus artículos y tus ajustes se guardan en un archivo en tu equipo.',
+      platforms: ['macOS (Apple Silicon)', 'Windows (64 bits)'],
+      screenshots: [
+        'Mi feed en SOS My Feed: los artículos de tres feeds en una sola lista, del más reciente al más antiguo',
+        'Un artículo abierto en el lector de SOS My Feed: dos páginas una al lado de la otra sobre papel sepia',
       ],
     },
   },

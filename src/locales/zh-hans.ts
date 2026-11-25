@@ -2,12 +2,10 @@ import type { Messages } from './types';
 
 export default {
   ui: {
-    siteDescription:
-      '英语、德语告急时随手可用的练习应用系列。在自己的电脑上，开口练习面试和口语。',
-    heroTitle: '外语让你犯难？',
+    siteDescription: '遇到难题时随手可用的小巧免费桌面应用系列。无需注册账号，在你自己的电脑上运行。',
+    heroTitle: '遇到难题？',
     heroAccent: '发出求救信号吧。',
-    heroLead:
-      '面试在即，或是一开口就卡壳。SOS 系列是一套免费的桌面应用，帮你开口练英语和德语。它们在你自己的电脑上运行，由你选择的 AI 随时纠正你的错误。',
+    heroLead: '面试在即，一开口就卡壳，或是标签页开得太多。SOS 系列是一套免费的桌面应用，每一款对应一个这样的时刻。它们在你自己的电脑上运行，无需注册账号。',
     appsHeading: '应用',
     language: '语言',
     download: '下载最新版本',
@@ -19,14 +17,13 @@ export default {
     requirements:
       'AI 反馈需要你所选服务（Google Gemini、Claude、OpenAI 等）的 API 密钥。如果你是第一次用，推荐有免费额度的 Google Gemini。',
     privacyHeading: '数据只留在你的电脑上',
-    privacy: '没有账号，也没有服务器。语音识别和朗读都在你的电脑上运行，练习记录也只保存在本机。',
     readme: '安装步骤和完整功能列表请见 README。',
     commonTitle: '这些应用的共同点',
     common: [
-      { title: '开口说，用耳听', body: '不用打字，直接开口回答；对方的话先用耳朵听。' },
-      { title: '在你的电脑上', body: '无需注册，安装即用。练习记录只保存在你的电脑上。' },
-      { title: '中文讲解', body: '纠错和反馈用中文讲解，练习仍然用所学的语言。' },
-      { title: '免费开源', body: '以 MIT 许可证开源。你只需向所选的 AI 服务支付实际用量的费用。' },
+      { title: '在你的电脑上', body: '无需注册，安装即用，支持 macOS 和 Windows。' },
+      { title: '数据归你所有', body: '你在应用中的一切都保存在自己的电脑上，而不是服务器上。' },
+      { title: '中文界面与讲解', body: '视应用而定，界面或纠错讲解可以用中文显示。' },
+      { title: '免费开源', body: '以 MIT 许可证开源。使用 AI 的应用，你只需向所选的 AI 服务支付实际用量的费用。' },
     ],
     notFoundTitle: '迷航了？',
     notFoundBody: '你要找的页面不存在。',
@@ -54,6 +51,8 @@ export default {
         { title: '中文反馈', body: '讲解可以用中文接收；问题和参考答案仍然是英语。' },
         { title: '练习记录', body: '每次回答都会连同文字稿、分数和录像一起保存，进步看得见。' },
       ],
+      privacy:
+        '没有账号，也没有服务器。语音识别和朗读都在你的电脑上运行，练习记录也只保存在本机。',
       platforms: ['macOS (Apple Silicon)', 'Windows (64 位)'],
       screenshots: ['SOS My Interview 首页：添加招聘信息和常见问题'],
     },
@@ -86,11 +85,34 @@ export default {
         { title: '复习纠错', body: '所有纠错都集中在一处，你可以反复开口练，直到说对为止。' },
         { title: '结束时的总结', body: '结束对话后，总结你做得好的地方、需要加强的地方，以及下次可以试试的表达。' },
       ],
+      privacy:
+        '没有账号，也没有服务器。语音识别和朗读都在你的电脑上运行，练习记录也只保存在本机。',
       platforms: ['macOS (Apple Silicon)', 'Windows (64 位)'],
       screenshots: [
         'SOS My Language 的对话界面：你说的话、纠正和对方的下一句',
         'SOS My Language 的语言选择界面：英语或德语',
         'SOS My Language 的主页：按类别排列的对话话题',
+      ],
+    },
+    feed: {
+      tagline: 'RSS 和 Atom 订阅阅读器',
+      hookTitle: '标签页开太多了？',
+      hookAccent: '救援正在路上。',
+      summary:
+        '在你自己的电脑上集中阅读常看的新闻网站和博客的 RSS、Atom 订阅源。订阅之后，新文章汇集在同一个列表里，文章则在应用内像书一样一页页翻着读。',
+      features: [
+        { title: '关注的内容汇成一个列表', body: '按时间从新到旧查看所有订阅源的文章，也可以只看某一个订阅源。' },
+        { title: '像读书一样阅读', body: '打开文章后只显示正文，没有广告、菜单和脚本。不用滚动，而是分成一页页，一次显示一页或两页，轻点屏幕翻页。' },
+        { title: '合你心意的版面', body: '六种背景色，字号、行距和页边距都可以自己选。' },
+        { title: '保存为 Markdown', body: '把文章正文连同标题、网址和日期下载为 Markdown 文件。' },
+        { title: '19 种语言界面', body: '应用界面支持 19 种语言，并提供浅色和深色主题。' },
+        { title: '自动保持最新', body: '应用启动时检查新版本；在 macOS 上一键即可更新。' },
+      ],
+      privacy: '没有账号，也没有服务器。订阅列表、文章和设置都保存在你电脑上的一个文件里。',
+      platforms: ['macOS (Apple Silicon)', 'Windows (64 位)'],
+      screenshots: [
+        'SOS My Feed 的我的订阅：三个订阅源的文章按时间从新到旧排在一个列表里',
+        '在 SOS My Feed 阅读器中打开的文章：棕褐色背景上并排显示两页',
       ],
     },
   },

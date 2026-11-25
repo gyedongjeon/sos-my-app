@@ -3,11 +3,11 @@ import type { Messages } from './types';
 export default {
   ui: {
     siteDescription:
-      'Seria aplikacji na ratunek, gdy angielski albo niemiecki zawodzi. Ćwicz rozmowy kwalifikacyjne i mówienie na głos, na własnym komputerze.',
-    heroTitle: 'Język cię zawodzi?',
+      'Seria małych, darmowych aplikacji na komputer, które przychodzą na ratunek. Działają na twoim komputerze, bez zakładania konta.',
+    heroTitle: 'Potrzebujesz ratunku?',
     heroAccent: 'Wyślij sygnał SOS.',
     heroLead:
-      'Zbliża się rozmowa kwalifikacyjna albo brakuje ci słów? Seria SOS to darmowe aplikacje na komputer do ćwiczenia angielskiego i niemieckiego na głos. Działają na twoim komputerze, a wybrany przez ciebie model AI na bieżąco poprawia twoje błędy.',
+      'Zbliża się rozmowa kwalifikacyjna, brakuje ci słów albo masz otwartych za dużo kart? Seria SOS to darmowe aplikacje na komputer, każda na taką właśnie chwilę. Działają na twoim komputerze, bez zakładania konta.',
     appsHeading: 'Aplikacje',
     language: 'Język',
     download: 'Pobierz najnowszą wersję',
@@ -19,17 +19,18 @@ export default {
     requirements:
       'Do poprawek i ocen AI potrzebujesz klucza API wybranego dostawcy (Google Gemini, Claude, OpenAI i innych). Jeśli dopiero zaczynasz, Google Gemini ma darmowy plan.',
     privacyHeading: 'Twoje dane zostają u ciebie',
-    privacy:
-      'Bez konta i bez serwera. Rozpoznawanie mowy i głos działają na twoim komputerze i tam też zapisuje się historia.',
     readme: 'Instrukcja instalacji i pełna lista funkcji są w README.',
     commonTitle: 'Co łączy aplikacje',
     common: [
-      { title: 'Mów i słuchaj', body: 'Odpowiadaj na głos zamiast pisać, a rozmówcę najpierw słuchaj, a dopiero potem czytaj.' },
-      { title: 'Na twoim komputerze', body: 'Instalujesz i korzystasz bez rejestracji. Historia zostaje na twoim komputerze.' },
-      { title: 'Wyjaśnienia po polsku', body: 'Poprawki są wyjaśniane po polsku, a ćwiczysz w języku, którego się uczysz.' },
+      { title: 'Na twoim komputerze', body: 'Instalujesz i korzystasz bez rejestracji, na macOS i Windows.' },
+      {
+        title: 'Twoje dane są twoje',
+        body: 'To, co robisz w aplikacjach, zostaje na twoim komputerze, a nie na serwerze.',
+      },
+      { title: 'Po polsku', body: 'W zależności od aplikacji ekrany albo wyjaśnienia są po polsku.' },
       {
         title: 'Darmowe i otwarte',
-        body: 'Udostępnione na licencji MIT. Płacisz tylko wybranemu dostawcy AI za to, z czego korzystasz.',
+        body: 'Udostępnione na licencji MIT. Za aplikacje korzystające z AI płacisz tylko wybranemu dostawcy AI.',
       },
     ],
     notFoundTitle: 'Dryfujesz?',
@@ -64,6 +65,8 @@ export default {
         },
         { title: 'Historia', body: 'Każda odpowiedź zapisuje się z transkrypcją, ocenami i nagraniem, więc widzisz swoje postępy.' },
       ],
+      privacy:
+        'Bez konta i bez serwera. Rozpoznawanie mowy i głos działają na twoim komputerze i tam też zapisuje się historia.',
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bitowy)'],
       screenshots: ['Ekran główny SOS My Interview: dodawanie ogłoszenia o pracę i typowe pytania'],
     },
@@ -108,11 +111,50 @@ export default {
           body: 'Zakończ rozmowę i zobacz, co ci wyszło, nad czym popracować i jakie wyrażenia wypróbować następnym razem.',
         },
       ],
+      privacy:
+        'Bez konta i bez serwera. Rozpoznawanie mowy i głos działają na twoim komputerze i tam też zapisuje się historia.',
       platforms: ['macOS (Apple Silicon)', 'Windows (64-bitowy)'],
       screenshots: [
         'Rozmowa w SOS My Language: to, co powiedziałeś, poprawka i kolejna kwestia partnera',
         'Wybór języka do ćwiczeń w SOS My Language: angielski lub niemiecki',
         'Strona główna SOS My Language: tematy rozmów według kategorii',
+      ],
+    },
+    feed: {
+      tagline: 'Czytnik kanałów RSS i Atom',
+      hookTitle: 'Za dużo otwartych kart?',
+      hookAccent: 'Pomoc już płynie.',
+      summary:
+        'Czytnik kanałów RSS i Atom serwisów informacyjnych i blogów, które śledzisz, działający na twoim komputerze. Zasubskrybuj kanał, zobacz wszystkie nowe artykuły na jednej liście i czytaj je w aplikacji, strona po stronie.',
+      features: [
+        {
+          title: 'Jedna lista na wszystko, co śledzisz',
+          body: 'Artykuły ze wszystkich kanałów, od najnowszych, albo tylko z jednego kanału.',
+        },
+        {
+          title: 'Czytanie jak w książce',
+          body: 'Artykuł otwiera się jako sam tekst, bez reklam, menu i skryptów strony, na stronach, które przewracasz dotknięciem, po jednej lub po dwie.',
+        },
+        {
+          title: 'Papier według gustu',
+          body: 'Sześć kolorów tła oraz wybrany rozmiar tekstu, odstęp między wierszami i marginesy.',
+        },
+        { title: 'Zapis do Markdown', body: 'Pobierz tekst artykułu jako plik Markdown, z tytułem, adresem i datą.' },
+        {
+          title: 'Ekrany w 19 językach',
+          body: 'Ekrany aplikacji są dostępne w 19 językach, z jasnym i ciemnym motywem.',
+        },
+        {
+          title: 'Sama się aktualizuje',
+          body: 'Przy uruchomieniu aplikacja sprawdza, czy jest nowa wersja, a na macOS aktualizuje się jednym kliknięciem.',
+        },
+      ],
+      privacy:
+        'Bez konta i bez serwera. Twoje subskrypcje, ich artykuły i ustawienia są zapisane w pliku na twoim komputerze.',
+      platforms: ['macOS (Apple Silicon)', 'Windows (64-bitowy)'],
+      screenshots: [
+        'Mój kanał w SOS My Feed: artykuły z trzech kanałów na jednej liście, od najnowszych',
+        'Artykuł otwarty w czytniku SOS My Feed: dwie strony obok siebie na papierze w kolorze sepii',
       ],
     },
   },
