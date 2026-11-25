@@ -2,12 +2,10 @@ import type { Messages } from './types';
 
 export default {
   ui: {
-    siteDescription:
-      '英文、德文卡關時拿出來用的練習 App 系列。在自己的電腦上，開口練習面試和口說。',
-    heroTitle: '外語卡關了嗎？',
+    siteDescription: '遇到難關時拿出來用的小巧免費桌面 App 系列。不用註冊帳號，在你自己的電腦上執行。',
+    heroTitle: '遇到難關了嗎？',
     heroAccent: '發出求救訊號吧。',
-    heroLead:
-      '面試在即，或是話到嘴邊說不出口。SOS 系列是一組開口練英文和德文的免費桌面 App。在你自己的電腦上執行，由你選擇的 AI 隨時幫你修正。',
+    heroLead: '面試在即、話到嘴邊說不出口，或是分頁開得太多。SOS 系列是一組免費的桌面 App，每一款對應一個這樣的時刻。在你自己的電腦上執行，不用註冊帳號。',
     appsHeading: 'App',
     language: '語言',
     download: '下載最新版本',
@@ -22,10 +20,10 @@ export default {
     readme: '安裝步驟和完整功能請看 README。',
     commonTitle: '這些 App 的共同特色',
     common: [
-      { title: '開口說、用耳聽', body: '用說的回答，不用打字；對方的話先用聽的，再看文字。' },
-      { title: '在你的電腦上', body: '不用註冊，安裝就能用。紀錄只留在你的電腦裡。' },
-      { title: '中文解說', body: '修正和回饋可以用繁體中文說明，練習本身維持所學的語言。' },
-      { title: '免費開源', body: '以 MIT 授權公開。只需向你選擇的 AI 服務支付實際用量的費用。' },
+      { title: '在你的電腦上', body: '不用註冊，安裝就能用，支援 macOS 和 Windows。' },
+      { title: '資料屬於你', body: '你在 App 裡做的一切都留在自己的電腦，而不是伺服器上。' },
+      { title: '中文介面與解說', body: '視 App 而定，畫面或修正解說可以用繁體中文顯示。' },
+      { title: '免費開源', body: '以 MIT 授權公開。使用 AI 的 App，只需向你選擇的 AI 服務支付實際用量的費用。' },
     ],
     notFoundTitle: '在海上迷路了？',
     notFoundBody: '找不到這個頁面。',
@@ -94,6 +92,27 @@ export default {
         'SOS My Language 的對話畫面：你說的話、修正和對方的下一句',
         'SOS My Language 的語言選擇畫面：英文或德文',
         'SOS My Language 的首頁：依類別排列的對話主題',
+      ],
+    },
+    feed: {
+      tagline: 'RSS 與 Atom 訂閱閱讀器',
+      hookTitle: '分頁開太多了嗎？',
+      hookAccent: '救援就在路上。',
+      summary:
+        '在你自己的電腦上集中閱讀常看的新聞網站和部落格的 RSS、Atom 訂閱。訂閱之後，新文章會匯集在同一個列表裡，文章則在 App 裡像書一樣一頁頁翻著讀。',
+      features: [
+        { title: '追蹤的內容匯成一個列表', body: '依時間由新到舊查看所有訂閱的文章，也可以只看其中一個訂閱。' },
+        { title: '像讀書一樣閱讀', body: '打開文章後只顯示內文，沒有廣告、選單和指令碼。不用捲動，而是分成一頁頁，一次顯示一頁或兩頁，點一下畫面就能翻頁。' },
+        { title: '合你心意的版面', body: '六種背景色，字級、行距和邊界都可以自己選。' },
+        { title: '存成 Markdown', body: '把文章內文連同標題、網址和日期下載成 Markdown 檔案。' },
+        { title: '19 種語言介面', body: 'App 畫面支援 19 種語言，並提供淺色和深色主題。' },
+        { title: '自動保持最新', body: 'App 啟動時會檢查新版本；在 macOS 上點一下就能更新。' },
+      ],
+      privacy: '不需要帳號，也沒有伺服器。訂閱列表、文章和設定都存在你電腦裡的一個檔案中。',
+      platforms: ['macOS (Apple Silicon)', 'Windows (64 位元)'],
+      screenshots: [
+        'SOS My Feed 的我的訂閱：三個訂閱的文章依時間由新到舊排在一個列表裡',
+        '在 SOS My Feed 閱讀器中打開的文章：深褐色背景上並排顯示兩頁',
       ],
     },
   },

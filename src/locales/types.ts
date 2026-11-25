@@ -51,5 +51,6 @@ export interface Messages {
   apps: {
     interview: AppText;
     language: AppText;
+    feed: AppText;
   };
 }

@@ -90,7 +90,7 @@ const readme = locale === 'ko' ? `${app.repo}/blob/main/README.ko.md` : `${app.r
           </div>
         </div>
       )}
-      <div role="note" class="alert alert-success alert-soft items-start">
+      <div role="note" class:list={['alert alert-success alert-soft items-start', !app.needsApiKey && 'md:col-span-2']}>
         <div>
           <h2 class="font-bold">{t.privacyHeading}</h2>
           <p class="mt-1">{text.privacy}</p>

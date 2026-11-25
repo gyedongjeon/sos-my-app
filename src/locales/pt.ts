@@ -3,11 +3,11 @@ import type { Messages } from './types';
 export default {
   ui: {
     siteDescription:
-      'Uma série de apps de prática para quando o seu inglês ou alemão precisa de resgate. Pratique entrevistas e conversação em voz alta, no seu próprio computador.',
-    heroTitle: 'O idioma te deixou na mão?',
+      'Uma série de pequenos apps gratuitos para computador que vêm ao seu resgate. Eles rodam no seu próprio computador, sem conta para criar.',
+    heroTitle: 'Precisa de resgate?',
     heroAccent: 'Mande um sinal de socorro.',
     heroLead:
-      'Uma entrevista chegando ou faltam palavras? A série SOS reúne apps gratuitos para computador para praticar inglês e alemão em voz alta. Eles rodam no seu computador, e a IA que você escolher corrige você na hora.',
+      'Uma entrevista chegando, faltam palavras ou abas abertas demais? A série SOS reúne apps gratuitos para computador, cada um para um momento assim. Eles rodam no seu próprio computador, sem conta para criar.',
     appsHeading: 'Apps',
     language: 'Idioma',
     download: 'Baixar a versão mais recente',
@@ -22,10 +22,13 @@ export default {
     readme: 'Os passos de instalação e a lista completa de recursos estão no README.',
     commonTitle: 'O que os apps têm em comum',
     common: [
-      { title: 'Fale e ouça', body: 'Responda em voz alta em vez de digitar, e ouça o seu interlocutor antes de ler.' },
-      { title: 'No seu computador', body: 'Instale e use sem cadastro. Seu histórico fica na sua máquina.' },
-      { title: 'Explicações em português', body: 'As correções são explicadas em português; a prática continua no idioma que você está aprendendo.' },
-      { title: 'Gratuito e de código aberto', body: 'Publicado sob a licença MIT. Você só paga ao seu provedor de IA pelo que usar.' },
+      { title: 'No seu computador', body: 'Instale e use sem cadastro, no macOS e no Windows.' },
+      { title: 'Seus dados são seus', body: 'O que você faz nos apps fica na sua máquina, não em um servidor.' },
+      { title: 'Em português', body: 'Dependendo do app, as telas ou as explicações aparecem em português.' },
+      {
+        title: 'Gratuito e de código aberto',
+        body: 'Publicado sob a licença MIT. Nos apps que usam IA, você só paga o que o seu provedor de IA cobrar.',
+      },
     ],
     notFoundTitle: 'À deriva?',
     notFoundBody: 'Esta página não existe.',
@@ -115,6 +118,43 @@ export default {
         'Uma conversa no SOS My Language: o que você disse, a correção e a próxima fala do seu parceiro',
         'A escolha do idioma no SOS My Language: inglês ou alemão',
         'A página inicial do SOS My Language: temas de conversa por categoria',
+      ],
+    },
+    feed: {
+      tagline: 'Leitor de feeds RSS e Atom',
+      hookTitle: 'Abas demais?',
+      hookAccent: 'A ajuda está a caminho.',
+      summary:
+        'Um leitor dos feeds RSS e Atom dos sites de notícias e blogs que você acompanha, rodando no seu próprio computador. Assine um feed, veja todos os artigos novos em uma só lista e leia cada artigo dentro do app, página por página.',
+      features: [
+        {
+          title: 'Uma lista para tudo o que você acompanha',
+          body: 'Os artigos de todos os feeds, dos mais recentes aos mais antigos, ou os de um único feed.',
+        },
+        {
+          title: 'Leitura como em um livro',
+          body: 'O artigo abre só com o texto, sem os anúncios, menus ou scripts da página, em páginas que você vira com um toque, uma ou duas por vez.',
+        },
+        {
+          title: 'Papel do seu jeito',
+          body: 'Seis cores de fundo, e o tamanho do texto, o espaçamento entre linhas e as margens que você escolher.',
+        },
+        {
+          title: 'Salvar em Markdown',
+          body: 'Baixe o texto de um artigo como arquivo Markdown, com o título, o endereço e a data.',
+        },
+        { title: 'Telas em 19 idiomas', body: 'As telas do app estão em 19 idiomas, com tema claro e escuro.' },
+        {
+          title: 'Sempre atualizado',
+          body: 'O app procura uma nova versão ao abrir e, no macOS, se atualiza com um clique.',
+        },
+      ],
+      privacy:
+        'Não há conta nem servidor. Suas assinaturas, os artigos delas e suas configurações ficam guardados em um arquivo no seu computador.',
+      platforms: ['macOS (Apple Silicon)', 'Windows (64 bits)'],
+      screenshots: [
+        'Meu feed no SOS My Feed: os artigos de três feeds em uma só lista, dos mais recentes aos mais antigos',
+        'Um artigo aberto no leitor do SOS My Feed: duas páginas lado a lado em papel sépia',
       ],
     },
   },

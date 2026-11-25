@@ -2,14 +2,17 @@
 // under `apps`, and follows each app's README; when an app's README changes what it does or
 // where it runs, update every locale too.
 import type { ImageMetadata } from 'astro';
+import feedIcon from '../assets/icons/feed.svg';
 import interviewIcon from '../assets/icons/interview.svg';
 import languageIcon from '../assets/icons/language.svg';
+import feedFeed from '../assets/screens/feed-feed.png';
+import feedReader from '../assets/screens/feed-reader.png';
 import interviewHome from '../assets/screens/interview-home.png';
 import languageConversation from '../assets/screens/language-conversation.png';
 import languageChoice from '../assets/screens/language-language.png';
 import languageHome from '../assets/screens/language-home.png';
 
-export type AppSlug = 'interview' | 'language';
+export type AppSlug = 'interview' | 'language' | 'feed';
 
 export interface App {
   slug: AppSlug;
@@ -38,6 +41,14 @@ export const apps: App[] = [
     icon: languageIcon,
     needsApiKey: true,
     images: [languageConversation, languageChoice, languageHome],
+  },
+  {
+    slug: 'feed',
+    name: 'SOS My Feed',
+    repo: 'https://github.com/gyedongjeon/sos-my-feed',
+    icon: feedIcon,
+    needsApiKey: false,
+    images: [feedFeed, feedReader],
   },
 ];
 
