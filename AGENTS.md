@@ -26,6 +26,7 @@ Follow Kent Beck's Tidy First, and test-first where there is logic to test.
     - When a change adds logic (for example a script, a data transform, or a build helper), follow TDD: write one small failing test first, make it pass with the least code, then refactor. For a bug in such logic, first write a test that reproduces it.
 - **Checking a change**:
     - Use the Node.js version in `.nvmrc` (`fnm use`); Astro refuses to run on older versions.
+    - Run `npm test` (Node's test runner over `tests/*.test.ts`) when a change touches logic in `src/lib/`.
     - Run `npm run build` (type check and build) before every commit; never commit a change that does not build.
     - Look at every changed page in the browser (`npm run dev` or `npm run preview`), at desktop and phone widths, before opening a PR.
     - Check that links to the apps (GitHub repositories, downloads) still resolve.
@@ -49,6 +50,7 @@ Follow Kent Beck's Tidy First, and test-first where there is logic to test.
     - **Hosting**: GitHub Pages, deployed by GitHub Actions on every push to `main`, with the custom domain `sosmy.app` (`site: 'https://sosmy.app'`, no `base` path). `.app` domains are HTTPS-only.
     - **Structure**: One site with a page per app under a path (`/interview`, `/language`, `/feed`), not a subdomain per app. English is served at `/`, every other language under `/<locale>/` (e.g. `/ko/`, `/zh-hans/`).
     - **Content**: App data (name, repository, icon, screenshots) lives in `src/data/apps.ts`; all text lives in `src/locales/<locale>.ts`. App copy follows each app's README (`README.ko.md` for Korean). When an app's features or supported platforms change, update every locale.
+- **For language models**: `/llms.txt` (`src/pages/llms.txt.ts`, built by `src/lib/llms.ts`) gives the site's English copy as Markdown, and each page carries schema.org JSON-LD (`src/lib/jsonld.ts`): `WebSite` on the home page, `SoftwareApplication` on an app page. Both are built from `src/data/apps.ts` and the locales, so they follow copy changes on their own; a new app needs only its `category` in `apps.ts`.
 - **Scope**: An informational site. Do not add a backend, authentication, cookies, or third-party trackers unless explicitly requested.
     - **Analytics**: Cloudflare Web Analytics only (token in `src/data/analytics.ts`, beacon in `src/layouts/Base.astro`). It sets no cookies and does not track visitors across sites, so it needs no consent banner. The DNS records stay DNS-only (not proxied) so GitHub Pages keeps issuing its HTTPS certificate, which is why the beacon is installed as a snippet.
     - Do not add Google Analytics or other cookie-based or cross-site tracking: under the GDPR and the German TTDSG it would need a consent banner, a privacy policy, and an imprint with a postal address.
