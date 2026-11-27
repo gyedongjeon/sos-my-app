@@ -37,6 +37,11 @@ export default {
     notFoundBody: 'This page does not exist.',
     backHome: 'Back to the start',
     footer: 'Open source, MIT license',
+    consentText: 'This site would like to use Google Analytics to count visits and see which pages are read. Only if you allow it, cookies are stored and usage data is sent to Google.',
+    consentLearnMore: 'How Google uses this data',
+    consentAllow: 'Allow',
+    consentDecline: 'Decline',
+    consentSettings: 'Cookie settings',
   },
   apps: {
     interview: {

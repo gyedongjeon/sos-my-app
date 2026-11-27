@@ -43,6 +43,11 @@ export default {
     notFoundBody: 'यह पेज मौजूद नहीं है।',
     backHome: 'शुरुआत पर लौटें',
     footer: 'ओपन सोर्स, MIT लाइसेंस',
+    consentText: 'यह साइट विज़िट गिनने और यह देखने के लिए कि कौन-से पेज पढ़े जाते हैं, Google Analytics का इस्तेमाल करना चाहती है। केवल आपकी अनुमति पर ही कुकी सहेजी जाती हैं और उपयोग का डेटा Google को भेजा जाता है।',
+    consentLearnMore: 'Google इस डेटा का इस्तेमाल कैसे करता है',
+    consentAllow: 'अनुमति दें',
+    consentDecline: 'अस्वीकार करें',
+    consentSettings: 'कुकी सेटिंग',
   },
   apps: {
     interview: {

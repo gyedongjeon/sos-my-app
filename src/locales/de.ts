@@ -40,6 +40,11 @@ export default {
     notFoundBody: 'Diese Seite gibt es nicht.',
     backHome: 'Zurück zum Anfang',
     footer: 'Open Source, MIT-Lizenz',
+    consentText: 'Diese Seite möchte Google Analytics nutzen, um Besuche zu zählen und zu sehen, welche Seiten gelesen werden. Nur wenn du zustimmst, werden Cookies gespeichert und Nutzungsdaten an Google gesendet.',
+    consentLearnMore: 'Wie Google diese Daten nutzt',
+    consentAllow: 'Zulassen',
+    consentDecline: 'Ablehnen',
+    consentSettings: 'Cookie-Einstellungen',
   },
   apps: {
     interview: {
