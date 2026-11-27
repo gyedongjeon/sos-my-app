@@ -3,6 +3,7 @@ import '../styles/global.css';
 import BrandMark from '../components/BrandMark.astro';
 import ConsentBanner from '../components/ConsentBanner.astro';
 import { apps } from '../data/apps';
+import { cfBeaconToken } from '../data/analytics';
 import { defaultLocale, langTags, languageNames, localePath, locales, messages, ogLocales, type Locale } from '../i18n';
 
 interface Props {
@@ -42,6 +43,16 @@ const ACTIVE = 'bg-primary text-primary-content hover:bg-primary';
     <meta property="og:description" content={pageDescription} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={ogLocales[locale]} />
+    {
+      import.meta.env.PROD && (
+        <script
+          is:inline
+          type="module"
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={JSON.stringify({ token: cfBeaconToken })}
+        />
+      )
+    }
   </head>
   <body class="flex min-h-dvh flex-col bg-base-200 text-base-content">
     <nav class="navbar bg-neutral text-neutral-content">
