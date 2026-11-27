@@ -30,14 +30,6 @@ export interface UI {
   notFoundBody: string;
   backHome: string;
   footer: string;
-  /** The analytics consent banner: what is asked, and its buttons. */
-  consentText: string;
-  /** Link text to Google's page on how it uses data from sites that use its services. */
-  consentLearnMore: string;
-  consentAllow: string;
-  consentDecline: string;
-  /** Footer button that reopens the consent banner. */
-  consentSettings: string;
 }
 
 /** One app's text. Follows the app's README; see src/data/apps.ts. */

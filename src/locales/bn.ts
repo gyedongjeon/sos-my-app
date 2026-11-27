@@ -43,11 +43,6 @@ export default {
     notFoundBody: 'এই পৃষ্ঠাটি নেই।',
     backHome: 'শুরুতে ফিরে যান',
     footer: 'ওপেন সোর্স, MIT লাইসেন্স',
-    consentText: 'ভিজিট গুনতে এবং কোন পেজগুলো পড়া হয় তা দেখতে এই সাইট Google Analytics ব্যবহার করতে চায়। শুধু আপনি অনুমতি দিলেই কুকি সংরক্ষণ করা হয় এবং ব্যবহারের ডেটা Google-এ পাঠানো হয়।',
-    consentLearnMore: 'Google এই ডেটা কীভাবে ব্যবহার করে',
-    consentAllow: 'অনুমতি দিন',
-    consentDecline: 'প্রত্যাখ্যান করুন',
-    consentSettings: 'কুকি সেটিংস',
   },
   apps: {
     interview: {

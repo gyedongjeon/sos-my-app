@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 import BrandMark from '../components/BrandMark.astro';
-import ConsentBanner from '../components/ConsentBanner.astro';
 import { apps } from '../data/apps';
 import { cfBeaconToken } from '../data/analytics';
 import { defaultLocale, langTags, languageNames, localePath, locales, messages, ogLocales, type Locale } from '../i18n';
@@ -122,10 +121,8 @@ const ACTIVE = 'bg-primary text-primary-content hover:bg-primary';
             </a>
           ))
         }
-        <button type="button" id="consent-settings" class="link link-hover">{t.consentSettings}</button>
       </nav>
     </footer>
 
-    <ConsentBanner locale={locale} />
   </body>
 </html>

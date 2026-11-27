@@ -43,11 +43,6 @@ export default {
     notFoundBody: 'Trang này không tồn tại.',
     backHome: 'Về trang đầu',
     footer: 'Mã nguồn mở, giấy phép MIT',
-    consentText: 'Trang này muốn dùng Google Analytics để đếm lượt truy cập và xem trang nào được đọc. Chỉ khi bạn cho phép, cookie mới được lưu và dữ liệu sử dụng mới được gửi đến Google.',
-    consentLearnMore: 'Cách Google sử dụng dữ liệu này',
-    consentAllow: 'Cho phép',
-    consentDecline: 'Từ chối',
-    consentSettings: 'Cài đặt cookie',
   },
   apps: {
     interview: {

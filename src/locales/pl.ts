@@ -37,11 +37,6 @@ export default {
     notFoundBody: 'Ta strona nie istnieje.',
     backHome: 'Wróć na stronę główną',
     footer: 'Otwarte oprogramowanie, licencja MIT',
-    consentText: 'Ta strona chciałaby używać Google Analytics, aby liczyć odwiedziny i sprawdzać, które strony są czytane. Tylko za twoją zgodą zapisywane są pliki cookie, a dane o korzystaniu trafiają do Google.',
-    consentLearnMore: 'Jak Google wykorzystuje te dane',
-    consentAllow: 'Zezwól',
-    consentDecline: 'Odrzuć',
-    consentSettings: 'Ustawienia cookie',
   },
   apps: {
     interview: {
