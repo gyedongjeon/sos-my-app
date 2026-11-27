@@ -29,11 +29,6 @@ export default {
     notFoundBody: '你要找的页面不存在。',
     backHome: '返回首页',
     footer: '开源软件，MIT 许可证',
-    consentText: '本站希望使用 Google Analytics 统计访问量，了解哪些页面被阅读。只有在你允许后，才会保存 Cookie 并将使用数据发送给 Google。',
-    consentLearnMore: 'Google 如何使用这些数据',
-    consentAllow: '允许',
-    consentDecline: '拒绝',
-    consentSettings: 'Cookie 设置',
   },
   apps: {
     interview: {

@@ -31,11 +31,6 @@ export default {
     notFoundBody: '찾는 페이지가 없습니다.',
     backHome: '처음으로',
     footer: '오픈소스, MIT 라이선스',
-    consentText: '방문 수와 많이 읽힌 페이지를 알아보려고 구글 애널리틱스를 쓰려고 합니다. 허용하신 경우에만 쿠키를 저장하고 이용 데이터를 구글로 보냅니다.',
-    consentLearnMore: '구글이 이 데이터를 쓰는 방식',
-    consentAllow: '허용',
-    consentDecline: '거부',
-    consentSettings: '쿠키 설정',
   },
   apps: {
     interview: {

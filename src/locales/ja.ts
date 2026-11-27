@@ -29,11 +29,6 @@ export default {
     notFoundBody: 'お探しのページは見つかりません。',
     backHome: 'トップに戻る',
     footer: 'オープンソース、MITライセンス',
-    consentText: '訪問数やよく読まれるページを知るために、Google アナリティクスを使いたいと考えています。許可した場合にのみ、Cookie を保存し、利用データを Google に送信します。',
-    consentLearnMore: 'Google によるデータの使用方法',
-    consentAllow: '許可する',
-    consentDecline: '拒否する',
-    consentSettings: 'Cookie の設定',
   },
   apps: {
     interview: {
