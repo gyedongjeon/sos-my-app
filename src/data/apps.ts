@@ -21,6 +21,8 @@ export interface App {
   icon: ImageMetadata;
   /** Whether the app needs an AI provider's API key; the app page then shows the shared `requirements` note. */
   needsApiKey: boolean;
+  /** The schema.org application category, for the app page's structured data. */
+  category: string;
   /** Screenshots, the first one shown on the home page. May be empty until an app has some. */
   images: ImageMetadata[];
 }
@@ -28,6 +30,7 @@ export interface App {
 export const apps: App[] = [
   {
     slug: 'interview',
+    category: 'EducationalApplication',
     name: 'SOS My Interview',
     repo: 'https://github.com/gyedongjeon/sos-my-interview',
     icon: interviewIcon,
@@ -36,6 +39,7 @@ export const apps: App[] = [
   },
   {
     slug: 'language',
+    category: 'EducationalApplication',
     name: 'SOS My Language',
     repo: 'https://github.com/gyedongjeon/sos-my-language',
     icon: languageIcon,
@@ -44,6 +48,7 @@ export const apps: App[] = [
   },
   {
     slug: 'feed',
+    category: 'UtilitiesApplication',
     name: 'SOS My Feed',
     repo: 'https://github.com/gyedongjeon/sos-my-feed',
     icon: feedIcon,

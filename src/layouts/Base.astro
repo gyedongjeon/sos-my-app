@@ -3,6 +3,7 @@ import '../styles/global.css';
 import BrandMark from '../components/BrandMark.astro';
 import { apps } from '../data/apps';
 import { cfBeaconToken } from '../data/analytics';
+import { jsonLdHtml } from '../lib/jsonld';
 import { defaultLocale, langTags, languageNames, localePath, locales, messages, ogLocales, type Locale } from '../i18n';
 
 interface Props {
@@ -11,9 +12,11 @@ interface Props {
   path: string;
   title?: string;
   description?: string;
+  /** Structured data for the page (schema.org), from src/lib/jsonld.ts. */
+  jsonLd?: object;
 }
 
-const { locale, path, title, description } = Astro.props;
+const { locale, path, title, description, jsonLd } = Astro.props;
 const t = messages[locale].ui;
 const pageTitle = title ? `${title} · SOS` : 'SOS — sosmy.app';
 const pageDescription = description ?? t.siteDescription;
@@ -42,6 +45,7 @@ const ACTIVE = 'bg-primary text-primary-content hover:bg-primary';
     <meta property="og:description" content={pageDescription} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={ogLocales[locale]} />
+    {jsonLd && <script type="application/ld+json" is:inline set:html={jsonLdHtml(jsonLd)} />}
     {
       import.meta.env.PROD && (
         <script
