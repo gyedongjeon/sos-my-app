@@ -3,7 +3,8 @@ import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import MorseSignal from './MorseSignal.astro';
 import { getApp, latestRelease, type AppSlug } from '../data/apps';
-import { messages, type Locale } from '../i18n';
+import { langTags, localePath, messages, type Locale } from '../i18n';
+import { appJsonLd } from '../lib/jsonld';
 
 interface Props {
   locale: Locale;
@@ -14,10 +15,19 @@ const { locale, slug } = Astro.props;
 const t = messages[locale].ui;
 const app = getApp(slug);
 const text = messages[locale].apps[slug];
+const jsonLd = appJsonLd({
+  name: app.name,
+  url: new URL(localePath(locale, `/${slug}/`), Astro.site).href,
+  description: text.summary,
+  inLanguage: langTags[locale],
+  category: app.category,
+  platforms: text.platforms,
+  repo: app.repo,
+});
 const readme = locale === 'ko' ? `${app.repo}/blob/main/README.ko.md` : `${app.repo}#readme`;
 ---
 
-<Base locale={locale} path={`/${slug}/`} title={app.name} description={text.summary}>
+<Base locale={locale} path={`/${slug}/`} title={app.name} description={text.summary} jsonLd={jsonLd}>
   <div class="mx-auto max-w-5xl p-4 sm:p-8">
     <header class="py-8 sm:py-12">
       <div class="flex items-center gap-3">
