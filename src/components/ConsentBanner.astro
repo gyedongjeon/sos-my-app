@@ -1,0 +1,129 @@
+---
+// Asks before loading Google Analytics. Nothing is sent to Google until the visitor allows it;
+// the choice is kept in localStorage, and the footer's "Cookie settings" button reopens the banner.
+// The tag loads only in production builds, so `npm run dev` never reports to Analytics.
+import { gaMeasurementId } from '../data/analytics';
+import { langTags, messages, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = messages[locale].ui;
+// Google's `hl` takes region tags for Chinese; the language code works for the rest.
+const hl = { 'zh-hans': 'zh-CN', 'zh-hant': 'zh-TW' }[locale as string] ?? langTags[locale];
+const learnMore = `https://policies.google.com/technologies/partner-sites?hl=${hl}`;
+---
+
+<div
+  id="consent-banner"
+  role="dialog"
+  aria-labelledby="consent-text"
+  data-ga-id={import.meta.env.PROD ? gaMeasurementId : undefined}
+  class="fixed inset-x-0 bottom-0 z-20 p-4"
+  hidden
+>
+  <div class="card mx-auto max-w-3xl border border-base-300 bg-base-100 shadow-xl">
+    <div class="card-body gap-3 p-5 text-sm sm:flex-row sm:items-center sm:gap-6">
+      <p id="consent-text" class="text-base-content/80">
+        {t.consentText}
+        <a class="link link-primary" href={learnMore} rel="noopener">{t.consentLearnMore}</a>
+      </p>
+      <div class="flex shrink-0 gap-2">
+        <button type="button" class="btn btn-sm btn-ghost border-base-300" data-consent="denied">{t.consentDecline}</button>
+        <button type="button" class="btn btn-sm btn-primary" data-consent="granted">{t.consentAllow}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  declare global {
+    interface Window {
+      dataLayer: unknown[];
+      gtag: (...args: unknown[]) => void;
+    }
+  }
+
+  type Choice = 'granted' | 'denied';
+  const KEY = 'sos-analytics-consent';
+  const banner = document.getElementById('consent-banner')!;
+  const id = banner.dataset.gaId;
+  let loaded = false;
+
+  function stored(): Choice | null {
+    try {
+      const value = localStorage.getItem(KEY);
+      return value === 'granted' || value === 'denied' ? value : null;
+    } catch {
+      return null;
+    }
+  }
+
+  function store(choice: Choice) {
+    try {
+      localStorage.setItem(KEY, choice);
+    } catch {
+      // Storage blocked: the choice holds for this page only.
+    }
+  }
+
+  function load() {
+    if (loaded || !id) return;
+    loaded = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () {
+      // gtag.js expects the `arguments` object itself, not an array.
+      window.dataLayer.push(arguments);
+    };
+    window.gtag('consent', 'default', {
+      analytics_storage: 'granted',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+    });
+    window.gtag('js', new Date());
+    window.gtag('config', id);
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
+    document.head.append(script);
+  }
+
+  /** Withdrawing consent: stop the tag and delete the cookies it set. */
+  function unload() {
+    if (loaded) window.gtag('consent', 'update', { analytics_storage: 'denied' });
+    const host = location.hostname;
+    for (const cookie of document.cookie.split(';')) {
+      const name = cookie.split('=')[0].trim();
+      if (!name.startsWith('_ga')) continue;
+      for (const domain of [host, `.${host}`, `.${host.split('.').slice(-2).join('.')}`]) {
+        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=${domain}`;
+      }
+      document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+    }
+  }
+
+  function apply(choice: Choice) {
+    if (choice === 'granted') load();
+    else unload();
+  }
+
+  for (const button of banner.querySelectorAll<HTMLButtonElement>('[data-consent]')) {
+    button.addEventListener('click', () => {
+      const choice = button.dataset.consent as Choice;
+      store(choice);
+      apply(choice);
+      banner.hidden = true;
+    });
+  }
+
+  document.getElementById('consent-settings')?.addEventListener('click', () => {
+    banner.hidden = false;
+  });
+
+  const choice = stored();
+  if (choice) apply(choice);
+  else banner.hidden = false;
+</script>

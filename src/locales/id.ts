@@ -43,6 +43,11 @@ export default {
     notFoundBody: 'Halaman ini tidak ada.',
     backHome: 'Kembali ke awal',
     footer: 'Open source, lisensi MIT',
+    consentText: 'Situs ini ingin memakai Google Analytics untuk menghitung kunjungan dan melihat halaman mana yang dibaca. Hanya jika kamu mengizinkan, cookie disimpan dan data penggunaan dikirim ke Google.',
+    consentLearnMore: 'Cara Google memakai data ini',
+    consentAllow: 'Izinkan',
+    consentDecline: 'Tolak',
+    consentSettings: 'Pengaturan cookie',
   },
   apps: {
     interview: {

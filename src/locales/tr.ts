@@ -37,6 +37,11 @@ export default {
     notFoundBody: "Böyle bir sayfa yok.",
     backHome: "Ana sayfaya dön",
     footer: "Açık kaynak, MIT lisansı",
+    consentText: "Bu site, ziyaretleri saymak ve hangi sayfaların okunduğunu görmek için Google Analytics kullanmak istiyor. Yalnızca izin verirsen çerezler kaydedilir ve kullanım verileri Google'a gönderilir.",
+    consentLearnMore: 'Google bu verileri nasıl kullanır',
+    consentAllow: 'İzin ver',
+    consentDecline: 'Reddet',
+    consentSettings: 'Çerez ayarları',
   },
   apps: {
     interview: {

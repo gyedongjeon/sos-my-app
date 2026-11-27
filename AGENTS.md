@@ -49,7 +49,10 @@ Follow Kent Beck's Tidy First, and test-first where there is logic to test.
     - **Hosting**: GitHub Pages, deployed by GitHub Actions on every push to `main`, with the custom domain `sosmy.app` (`site: 'https://sosmy.app'`, no `base` path). `.app` domains are HTTPS-only.
     - **Structure**: One site with a page per app under a path (`/interview`, `/language`, `/feed`), not a subdomain per app. English is served at `/`, every other language under `/<locale>/` (e.g. `/ko/`, `/zh-hans/`).
     - **Content**: App data (name, repository, icon, screenshots) lives in `src/data/apps.ts`; all text lives in `src/locales/<locale>.ts`. App copy follows each app's README (`README.ko.md` for Korean). When an app's features or supported platforms change, update every locale.
-- **Scope**: An informational site. Do not add a backend, authentication, analytics, cookies, or third-party trackers unless explicitly requested.
+- **Scope**: An informational site. Do not add a backend, authentication, cookies, or third-party trackers unless explicitly requested.
+    - **Analytics**: Google Analytics 4 (`src/data/analytics.ts`), loaded only after the visitor allows it in the consent banner (`src/components/ConsentBanner.astro`), as the GDPR and the German TTDSG require. Nothing goes to Google before that, and the footer's "Cookie settings" reopens the banner.
+    - Cloudflare Web Analytics (token in `src/data/analytics.ts`, beacon in `src/layouts/Base.astro`) loads without consent: it sets no cookies and does not track visitors across sites. The DNS records stay DNS-only (not proxied) so GitHub Pages keeps issuing its HTTPS certificate, which is why the beacon is installed as a snippet.
+    - Do not add other analytics or tags, or load Google Analytics without consent.
 
 ## Operational Preferences
 - **Conciseness**: Be concise and technical in your responses.

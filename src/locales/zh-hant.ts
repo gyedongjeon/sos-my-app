@@ -29,6 +29,11 @@ export default {
     notFoundBody: '找不到這個頁面。',
     backHome: '回到首頁',
     footer: '開源軟體，MIT 授權',
+    consentText: '本站希望使用 Google Analytics 統計造訪次數，了解哪些頁面被閱讀。只有在你允許後，才會儲存 Cookie 並將使用資料傳送給 Google。',
+    consentLearnMore: 'Google 如何使用這些資料',
+    consentAllow: '允許',
+    consentDecline: '拒絕',
+    consentSettings: 'Cookie 設定',
   },
   apps: {
     interview: {

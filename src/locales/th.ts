@@ -43,6 +43,11 @@ export default {
     notFoundBody: 'ไม่พบหน้านี้',
     backHome: 'กลับหน้าแรก',
     footer: 'โอเพนซอร์ส สัญญาอนุญาต MIT',
+    consentText: 'เว็บไซต์นี้ต้องการใช้ Google Analytics เพื่อนับจำนวนการเข้าชมและดูว่าหน้าใดถูกอ่าน คุกกี้จะถูกบันทึกและข้อมูลการใช้งานจะถูกส่งไปยัง Google เฉพาะเมื่อคุณอนุญาตเท่านั้น',
+    consentLearnMore: 'วิธีที่ Google ใช้ข้อมูลนี้',
+    consentAllow: 'อนุญาต',
+    consentDecline: 'ปฏิเสธ',
+    consentSettings: 'การตั้งค่าคุกกี้',
   },
   apps: {
     interview: {

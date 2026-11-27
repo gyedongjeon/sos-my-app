@@ -37,6 +37,11 @@ export default {
     notFoundBody: 'Такой страницы нет.',
     backHome: 'На главную',
     footer: 'Открытый код, лицензия MIT',
+    consentText: 'Этот сайт хотел бы использовать Google Analytics, чтобы считать посещения и видеть, какие страницы читают. Только с вашего разрешения сохраняются файлы cookie и данные об использовании отправляются в Google.',
+    consentLearnMore: 'Как Google использует эти данные',
+    consentAllow: 'Разрешить',
+    consentDecline: 'Отклонить',
+    consentSettings: 'Настройки cookie',
   },
   apps: {
     interview: {
