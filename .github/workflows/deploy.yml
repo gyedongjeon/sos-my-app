@@ -45,3 +45,17 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v5
+
+  # Tells search engines that use IndexNow (Bing, Yandex, and others) about the deployed pages.
+  # A failed submission does not undo the deploy, so it is reported but does not fail the run.
+  indexnow:
+    if: github.event_name != 'pull_request'
+    needs: deploy
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+      - run: node scripts/indexnow.ts
